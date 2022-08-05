@@ -1,0 +1,16 @@
+
+El consultorio del doctor Peña necesita agendar sus citas por medio de un programa que le permita hacer dicha acción.
+
+(Modulo para registrar pacientes)
+Antes agendar una cita se le pide al paciente los siguientes datos: nombre, apellidos, edad, numero de teléfono y dirección (el el programa se va a hacer un registro de pacientes para así hacerles una nueva cita cada que requieran ir al consultorio).
+
+(Modulo para agendar citas)
+Para agendar cita el doctor revisa en su agenda el día de la consulta y la hora en la que puede atender al paciente, y que es lo que se va a tratar en la consulta.
+
+Una vez realizada la cita, se solicita que se haga un campo de comentarios de lo que se hizo en la consulta y cuanto se ha cobrado por la cita
+
+(Proximas citas)
+El doctor también pidio que en el programa se mostraran las proximas consultas, de la más proxima hasta la última que tendrá.
+
+
+

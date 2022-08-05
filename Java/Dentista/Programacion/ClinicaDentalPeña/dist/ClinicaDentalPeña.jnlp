@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<jnlp spec="1.0" xmlns:jfx="http://javafx.com" href="ClinicaDentalPeña.jnlp">
+  <information>
+    <title>ClinicaDentalPeña</title>
+    <vendor>alejandrocornejo</vendor>
+    <description>null</description>
+    <offline-allowed/>
+  </information>
+  <resources>
+    <j2se version="1.6+" href="http://java.sun.com/products/autodl/j2se"/>
+    <jar href="ClinicaDentalPeña.jar" size="5283" download="eager" />
+    <jar href="lib/bootstrapfx-core-0.4.0.jar" size="27378" download="eager" />
+    <jar href="lib/jfoenix-8.0.10.jar" size="2710207" download="eager" />
+  </resources>
+  <jfx:javafx-desc  width="800" height="600" main-class="org.athenatechnologies.clinicadentalpenia.gui.Main"  name="ClinicaDentalPeña" />
+  <update check="always"/>
+</jnlp>
