@@ -92,6 +92,8 @@ public class Anotas_de_java
             // Número aleatorio
             //double num = Math.random();
             System.out.println(num);
+
+            //Algo cambia?
         */
 
         Scanner feli = new Scanner(System.in);
