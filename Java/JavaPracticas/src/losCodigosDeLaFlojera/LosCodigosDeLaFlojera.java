@@ -36,6 +36,11 @@ public static void main(String[] args)
         System.out.println();
     }
 
+public static void main(String[] args)
+    { 
+        
+    }
+
 
     /* <!--
 /  Emmanuel Alejandro Hernandez Cornejo
@@ -125,3 +130,4 @@ footer
 }
 
  */
+
