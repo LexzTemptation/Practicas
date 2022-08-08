@@ -112,11 +112,12 @@ insertDocument
 db.doctores.insertOne
 (
 	{
-	"nombre":"Juan", 
-	"apellidos":"Peña", 
-	"experiencia, 45, 
-	"nacimineto": new ISODate("1980-07-12"),
-	 "estado":1
+		 _id: getNextSequence("idDoc"),
+		nombre:"Juan", 
+		apellidos:"Peña", 
+		experiencia : 45, 
+		nacimineto: new ISODate("1980-07-12"),
+		estado:1
 	 }
  )
 
@@ -124,6 +125,7 @@ db.getCollection('doctores').insertMany
 (
     [
         {
+             _id: getNextSequence("idDoc"),
             nombre : "Lawrence", 
             apellidos : "de Arabia", 
             experiencia : 37, 
@@ -131,6 +133,7 @@ db.getCollection('doctores').insertMany
             estado : 2
         },
         {
+            _id: getNextSequence("idDoc"),
             nombre : "Marina", 
             apellidos : "Arceli", 
             experiencia : 29, 
