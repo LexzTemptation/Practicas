@@ -204,6 +204,9 @@ estoEsUnaFunción();
 function unaFuncionQueDevuelveUnValor()
 {
     console.log("Uno");
+    return 19;  //Si la función encuentra la parabra
+                //reservada "return" ignora lo que
+                //hay abajo de ella
     console.log("Dos");
     console.log("Tres");
     return "La función ha retornado una cadena de texto";
@@ -213,10 +216,38 @@ let valorDeFuncion = unaFuncionQueDevuelveUnValor();
 
 console.log(valorDeFuncion);
 
+function saludar(nombre = "Desconocido", edad = 0)
+{
+    console.log(`Hola mi nombre es ${nombre} y tengo ${edad} años.`);
+}
 
+saludar("Lexz", 24);
+saludar();
 
+funcionDeclarada();
 
+function funcionDeclarada() 
+{
+console.log("Esto es un función declarada, puede" +
+" invocarse en cualquier parte de nuestro código, incluso" +
+" antes de que la función sea declarada");
+}
 
+funcionDeclarada();
+
+//función anónima 
+funcionExpresada();
+
+const funcionExpresada = function ()
+{
+    console.log("Esto es una función expresada, es decir," +
+    " una función quese le ha asignado como valor a una" +
+    " variable, si invocamos esta función antes de su" +
+    " definición JS nos dirá: 'Cannot access 'funcionExpresada'" +
+    " before initialization'")
+}
+
+funcionExpresada();
 
 
 //********************VER RESULTADOS EN CONSOLA********************
