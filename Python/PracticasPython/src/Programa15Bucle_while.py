@@ -1,4 +1,4 @@
-#while
+# while
 
 # Ejemplo 1
 x = 1
