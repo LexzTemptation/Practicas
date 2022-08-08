@@ -56,7 +56,7 @@ extraer = str(extraerSubCadena)
 print("R= "+extraer)
 print()
 
-# Concatenación con método ".format(var1, var2)"
+# ********** Concatenación con método ".format(var1, var2)" **********
 # Alternativa 1
 
 nombre = "Carlos"
@@ -74,7 +74,7 @@ print("Hola {nombre} tienes {edad} años".format(nombre = "Carlos", edad = 25))
 print("Hola {1} tienes {0} años".format(edad, nombre))
 print()
 
-# Concatenación con método "f-Strings"
+# ********** Concatenación con método "f-Strings" **********
 
 # Las "f-Strings", fueron introducidas a partir de la versión 3.6 de Python.
 # Permiten agregar expresiones dentro de una constante de tipo String, y al
@@ -101,7 +101,7 @@ print()
 
 print(f"Hola {nombre} el resultado de {num_uno} + {num_dos} es: {num_uno + num_dos}")
 
-
+# ********** Concatenación con método "strip()" **********
 
 
 
