@@ -2,7 +2,7 @@ package bucles;
 
 import java.util.Scanner;
 
-public class notasWhile
+public class While
 {
     public static void main(String[] args)
     { 
