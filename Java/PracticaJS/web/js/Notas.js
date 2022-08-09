@@ -1,7 +1,7 @@
 
 //********************VER RESULTADOS EN CONSOLA********************
 
-//Variables, USAR let ***************************
+//*******Variables, USAR let ***************************
 /*
 var hola = "Hola Mundo"; 
 let hello = "Hello World"; 
@@ -10,7 +10,8 @@ console.log(hello);
 console.log(window); 
 console.log(window.hola); 
 console.log(window.hello); 
-//Ambito de bloque
+
+//*******Ambito de bloque*******
 
 console.log("***************var*************")
 var musica = "Rock"; 
@@ -31,7 +32,7 @@ console.log("Variable Música antes del Bloque", musica2);
 console.log("Variable Música antes del Bloque", musica2);
 */
 
-//Constantes*******************************
+//*******Constantes*******
 /*Const = constantes, se usan cuando sabemos que alguna "variable"
  *no va a cambiar su valor.
  */
@@ -58,9 +59,10 @@ console.log(objeto);
 let colores = ["blanco", "negro", "rojo"];
 colores.push("anaranjado");
 console.log(colores);
+
 */
 
-//Cadenas de texto****************************
+//*******Cadenas de texto*******
 /*
 let nombre = "Alejandro";
 let apellido = 'Cornejo';
@@ -85,7 +87,7 @@ console.log
 */
 
 /*
-//Concatenación
+//*******Concatenación*******
 
 let nombre = "Alejandro";
 let apellido = 'Cornejo';
@@ -114,7 +116,7 @@ console.log(ul);
 */
 
 /*
-//Números
+//*******Números*******
 
 let a = 2;
 let b = new Number(4);
@@ -138,7 +140,7 @@ console.log(c + Number.parseFloat(d));//hablando de números
 */
 
 /*
-//Boolean
+//*******Boolean*******
 
 let verdadero = true;
 let falso = false;
@@ -154,7 +156,7 @@ console.log(Boolean(" "));
 console.log(Boolean(""));
 */
 
-//undefined, null & NaN
+//*******undefined, null & NaN*******
 
 /*null y undefined representan una variable de un valor ausente 
   undefined: Es una propiedad del objeto global, es decir, una variable de alcance global.
@@ -175,8 +177,8 @@ let noEsUnNumero = "hey" * 2;
 console.log(noEsUnNumero);
 */
 
-/**/
-//Funciones mi vro
+
+//*******Funciones mi vro*******
 
 /*Una función es un bloque de código, autocontenido, que se puede definir una 
 vez y ejecutar en cualquier momento. Opcionalmente, una función puede aceptar
@@ -189,7 +191,7 @@ asignarse a un valor, y pueden pasarse como argumentos y usarse como un
 valor de retorno. */
 
 //Función declarada
-
+/*
 function estoEsUnaFunción()
 {
     console.log("Uno");
@@ -234,10 +236,12 @@ console.log("Esto es un función declarada, puede" +
 }
 
 funcionDeclarada();
+*/
 
 //función anónima 
-funcionExpresada();
 
+/*funcionExpresada();*/
+/*
 const funcionExpresada = function ()
 {
     console.log("Esto es una función expresada, es decir," +
@@ -248,6 +252,58 @@ const funcionExpresada = function ()
 }
 
 funcionExpresada();
+*/
+
+//*******Arrays*******
+
+/* 
+    Un arreglo(vector, array, matriz) es un conjunto de datos
+    o una estructura de datos homogéneos que se encuentran ubicados
+    en forma consecutiva en la memoria RAM (sirve para almacenar
+    datos en forma temporal).
+*/
+
+let a = [];
+let b = [1, true, "Hola", ["A", "B", "C",[1, 2, 3]]]
+console.log(a);
+console.log(b);
+console.log(b.length);
+console.log(b[2]);
+console.log(b[0]);
+console.log(b[3]);
+console.log(b[3][2]);
+console.log(b[3][3][0]);
+
+let c = Array.of("X","Y","Z",9,8,7);
+console.log(c);
+
+const d = Array(100).fill(false);
+console.log(d);
+
+const e = new Array();
+console.log(e);
+
+const f = new Array(1,2,3, true, false,);
+console.log(f);
+
+const rgb = ["Rojo", "Verde", "Azúl"];
+console.log(rgb);
+
+rgb.push("Negro");
+console.log(rgb);
+
+rgb.pop();
+console.log(rgb)
+
+rgb.forEach
+(
+    function(el, index)
+    {
+        console.log
+        (`<li id="${index}"> ${el} </li>`);
+    }
+);
+
 
 
 //********************VER RESULTADOS EN CONSOLA********************
