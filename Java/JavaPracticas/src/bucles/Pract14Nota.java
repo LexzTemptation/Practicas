@@ -2,7 +2,7 @@ package bucles;
 
 import javax.swing.JOptionPane;
 
-public class Pract14 
+public class Pract14Nota 
 {
     public static void main(String[] args)
     { 
