@@ -262,7 +262,7 @@ funcionExpresada();
     en forma consecutiva en la memoria RAM (sirve para almacenar
     datos en forma temporal).
 */
-
+/*
 let a = [];
 let b = [1, true, "Hola", ["A", "B", "C",[1, 2, 3]]]
 console.log(a);
@@ -303,6 +303,80 @@ rgb.forEach
         (`<li id="${index}"> ${el} </li>`);
     }
 );
+*/
+
+//*******Objetos*******
+
+let a = new String("Hola");
+
+console.log(a);
+
+const b = {};
+console.log(b);
+
+const c = new Object();
+console.log(c);
+
+/*
+Dentro de un objero a las variables se
+le van a llamar atributos/propirdades
+y a las funciones se les llama metodos
+*/
+const lexz = 
+{
+    gt : "LexzTemptation",
+    edad : 24,
+    pasatiempos : 
+        [
+            "jugar videojuegos", 
+            "hacer ejercicio", 
+            "ser pro"
+        ],
+    soltero : true,
+    contacto : 
+        {
+            email : "alejandrotemptation@gmail.com",
+            twitter : "@LexzTemp",
+            movil : 4771234567
+        },
+    saludar : function()
+    {
+        console.log("Hey!!");
+    },
+
+    decirMiGt : function()
+    {
+        console.log(`Mi GT es ${this.gt} y tengo ${this.edad} años`)
+    }
+
+}
+
+console.log(lexz);
+console.log(lexz["gt"]);
+console.log(lexz["pasatiempos"]);
+console.log(lexz.gt); 
+//Esto es lo más común, las anterioes también se pueden utilizar, 
+//pero hacerlo de esta forma es más común
+console.log(lexz.soltero);
+console.log(lexz.pasatiempos);
+console.log(lexz.pasatiempos[1]);
+console.log(lexz.contacto);
+console.log(lexz.contacto.twitter);
+lexz.saludar();
+lexz.decirMiGt();
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
