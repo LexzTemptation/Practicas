@@ -38,7 +38,7 @@ body
 header 
 {
   width: 100%;
-  height: 600px;
+  height: 630px;
   background: #ef32d9;
   /* fallback for old browsers */
   background: -webkit-linear-gradient(
@@ -79,7 +79,7 @@ nav > a:hover
   text-decoration: underline;
 }
 
-header .text-header 
+header .text-header /*Esto hace que el texto se haga en medio*/
 {
   display: flex;
   height: 430px;
@@ -87,10 +87,12 @@ header .text-header
   align-items: center;
   justify-content: center;
   flex-direction: column;
+  /*Especifica cómo se colocan los elementos flexibles en el contenedor
+   flexible, estableciendo la dirección del eje principal del contenedor flexible.*/
   text-align: center;
 }
 
-.text-header h1 
+.text-header h1 /*Le da color a la fuente de text header h1*/
 {
   font-size: 50px;
   color: #fff;
@@ -128,19 +130,19 @@ main .sobre-nosotros
   width: 48%;
 }
 
-.sobre-nosotros .container-text 
+.sobre-nosotros .contents-texts
 {
   width: 48%;
 }
 
-.container-text h3 
+.contents-texts h3 
 {
   margin-bottom: 15px;
 }
 
-.container-text h3 span 
+.contents-texts h3 span 
 {
-  background: #4d0686;
+  background: #4D0686;
   color: #fff;
   border-radius: 50%;
   display: inline-block;
@@ -152,7 +154,7 @@ main .sobre-nosotros
   margin-right: 5px;
 }
 
-.container-text p 
+.contents-texts p 
 {
   padding: 0px 0px 30px 15px;
   font-weight: 300;
@@ -166,14 +168,15 @@ main .sobre-nosotros
   background: #f2f2f2;
 }
 
-.galeria-port 
+.galery-port 
 {
   display: flex;
   justify-content: space-evenly;
   flex-wrap: wrap;
 }
 
-.imagen-port {
+.image-port 
+{
   width: 24%;
   margin-bottom: 10px;
   overflow: hidden;
@@ -182,39 +185,37 @@ main .sobre-nosotros
   box-shadow: 0 0 6px 0 rgba(0, 0, 0, 0.5);
 }
 
-.imagen-port > img {
+.image-port > img
+{
   width: 100%;
   height: 100%;
   object-fit: cover;
   display: block;
 }
 
-.hover-galeria 
-{
+.hover-galeria{
   position: absolute;
   width: 100%;
   height: 100%;
   top: 0;
   transform: scale(0);
-  background: hsla(273, 91%, 27%, 0.7);
-  transition: transform 0.5s;
+  background: hsla(273,91%,27%, 0.7);
+  transition: transform .5s;
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
 }
 
-.hover-galeria img 
-{
+.hover-galery img{
   width: 50px;
 }
 
-.hover-galeria p {
+.hover-galery p{
   color: #fff;
 }
 
-.imagen-port:hover .hover-galeria 
-{
+.image-port:hover .hover-galeria{
   transform: scale(1);
 }
 
@@ -248,13 +249,13 @@ main .sobre-nosotros
   display: block;
 }
 
-.cards .card > .contenido-texto-card 
+.cards .card > .container-text-card 
 {
   width: 60%;
   color: #fff;
 }
 
-.cards .card > .contenido-texto-card p 
+.cards .card > .container-text-card p 
 {
   font-weight: 300;
   padding-top: 5px;
@@ -262,45 +263,53 @@ main .sobre-nosotros
 
 /*  Our team */
 
-.about-services {
+.about-services 
+{
   background: #f2f2f2;
   padding-bottom: 30px;
 }
 
-.servicio-cont {
+.service-cont 
+{
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
 
-.servicio-ind {
+.servicio-ind 
+{
   width: 28%;
   text-align: center;
 }
 
-.servicio-ind img {
+.servicio-ind image
+{
   width: 90%;
 }
 
-.servicio-ind h3 {
+.servicio-ind h3 
+{
   margin: 10px 0;
 }
 
-.servicio-ind p {
+.servicio-ind p 
+{
   font-weight: 300;
   text-align: justify;
 }
 
 /* footer */
 
-footer {
+footer 
+{
   background: #414141;
   padding: 60px 0 30px 0;
   margin: auto;
   overflow: hidden;
 }
 
-.contenedor-footer {
+.contenedor-footer 
+{
   display: flex;
   width: 90%;
   justify-content: space-evenly;
@@ -309,62 +318,74 @@ footer {
   border-bottom: 1px solid #ccc;
 }
 
-.content-foo {
+.content-foo 
+{
   text-align: center;
 }
 
-.content-foo h4 {
+.content-foo h4 
+{
   color: #fff;
   border-bottom: 3px solid #af20d3;
   padding-bottom: 5px;
   margin-bottom: 10px;
 }
 
-.content-foo p {
+.content-foo p 
+{
   color: #ccc;
 }
 
-.titulo-final {
+.titulo-final 
+{
   text-align: center;
   font-size: 24px;
   margin: 20px 0 0 0;
   color: #9e9797;
 }
 
-@media screen and (max-width: 900px) {
-  header {
+@media screen and (max-width: 900px) 
+{
+  header 
+  {
     background-position: center;
   }
 
-  .contenedor-sobre-nosotros {
+  .contenedor-sobre-nosotros 
+  {
     flex-direction: column;
     justify-content: center;
     align-items: center;
   }
 
-  .sobre-nosotros .contenido-textos {
+  .sobre-nosotros .contenido-textos 
+  {
     width: 90%;
   }
 
-  .imagen-about-us {
+  .imagen-about-us 
+  {
     width: 90%;
   }
 
   /* Galeria */
 
-  .imagen-port {
+  .imagen-port 
+  {
     width: 44%;
   }
 
   /* Clientes */
 
-  .cards {
+  .cards 
+  {
     flex-direction: column;
     justify-content: center;
     align-items: center;
   }
 
-  .cards .card {
+  .cards .card 
+  {
     width: 90%;
   }
 
