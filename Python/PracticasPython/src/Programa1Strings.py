@@ -166,14 +166,52 @@ last_name = input("Apellido: ")
 full_name = f"{first_name} {last_name}"
 
 print()
-print(f"¿El formato del método title() se ha aplicado?: {full_name.istitle()}")
-print(f"Aplicando el método title(): {full_name.title()}")
-print(f"Volvemos a imprimir el nombre: {full_name}")
+print(f"¿El formato del método title() se ha aplicado?: {full_name.istitle()}") # Regresa un true o false
+print(f"Aplicando el método title(): {full_name.title()}") # Aplica el método y regresa el texto de forma correcta "Alejandro Cornejo"
+print(f"Volvemos a imprimir el nombre: {full_name}") # Regresa el texto como se ingresó "aleJAndrO coRNeJO"
 
 
 print()
-full_name = full_name.title()
-print(f"¿El formato del método title() se ha aplicado?: {full_name.istitle()}")
-print(f"Se ha aplicado el método title() de manera permanente: {full_name}")
+full_name = full_name.title() # Aquí se aplica el formato correcto de forma permanente
+print(f"¿El formato del método title() se ha aplicado?: {full_name.istitle()}") # Regresa un true o false
+print(f"Se ha aplicado el método title() de manera permanente: {full_name}") #
+print(f"Volvemos a imprimir el nombre: {full_name}") # Y aquí se regresa el texto con el método title() de manera permanente
+
+print()
+
+# ********** Concatenación con método "islower()" y "lower()" **********
+# En Python, contamos con métodos que nos permiten convertir todas
+# las letras de una cadena de caracteres a mayúsculas, o bien, a minúsculas.
+
+# Y a su vez, también contamos con métodos para identificar si una
+# cadena de caracteres se encuentra completamente en mayúsculas o en minúsculas.
+
+string = input("Introduce un String:")
+
+print(f"\n¿Todas las letras están en minúsculas?: {string.islower()}")
+string = string.lower()
+print(f"String en minúsculas: {string}")
+
+print(f"\n¿Todas las letras están en mayúsculas?: {string.isupper()}")
+print(f"String en mayúsculas: {string.upper()}")
+print(f"String origianl: {string}")
+
+print()
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
