@@ -155,6 +155,26 @@ print()
 # palabra de un String en mayúsculas, y a su vez, convertir el
 # resto de letras que componen a cada palabra de un String en minúsculas.
 
+# Para realizar esta acción, contamos con los métodos
+# "istitle()" y "title()", los cuales se utilizan para identificar si la
+# primera letra de cada palabra comienza con mayúscula, y el
+# resto de letras se encuentran en minúsculas, y de no ser así,
+# realizar la respectiva conversión.
+
+first_name = input("Nombre: ")
+last_name = input("Apellido: ")
+full_name = f"{first_name} {last_name}"
+
+print()
+print(f"¿El formato del método title() se ha aplicado?: {full_name.istitle()}")
+print(f"Aplicando el método title(): {full_name.title()}")
+print(f"Volvemos a imprimir el nombre: {full_name}")
+
+
+print()
+full_name = full_name.title()
+print(f"¿El formato del método title() se ha aplicado?: {full_name.istitle()}")
+print(f"Se ha aplicado el método title() de manera permanente: {full_name}")
 
 
 
