@@ -1,0 +1,12 @@
+-salas == numSala, metrosCuadrados, ubicacion, tipoDeSala (cardio, general, muscular).
+
+-aparatos == idAparato, descripción, estadoAparato, salaDelAparato.
+
+-clases == descripcion, día/hora, idClase, sala, instructor.
+
+-socios == idSocio, nombre, direccion, telefono, clases
+
+-instructor == idInstructor, nombre, direccion, telefono, titulación.
+
+-pistaSquash == numPista, ubicacion, estadoPista, reservación.
+
