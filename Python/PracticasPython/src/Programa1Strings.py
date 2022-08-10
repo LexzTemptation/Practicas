@@ -177,4 +177,4 @@ print(f"¿El formato del método title() se ha aplicado?: {full_name.istitle()}"
 print(f"Se ha aplicado el método title() de manera permanente: {full_name}")
 
 
-
+#ajsjsjs xdxdxd
