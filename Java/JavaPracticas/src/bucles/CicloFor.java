@@ -11,6 +11,18 @@ public class CicloFor
 
         /*for
         
+        -inicialización: Siempre se inicializa la variable dentro de el ciclo
+        a esta inicialización se le llama "iterador" (Los iteradores son un 
+        tipo de punteros a ciertas estructuras de datos (contenedores). 
+        Ciertos contenedores ofrecen la capacidad de crecer a medida que se 
+        van insertando nuevos elementos.)
+
+        -condición: La condición es como en los operadores condicionales.
+        Por decir : "Este bucle se va a ejecutar hasta que i sea menor que 20 (i < 20)
+
+        aumento o decremento: Le decimos al iterador que primero se muesta y luego se
+        aumenta o decrementa (i++)
+
         for (inicialización ; condición ; aumento o decremento)
         {
             instrucciones;
