@@ -160,7 +160,7 @@ print()
 # primera letra de cada palabra comienza con mayúscula, y el
 # resto de letras se encuentran en minúsculas, y de no ser así,
 # realizar la respectiva conversión.
-
+'''
 first_name = input("Nombre: ")
 last_name = input("Apellido: ")
 full_name = f"{first_name} {last_name}"
@@ -178,28 +178,80 @@ print(f"Se ha aplicado el método title() de manera permanente: {full_name}") #
 print(f"Volvemos a imprimir el nombre: {full_name}") # Y aquí se regresa el texto con el método title() de manera permanente
 
 print()
-
+'''
 # ********** Concatenación con método "islower()" y "lower()" **********
 # En Python, contamos con métodos que nos permiten convertir todas
 # las letras de una cadena de caracteres a mayúsculas, o bien, a minúsculas.
 
 # Y a su vez, también contamos con métodos para identificar si una
 # cadena de caracteres se encuentra completamente en mayúsculas o en minúsculas.
-
+'''
 string = input("Introduce un String:")
 
 print(f"\n¿Todas las letras están en minúsculas?: {string.islower()}")
-string = string.lower()
-print(f"String en minúsculas: {string}")
+# Regresa un true o false, comprueba si todas las letras están en minusculas
+print(f"String en minúsculas: {string.lower()}")
+# Convierte todas las letras en minusculas
+print(f"String original: {string}")
 
 print(f"\n¿Todas las letras están en mayúsculas?: {string.isupper()}")
+# Regresa un true o false, comprueba si todas las letras están en mayusculas
 print(f"String en mayúsculas: {string.upper()}")
-print(f"String origianl: {string}")
+# Convierte todas las letras en mayusculas
+print(f"String original: {string}")
+'''
 
 print()
 
+# ********** Concatenación con método "swapcase()" **********
 
+# En Python, contamos con el método swapcase(), que a diferencia de los
+# métodos lower() y upper(), nos permite invertir todas las letras de una
+# cadena de caracteres, donde las mayúsculas se convierten en minúsculas
+# y las minúsculas se convierten en mayúsculas.
 
+txt_lower_upper = "atHeNA TECnoLOgIeS"
+print(txt_lower_upper.swapcase())
+
+txt_upper = "CADENA DE MAYÚSCULAS"
+print(txt_upper.swapcase())
+
+txt_lower = "cadena con minúsculas"
+print(txt_lower.swapcase())
+
+txt_number = "1234!-*"
+print(txt_number)
+
+print()
+
+# No modificados con el método "swapcase()"
+
+print(txt_lower_upper)
+print(txt_upper)
+print(txt_lower)
+print(txt_number)
+
+print()
+
+# ********** Concatenación con método "capitalize()" **********
+
+# En Python, el método "capitalize()" se utiliza para convertir el
+# primer carácter de un String en una letra mayúscula, y a su vez,
+# todas las letras restantes en minúsculas.
+
+string = "eL VIAJE eS la RecoMpensa"
+
+print(f"Antes de capitalize(): {string}")
+string = string.capitalize()
+print(f"Después de capitalize(): {string}")
+
+print()
+
+# ********** Concatenación con método "center()", "ljust()" y "rjust()" **********
+
+# En Python, es posible alinear el texto que imprimimos en pantalla, de
+# acuerdo a nuestras necesidades, es decir, podemos alinear una impresión
+# en pantalla, a la izquierda, a la derecha o al centro.
 
 
 
