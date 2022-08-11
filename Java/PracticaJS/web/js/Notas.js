@@ -306,22 +306,22 @@ rgb.forEach
 */
 
 //*******Objetos*******
-
+/*
 let a = new String("Hola");
 
 console.log(a);
 
-const b = {};
-console.log(b);
+const b = {}; //Regresa un objeto
+console.log(b); //Regresa lo que hay en "cons b"
 
-const c = new Object();
-console.log(c);
-
+const c = new Object(); //Regresa un objeto
+console.log(c); //Regresa lo que hay en "cons c"
+*/
 /*
-Dentro de un objero a las variables se
+Dentro de un objeto a las variables se
 le van a llamar atributos/propirdades
 y a las funciones se les llama metodos
-*/
+*//*
 const lexz = 
 {
     gt : "LexzTemptation",
@@ -365,16 +365,66 @@ console.log(lexz.contacto.twitter);
 lexz.saludar();
 lexz.decirMiGt();
 
+console.log(Object.keys(lexz)); //listado de llaves, gt, edad, pasatiempos, etc.
+console.log(Object.values(lexz)) //listado de los valores de las llaves.
+console.log(lexz.hasOwnProperty("gt")); //Regresa true por que tiene algo dentro de la propiedad
+console.log(lexz.hasOwnProperty("sexo")); //Regresa false por no existe la llave
+*/
 
+//*******Tipos de operadores*******
 
+// Operadores aritmeticos (+, -, *, /, %)
 
+let a = 5 + (5 - 10) * 3;
+console.log(a);
 
+let modulo = 5 % 2;
+console.log(modulo)
 
+// Operadores relacionales (<, >, <=, >=, ==, ===, !=, !==)
 
+// De esta forma solo regresa valores booleanos
+console.log(8 > 9);
+console.log(9 > 8);
+console.log(8 >= 9);
+console.log(9 >= 8);
+console.log(7 < 7);
+console.log(7 <= 7);
+console.log(8 > 9);
 
+// = 1 igual es asignación de variable 
+// == 2 iguales es comparacion de valores 
+// === 3 es comparación de tipo de dato y de valor
 
+console.log(7 == 7);
+console.log("7" == 7);
+console.log(0 == false);
 
+console.log("");
 
+//Por buenas practicas es considerado hacer este tipo de
+//comparación triple, doble igual es malas practicas
+
+console.log(7 === 7);
+console.log("7" === 7);
+console.log(0 === false);
+
+// Incremento y decremento (++, --)
+
+let i = 2;
+//i = i + 2;
+//i += 3;
+//i -= 3;
+
+// Operador unario
+i++;
+i--;
+//Expresiones más adecuadas las dos de arriba
+++i;
+--i;
+console.log(i);
+console.log(i++);
+console.log(++i);
 
 
 
