@@ -19,7 +19,7 @@ public class Pract20
         for (int i = 1; i <= num; i++)
         {
 
-            factorial = factorial * i;
+            System.out.println( factorial = factorial * i);
             // 1x1 factorial = 1
             // 1x2 factorial = 2
             // 2x3 factorial = 6
@@ -28,7 +28,11 @@ public class Pract20
 
         }
 
-        System.out.println(factorial);
+        JOptionPane.showMessageDialog(null,"La factorial es: " + factorial);
+
+        System.out.println();
+
+        System.out.println("La factorial es: " + factorial);
 
         System.out.println();
     }
