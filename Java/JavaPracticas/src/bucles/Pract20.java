@@ -20,7 +20,6 @@ public class Pract20
         {
 
             factorial = factorial * i;
-
             // 1x1 factorial = 1
             // 1x2 factorial = 2
             // 2x3 factorial = 6
