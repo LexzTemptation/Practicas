@@ -253,11 +253,91 @@ print()
 # acuerdo a nuestras necesidades, es decir, podemos alinear una impresión
 # en pantalla, a la izquierda, a la derecha o al centro.
 
+# Para crear los espacios se necesita dar un argumento en números enteros.
+# Se le debe de dar un número que cuente tanto los caracteres ingresados como
+# los espacios que se desean ingresar.
 
+# Si se le llega a dar un número impar, Python considera cuál es la mejor alineación
+# para asignar los espacios y alinear con el método asignado.
 
+string = "Menú"
 
+print("Métodos con espacios:")
+print(string.center(20))
+print(string.ljust(20))
+print(string.rjust(20))
 
+print("\nMétodos con caracter:")
+print(string.center(20, "="))
+print(string.ljust(20, "*"))
+print(string.rjust(20, "#"))
 
+print("\nVariable modificada:")
+string = string.center(10, "=")
+print(string)
+
+print()
+
+# ********** Concatenación con método "count()" **********
+# En Python el método count(), es de gran utilidad cuando tenemos
+# la necesidad de conocer la cantidad de veces que aparece una cadena
+# o carácter en específico dentro de un texto.
+
+# De manera predeterminada, el método count(), se encargará de buscar
+# una cadena en particular, dentro de all contenido que compone a
+# una cadena en específico.
+
+# Además, el método counto, tiene la Capacidad de buscar una subcadena
+# en una parte en específico de la cadena principal.
+
+string = "mi mamá me mima"
+contador = 0 # El contador es para indicar desde que posición queremos que empiece a contar
+
+print(string.center(40, "="))
+
+# El método puede diferenciar de mayusculas y minusculas, es normal que salga 0
+contador = string.count("M")
+print(f"\nLa letra M se encontró {contador} veces en la cadena: {string}")
+
+contador = string.count("m")
+print(f"\nLa letra m se encontró {contador} veces en la cadena: {string}")
+
+contador = string.count("mamá")
+print(f"\nLa palabra mamá se encontró {contador} veces en la cadena: {string}")
+
+contador = string.count("me mima")
+print(f"\nLa oración me mima se encontró {contador} veces en la cadena: {string}")
+
+# El método también puede diferenciar de caracteres, por la letra "á"
+# con acento no la va a contar
+contador = string.count("ma")
+print(f"\nLa palabra ma se encontró {contador} veces en la cadena: {string}")
+
+# Si se le llega a agregar otro argumento como en el ejemplo, el método
+# comenzará a contar desde la pocisión indicada
+contador = string.count("m", 13)
+print(f"\nLa letra m se encontró {contador} veces, desde la posición 13 en la cadena: {string}")
+
+contador = string.count("m", 100)
+print(f"\nLa letra m se encontró {contador} veces, desde la posición 100 en la cadena: {string}")
+
+# En este caso cuando indicamos números negativos, el método comenzará a contar
+# desde el otro extremo de la cadena, indicando que el final original de la cadena
+# es la posición 0, pero esto no quita la forma de hacer el recorrido original,
+# esto quiere decir que sigue recorriendo de izquierda a derecha, pero desde la
+# posición indicada.
+contador = string.count("m", -3)
+print(f"\nLa letra m se encontró {contador} veces, desde la posición -3 en la cadena: {string}")
+
+#
+contador = string.count("m", 3, 7)
+print(f"\nLa letra m se encontró {contador} veces, desde la posición 3 hasta la posición 7 en la cadena: {string}")
+
+contador = string.count("m", 100, 100)
+print(f"\nLa letra m se encontró {contador} veces, desde la posición 100 hasta la posición 100 en la cadena: {string}")
+
+contador = string.count("m", -4, -1)
+print(f"\nLa letra m se encontró {contador} veces, desde la posición -4 hasta la posición -1 en la cadena: {string}")
 
 
 
