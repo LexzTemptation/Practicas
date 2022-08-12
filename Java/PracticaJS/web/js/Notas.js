@@ -426,9 +426,16 @@ console.log(i);
 console.log(i++);
 console.log(++i);
 
+// Operadores lógicos
 
+// ! = negación
+// ||= or, con que una condicón se cumpla el or valida
+// && = and
 
-
+console.log(!true);
+console.log(!false);
+console.log((9 === 9) || console.log("9" === 9));
+console.log((9 === 9) && console.log("9" === "9"));
 
 //********************VER RESULTADOS EN CONSOLA********************
 
