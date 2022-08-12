@@ -1,0 +1,17 @@
+-salas: idSala, metrosCuadrados, ubicacion, tipoDeSala (cardio, general, muscular).
+-rooms: idRoom , squareMeters, location, roomType (cardio, general, muscular).
+
+-aparatos: idAparato, descripción, estadoAparato, salaDelAparato.
+-fixtures: idFixture, description, fixtureStatus, fixtureRoom.
+
+-clases: descripcion, díaHora, idClase, sala, instructor.
+-classes: description, dayTime, idClase, room, instructor.
+
+-socios: idSocio, nombre, direccion, telefono, clases
+-partners: idPartner, name, address, phone, classes
+
+-instructor: idInstructor, nombre, direccion, telefono, titulación.
+-instructor: idInstructor, name, address, telephone, degree.
+
+-pistaSquash: idPista, ubicacion, estadoPista, reservación.
+-squashCourt: idCourt, location, courtState, reservation.
