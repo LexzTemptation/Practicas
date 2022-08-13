@@ -37,6 +37,11 @@ public class Pract22Nota
                                         "\n La estatura promedio es de: " + mediaAltura +
                                         "\n La cantidad de alumnos mayores a 18 años es: " + contMayores18 +
                                         "\n La cantidad de alumnos que miden más de 1.75 de altura es: " + contAltMay175);
+        
+        System.out.println("La edad promedio es de: " + medieaEdad + 
+                        "\n La estatura promedio es de: " + mediaAltura +
+                        "\n La cantidad de alumnos mayores a 18 años es: " + contMayores18 +
+                        "\n La cantidad de alumnos que miden más de 1.75 de altura es: " + contAltMay175);
 
         System.out.println();
     }
