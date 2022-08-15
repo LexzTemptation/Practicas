@@ -321,7 +321,7 @@ print(f"\nLa letra m se encontró {contador} veces, desde la posición 13 en la 
 contador = string.count("m", 100)
 print(f"\nLa letra m se encontró {contador} veces, desde la posición 100 en la cadena: {string}")
 
-# En este caso cuando indicamos números negativos, el método comenzará a contar
+# En este caso cuando se le indica números negativos, el método comenzará a contar
 # desde el otro extremo de la cadena, indicando que el final original de la cadena
 # es la posición 0, pero esto no quita la forma de hacer el recorrido original,
 # esto quiere decir que sigue recorriendo de izquierda a derecha, pero desde la
@@ -329,19 +329,87 @@ print(f"\nLa letra m se encontró {contador} veces, desde la posición 100 en la
 contador = string.count("m", -3)
 print(f"\nLa letra m se encontró {contador} veces, desde la posición -3 en la cadena: {string}")
 
-#
+# Cuando se le indica dos números los cuales deben ser enteros se le está
+# indicando que debe de comenzar en la primera posición indicada
+# y terminar en la segunda posición indicada para encontrar el caracter
+# indicado en el método.
 contador = string.count("m", 3, 7)
 print(f"\nLa letra m se encontró {contador} veces, desde la posición 3 hasta la posición 7 en la cadena: {string}")
 
+# Si se le indica más caracteres de lo que contiene el método
+# no arrojará un error, simplemente se va a encontrar al final de
+# la cadena y el método finalizará dicendo que ha encontrado
+# 0 veces la subcadena indicada.
 contador = string.count("m", 100, 100)
 print(f"\nLa letra m se encontró {contador} veces, desde la posición 100 hasta la posición 100 en la cadena: {string}")
 
+# Aquí el método actua parecido como con los numeros positivos, pero
+# el método comenzará a contar desde el otro extremo de la cadena indicando
+# que el final original de la cadena es la posición 0, sin empbargo, como
+# en este metodo los números son negativos, el primer número indicará que
+# desde donde se comienza a contar y el segundo número donde termina
 contador = string.count("m", -4, -1)
 print(f"\nLa letra m se encontró {contador} veces, desde la posición -4 hasta la posición -1 en la cadena: {string}")
 
+# ********** Concatenación con método "count()" **********
+# El método startswith(), se utiliza para comprobar si una cadena de caracteres
+# comienza con una subcadena en particular.
+# Además, es posible establecer un rango de búsqueda dentro de la cadena principal.
+
+string = "Diana se peina sola"
+resultado = 0
+starts_with = "Ejemplos con startswith():"
+ends_with = "Ejemplos con endswith():"
+
+print(f"\n{starts_with.rjust(50, '=')}")
+
+# Regresa un valor booleano si encuentra el caracter indicado (true)
+resultado = string.startswith("D")
+print(f"\n{string} comienza con la subcadena D: {resultado}")
+
+# Regresa un valor booleano si encuentra el caracter indicado (false)
+resultado = string.startswith("d")
+print(f"\n{string} comienza con la subcadena d: {resultado}")
+
+# Regresa un valor booleano si encuentra la sub-cadena indicada (true)
+resultado = string.startswith("Diana")
+print(f"\n{string} comienza con la subcadena Diana: {resultado}")
 
 
+resultado = string.startswith("se", 6)
+print(f"\n{string} comienza con la subcadena se, desde la posición 6: {resultado}")
 
+resultado = string.startswith("se", 6, 7)
+print(f"\n{string} comienza con la subcadena se, desde la posición 6 hasta la posición 7: {resultado}")
+
+resultado = string.startswith("se", 100, 100)
+print(f"\n{string} comienza con la subcadena se, desde la posición 100 hasta la posición 100: {resultado}")
+
+resultado = string.startswith("se", -4, -1)
+print(f"\n{string} comienza con la subcadena se, desde la posición -4 hasta la posición -1: {resultado}")
+
+print(f"\n{ends_with.rjust(50, '=')}")
+
+resultado = string.endswith("A")
+print(f"\n{string} termina con la subcadena A: {resultado}")
+
+resultado = string.endswith("a")
+print(f"\n{string} termina con la subcadena a: {resultado}")
+
+resultado = string.endswith("sola")
+print(f"\n{string} termina con la subcadena sola: {resultado}")
+
+resultado = string.endswith("sola", 10)
+print(f"\n{string} termina con la subcadena sola, desde la posición 10: {resultado}")
+
+resultado = string.endswith("s", 9, 14)
+print(f"\n{string} termina con la subcadena s, desde la posición 9 hasta la posición 14: {resultado}")
+
+resultado = string.endswith("s", 100, 100)
+print(f"\n{string} termina con la subcadena s, desde la posición 100 hasta la posición 100: {resultado}")
+
+resultado = string.endswith("s", -4, -2)
+print(f"\n{string} termina con la subcadena s, desde la posición -4 hasta la posición -2: {resultado}")
 
 
 
