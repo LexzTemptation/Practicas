@@ -370,7 +370,7 @@ console.log(Object.values(lexz)) //listado de los valores de las llaves.
 console.log(lexz.hasOwnProperty("gt")); //Regresa true por que tiene algo dentro de la propiedad
 console.log(lexz.hasOwnProperty("sexo")); //Regresa false por no existe la llave
 */
-
+/*
 //*******Tipos de operadores*******
 
 // Operadores aritmeticos (+, -, *, /, %)
@@ -436,6 +436,149 @@ console.log(!true);
 console.log(!false);
 console.log((9 === 9) || console.log("9" === 9));
 console.log((9 === 9) && console.log("9" === "9"));
+*/
+/*
+//*******Condicionales*******
+
+// Una estructura de control es aquel mecanismo que 
+// permite controlar el flujo de programación
+
+//if-else
+
+let edad = 19;
+
+if(edad > 17)
+{
+    console.log("Eres mayor de edad");
+}
+else
+{
+    console.log("Eres menor de edad");
+}
+
+if(edad >= 18)
+{
+    console.log("Eres mayor de edad");
+}
+else
+{
+    console.log("Eres menor de edad");
+}
+
+if(edad < 17)
+{
+    console.log("Eres mayor de edad");
+}
+else
+{
+    console.log("Eres menor de edad");
+}
+
+if(edad <= 17)
+{
+    console.log("Eres menor de edad");
+}
+else
+{
+    console.log("Eres mayor de edad");
+}
+
+// if - else if - else
+let hora = 9;
+
+if(hora >= 0 && hora <= 5)
+{
+    console.log("Debes dormir");
+}
+else if(hora >= 6 && hora <= 11)
+{
+    console.log("Buenos días");
+}
+else if(hora >= 12 && hora <= 18)
+{
+    console.log("Buenos días");
+}
+else
+{
+    console.log("Buenas tardes")
+}
+
+// Operador ternario
+
+console.log("Operador ternario");
+
+let eresMayor = (edad >= 18) 
+? "Eres mayor de edad"
+: "Eres menor de edad";
+
+console.log(eresMayor);
+
+// switch - case
+
+let dia = 2;
+
+switch (dia) 
+{
+    case 0:
+        console.log("Domingo")
+        break;
+        
+    case 1:
+        console.log("Lunes")
+        break;
+
+    case 2:
+        console.log("Martes")
+        break;
+        
+    case 3:
+        console.log("Miercoles")
+        break;
+
+    case 4:
+        console.log("Jueves")
+        break;
+            
+    default: 
+    console.log("Opción no registrada")
+        break;
+}
+*/
+
+//*******Bucles o ciclos*******
+
+let contador = 1;
+let contador2 = 1;
+
+while (contador <= 5)
+{
+    console.log("while " + contador);
+    contador++;
+}
+
+console.log("")
+
+do
+{
+    console.log("do while " +contador2);
+    contador2++;
+}
+while(contador2 <= 5)
+
+console.log("")
+//for (inicialización; condición; aumento-decremento){instrucciones}
+
+for (let i = 1; i <= 5; i++) 
+{
+    console.log("for "+i);
+    
+}
+
+
+
+
+
+
 
 //********************VER RESULTADOS EN CONSOLA********************
 
