@@ -544,7 +544,7 @@ switch (dia)
         break;
 }
 */
-
+/*
 //*******Bucles o ciclos*******
 
 let contador = 1;
@@ -573,6 +573,89 @@ for (let i = 1; i <= 5; i++)
     console.log("for "+i);
     
 }
+
+console.log("")
+
+let numeros =[10,20,30,40,50,60,70,80,90];
+
+for (let i = 0; i <= numeros.length; i++) 
+{
+    console.log(numeros[i]);
+    
+}
+
+console.log("")
+
+const lexz = 
+{
+    gt : "LexzTemptation",
+    edad : 24,
+
+}
+
+// for in
+for (const propiedad in lexz)
+{
+    console.log(`Key : ${propiedad}, Value : ${lexz.propiedad} `);
+    console.log("");
+    console.log(`Key : ${propiedad}, Value : ${lexz[propiedad]} `);
+}
+
+console.log("")
+//for of
+for (const elemento of numeros)
+{
+    console.log(elemento);
+}
+
+console.log("")
+
+let cadena = "Hey mi vro!"
+
+for (const caracter of cadena)
+{
+    console.log(caracter)
+}
+
+*/
+
+//*******Bucles o ciclos*******
+
+try
+{
+    console.log("En el ''try'' se agrega el código a evaluar");
+    noHayXd;
+}
+catch (error)
+{
+    console.log("''Catch'' captura cualquier error surgido o lanzado en el try");
+    console.log(error);
+}
+finally
+{
+    console.log("El bloque''finally'' se ejecutará siempre al final de "
+                + "un bloque try-catch");
+}
+
+console.log("")
+//
+try
+{
+    let numero = "y";
+
+    if(isNaN(numero))
+    {
+        throw new Error("Vro, el caracter introducido no es un número");
+    }
+
+    console.log(numero * numero)
+}
+catch (error)
+{
+    console.log(`Se produjo el siguiente error: ${error}`)
+}
+
+
 
 
 
