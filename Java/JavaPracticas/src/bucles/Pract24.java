@@ -18,7 +18,7 @@ public class Pract24
         System.out.println();
         
         int codigo, litros, litrosArticulo1 = 0, conteoMas600 = 0, op;
-        float precioLitro, facturacionTotal = 0;
+        float /*precioLitro,*/ facturacionTotal = 0;
         double importeFactura;
 
         for (int i = 1; i < 5; i++)
