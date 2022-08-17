@@ -351,10 +351,11 @@ print(f"\nLa letra m se encontró {contador} veces, desde la posición 100 hasta
 contador = string.count("m", -4, -1)
 print(f"\nLa letra m se encontró {contador} veces, desde la posición -4 hasta la posición -1 en la cadena: {string}")
 
-# ********** Concatenación con método "count()" **********
+# ********** Concatenación con método "startswith()" y "endswith()" **********
 # El método startswith(), se utiliza para comprobar si una cadena de caracteres
 # comienza con una subcadena en particular.
 # Además, es posible establecer un rango de búsqueda dentro de la cadena principal.
+# Este método regresa valores booleanos
 
 string = "Diana se peina sola"
 resultado = 0
@@ -375,11 +376,16 @@ print(f"\n{string} comienza con la subcadena d: {resultado}")
 resultado = string.startswith("Diana")
 print(f"\n{string} comienza con la subcadena Diana: {resultado}")
 
-
+# Si se le llega a agregar otro argumento como en el ejemplo, el método
+# comenzará a contar desde la pocisión indicada
 resultado = string.startswith("se", 6)
 print(f"\n{string} comienza con la subcadena se, desde la posición 6: {resultado}")
 
-resultado = string.startswith("se", 6, 7)
+# Cuando se le indica dos números los cuales deben ser enteros se le está
+# indicando que debe de comenzar en la primera posición indicada
+# y terminar en la segunda posición indicada para encontrar el caracter
+# indicado en el método.
+resultado = string.startswith("se", 6, 8)
 print(f"\n{string} comienza con la subcadena se, desde la posición 6 hasta la posición 7: {resultado}")
 
 resultado = string.startswith("se", 100, 100)
@@ -387,6 +393,11 @@ print(f"\n{string} comienza con la subcadena se, desde la posición 100 hasta la
 
 resultado = string.startswith("se", -4, -1)
 print(f"\n{string} comienza con la subcadena se, desde la posición -4 hasta la posición -1: {resultado}")
+
+# El método endswith(), se utiliza para comprobar si una cadena de caracteres termina
+# con una subcadena en particular.
+# Además, es posible establecer un rango de búsqueda dentro de la cadena principal.
+# Esté método busca de derecha a izquierda.
 
 print(f"\n{ends_with.rjust(50, '=')}")
 
@@ -408,8 +419,75 @@ print(f"\n{string} termina con la subcadena s, desde la posición 9 hasta la pos
 resultado = string.endswith("s", 100, 100)
 print(f"\n{string} termina con la subcadena s, desde la posición 100 hasta la posición 100: {resultado}")
 
+# Este orden del método cuenta de derecha a izquierda, por lo cual está buscando desde
+# la posición indicada solo un caracter indicado de la cadena digitada.
 resultado = string.endswith("s", -4, -2)
 print(f"\n{string} termina con la subcadena s, desde la posición -4 hasta la posición -2: {resultado}")
+print()
+
+# ********** Concatenación con substrings **********
+
+# En Python, una cadena de caracteres, es una sucesión que puede
+# contener caracteres especiales o alfanuméricos.
+# Es decir, letras, números y/o símbolos.
+# En Python es posible acceder a partes específicas de una cadena
+# de caracteres, también llamadas substrings o subcadenas.
+
+# variable[inicio : final : saltos]
+# Inicio: Establece al índice en donde se iniciará la subcadena.
+# Final. Establece al índice en donde se terminará la subcadena.
+# Saltos: Establece el número de saltos que realizará el índice para
+# generar la subcadena.
+
+# Los valores asignados al inicio, final y saltos, deberán ser
+# valores enteros, y a su vez, el valor que se le asigne a los
+# índices pueden ser positivos o negativos.
+
+# Teniendo en cuenta que los índices positivos se situaran desde
+# el inicio de la cadena, haciendo su recorrido de izquierda a derecha
+# Mientras que los índices negativos, se situaran desde el final
+# de la cadena, haciendo su recorrido igualmente de izquierda a derecha.
+
+string = "0123456789"
+substring = ""
+
+print(f"Cadena principal: {string}")
+
+# El método recorre las posiciones indicadas y regresa el caracter
+# que tiene a la derecha de su posición actual.
+substring = string[0]
+print(f"\nSubcadena con indice en la posición [0] es: {substring}")
+
+substring = string[5]
+print(f"\nSubcadena con indice en la posición [5] es: {substring}")
+
+# Cuenta de derecha a izquierda
+substring = string[-4]
+print(f"\nSubcadena con indice en la posición [-4] es: {substring}")
+
+substring = string[0:3]
+print(f"\nSubcadena con indices en las posiciones [0:3] es: {substring}")
+
+substring = string[:3]
+print(f"\nSubcadena con indices en las posiciones [:3] es: {substring}")
+
+substring = string[5:]
+print(f"\nSubcadena con indices en las posiciones [5:] es: {substring}")
+
+substring = string[-4:-1]
+print(f"\nSubcadena con indices en las posiciones [-4:-1] es: {substring}")
+
+substring = string[:]
+print(f"\nSubcadena con indices en las posiciones [:] es: {substring}")
+
+substring = string[1:6:2]
+print(f"\nSubcadena con indices en las posiciones y salto [1:6:2] es: {substring}")
+
+substring = string[::3]
+print(f"\nSubcadena con indices en las posiciones y salto [::3] es: {substring}")
+
+
+
 
 
 
