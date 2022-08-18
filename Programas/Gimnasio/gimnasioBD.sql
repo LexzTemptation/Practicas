@@ -14,12 +14,12 @@ CREATE TABLE rooms
 CREATE TABLE fixtures
 (
     idFixture INT PRIMARY KEY AUTO_INCREMENT NOT NULL,
-    idRoom INT NOT NULL,
     roomDescription TEXT DEFAULT NULL,
     fixtureStatus TEXT DEFAULT NULL,
 
-    PRIMARY KEY (idFixture, idRoom),
-    FOREIGN KEY (idRoom) REFERENCES rooms (idRoom)
+	idRoom INT NOT NULL,
+
+	FOREIGN KEY (idRoom) REFERENCES rooms (idRoom)
 
 );
 
@@ -38,50 +38,79 @@ CREATE TABLE members
 	idMember  INT PRIMARY KEY AUTO_INCREMENT NOT NULL,
 	
 	idPerson INT NOT NULL,
-	idClass INT NOT NULL,
-	
-	PRIMARY KEY (idMember, idPerson, idClass),
-	FOREIGN KEY (idPerson) REFERENCES person (idPerson),
-	FOREIGN KEY (idClass) REFERENCES classes (idClass)
+	idClass INT NOT NULL
 );
+
+DROP TABLE members;
 
 CREATE TABLE instructor
 (
 	idInstructor INT PRIMARY KEY AUTO_INCREMENT NOT NULL,
 	degree TEXT DEFAULT NULL,
-	
+
 	idPerson INT NOT NULL,
-	idClass INT NOT NULL,
-	
-	FOREIGN KEY (idPerson) REFERENCES person (idPerson),
-	FOREIGN KEY (idClass) REFERENCES classes (idClass)
+	idClass INT NOT NULL
+
 );
 
 CREATE TABLE classes
 (
 	idClass INT PRIMARY KEY AUTO_INCREMENT NOT NULL,
 	description TEXT DEFAULT NULL,
-	
+
 	idRoom INT NOT NULL,
-	idInstructor INT NOT NULL,
+	idInstructor INT NOT NULL
 	
-	FOREIGN KEY (idRoom) REFERENCES rooms (idPerson),
-	FOREIGN KEY (idInstructor) REFERENCES instructor (idInstructor)
-)
+);
 
 CREATE TABLE courtSquash
 (
 	idCourt INT PRIMARY KEY AUTO_INCREMENT NOT NULL,
 	locationCourt TEXT DEFAULT NULL,
-	courtStatus TEXT DEFAULT NULL,
-	reservation TEXT DEFAULT NULL
-)
+	courtStatus TEXT DEFAULT NULL
+);
+
+CREATE TABLE reservations
+(
+	dayTime DATE,	
+	
+	idMember INT NOT NULL,
+	
+	FOREIGN KEY (idMember) REFERENCES members (idMember)
+);
 
 
 
+ALTER TABLE members
+ADD KEY fk_members_person (idPerson),
+ADD KEY fk_members_classes (idClass);
+
+ALTER TABLE members
+ADD CONSTRAINT fk_members_person FOREIGN KEY (idPerson) REFERENCES person (idPerson) ON DELETE CASCADE ON UPDATE CASCADE,
+ADD CONSTRAINT fk_members_classes FOREIGN KEY (idClass) REFERENCES classes (idClass) ON DELETE CASCADE ON UPDATE CASCADE;
 
 
 
+ALTER TABLE instructor
+ADD KEY fk_instructor_person (idPerson),
+ADD KEY fk_instructor_classes (idClass),;
+
+ALTER TABLE instructor
+ADD CONSTRAINT fk_members_person FOREIGN KEY (idPerson) REFERENCES person (idPerson) ON DELETE CASCADE ON UPDATE CASCADE,
+ADD CONSTRAINT fk_instructor_classes FOREIGN KEY (idClass) REFERENCES classes (idClass) ON DELETE CASCADE ON UPDATE CASCADE;
+
+
+ALTER TABLE classes
+ADD KEY fk_classes_room (idRoom),
+ADD KEY fk_classes_instructor (idInstructor);
+
+ALTER TABLE classes
+ADD CONSTRAINT fk_classes_room FOREIGN KEY (idRoom) REFERENCES rooms (idRoom) ON DELETE CASCADE ON UPDATE CASCADE,
+ADD CONSTRAINT fk_classes_instructor FOREIGN KEY (idInstructor) REFERENCES instructor (idInstructor) ON DELETE CASCADE ON UPDATE CASCADE;
+
+
+
+--DROP DATABASE gym_vro;
 
 
 
