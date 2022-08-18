@@ -1,5 +1,7 @@
 package losCodigosDeLaFlojera;
 
+public class losCodigosDeLaFlojera
+{
 /*************JAVA*********************
 /  Emmanuel Alejandro Hernandez Cornejo
 /  Universidad Tecnólogica de Léon
@@ -135,4 +137,5 @@ footer
 
  */
 
+}
 
