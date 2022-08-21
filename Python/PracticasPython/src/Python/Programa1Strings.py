@@ -465,24 +465,36 @@ print(f"\nSubcadena con indice en la posición [5] es: {substring}")
 substring = string[-4]
 print(f"\nSubcadena con indice en la posición [-4] es: {substring}")
 
+# Rango de índice 0 a 3, solo toma los valores que están en este rango inicado
 substring = string[0:3]
 print(f"\nSubcadena con indices en las posiciones [0:3] es: {substring}")
 
+# Si no hay un índice indicado entonces lo tomará como desde la posición 0
 substring = string[:3]
 print(f"\nSubcadena con indices en las posiciones [:3] es: {substring}")
 
+# Aquí buscará la subcadena desde la posición 5 hasta la última posición de la subcadena
 substring = string[5:]
 print(f"\nSubcadena con indices en las posiciones [5:] es: {substring}")
 
+# De esta forma iŕa hasta el final de la cadena y contará hacia atras con el rango indicado
+# recordando que cuenta de derecha a izquierda.
 substring = string[-4:-1]
 print(f"\nSubcadena con indices en las posiciones [-4:-1] es: {substring}")
 
+# Aquí no hay un valor establecido, así que el índice es tomado desde el inicio de
+# la subcadena y el final de la misma.
 substring = string[:]
 print(f"\nSubcadena con indices en las posiciones [:] es: {substring}")
 
+# Con tres valores de manera simultánea toma el primer número como el índice, y el segundo
+# como el rango final, el tercero hace intervalos de dos, y suma el índice por el valor indicado
+# en el mismo, pero no hay que confundir con que va a regresar la suma, el método regresará los números
+# encontrados en la subcadena
 substring = string[1:6:2]
 print(f"\nSubcadena con indices en las posiciones y salto [1:6:2] es: {substring}")
 
+# De igual forma aquí no va a tener un índice y un final, pero los intervalos los tiene establecidos
 substring = string[::3]
 print(f"\nSubcadena con indices en las posiciones y salto [::3] es: {substring}")
 

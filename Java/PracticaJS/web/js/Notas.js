@@ -618,7 +618,7 @@ for (const caracter of cadena)
 }
 
 */
-
+/*
 //*******Bucles o ciclos*******
 
 try
@@ -654,6 +654,207 @@ catch (error)
 {
     console.log(`Se produjo el siguiente error: ${error}`)
 }
+*/
+/* 
+//*******Break & continue*******
+const numeros = [1, 2, 3, 4, 5, 6, 7]
+
+for (let i = 0; i < numeros.length; i++)
+{
+    if (i === 4)
+    {
+        break;
+    }
+    console.log(numeros[i]);
+}
+
+console.log("");
+
+for (let i = 0; i < numeros.length; i++)
+{
+    if (i === 4)
+    {
+        continue; //La sentencia omite el número siguiente
+    }
+    console.log(numeros[i]);
+}
+*/
+/*
+//*******Destructuración*******
+
+// Es una nueva forma de asignar valores a variables
+// sobre todo a arreglos u objetos.
+
+const numeros = [1, 2, 3];
+
+//Se necesita guardar cada una de las pocisiones en variables diferentes
+
+let uno = numeros[0];
+let dos = numeros[1];
+let tres = numeros[2];
+
+console.log(uno, dos, tres);
+
+// Con destructuración
+
+const [one, two, three] = numeros;
+
+console.log(one, two, three);
+
+let persona =
+{
+    nombre: "Lexz",
+    apellido: "Cornejo",
+    edad : 24
+}
+
+let {nombre, apellido, edad} = persona;
+
+console.log(nombre, apellido, edad);
+// Para que la destructuración funcione en los objetos es muy importante que
+// la variable que se tiene creada se llame igual que la propiedad a la cual
+// se prente aislar en una sola variable.
+*/
+
+//*******Objetos literales*******
+
+//Los objetos literales son una nueva forma de escribir atributos y métodos
+
+let nombre = "Lexz", edad = 24;
+
+const persona = 
+{
+    name : nombre,
+    age : edad,
+
+    cantar : function()
+    {
+        console.log("Sacar la playlist")
+    }
+}
+
+console.log(persona);
+persona.cantar();
+
+//Con nuevas caracteristicas
+
+const person =
+{
+    // Lo que entiende js dinamicamente es que el nombre de la propiedad
+    // que se le quiere asignar a la nueva propiedad del objeto es igual al 
+    // nombre de la variable, que se le esta creando en este objeto,
+    // y su valor es lo que almacena en la variable del objeto anterior.
+    // Esto agiliza el proceso de escritura del objeto.
+    nombre, 
+    edad,
+    vanda : "ALV & LL",
+
+    cantar()
+    {
+        console.log("Sacar la playlist vro")
+    }
+}
+
+console.log(person);
+person.cantar();
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -664,4 +865,149 @@ catch (error)
 
 
 //********************VER RESULTADOS EN CONSOLA********************
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
