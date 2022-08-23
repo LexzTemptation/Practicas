@@ -1,3 +1,5 @@
+/* Aquí se hace el modelado de los atributos de las cards */
+
 package com.athenatechnologies.core.entity;
 
 import java.util.Date;
@@ -6,7 +8,7 @@ public class Post
 {
     private int id;
     private String description, urlImg, title;
-    private Date fecha;
+    private Date date;
 
     public int getId()
     {
@@ -48,14 +50,14 @@ public class Post
         this.title = title;
     }
 
-    public Date getFecha()
+    public Date getDate()
     {
-        return fecha;
+        return date;
     }
 
-    public void setFecha(Date fecha)
+    public void setDate(Date date)
     {
-        this.fecha = fecha;
+        this.date = date;
     }
 
     public Post(int id, String description, String urlImg, String title, java.util.Date date)
@@ -64,7 +66,7 @@ public class Post
         this.description = description;
         this.urlImg = urlImg;
         this.title = title;
-        this.fecha = date;
+        this.date = date;
     }
 
     public Post()
