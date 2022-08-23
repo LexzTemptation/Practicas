@@ -34,7 +34,7 @@ public class Pract27
 
         System.out.println();
 
-        for (int i = 0; i < nElementos; i++) 
+        for (int i = 0; i < nElementos; i++)
         {
             System.out.print(letras[i]);
         }
