@@ -46,46 +46,18 @@
     
     <div class="container">
       <div class="row">
-        <div class="col-3">
+
+        <div th:each="post : ${posts}" class="col-3">
           <div class="card" style="width: 18rem;">
-            <img th:src=@{/img/aqua.jpg} src="../static/img/aqua.jpg" alt="">
+            <img th:src="${post.urlImg}" src="../static/img/aqua.jpg" alt="">
             <div class="card-body">
-              <h5 class="card-title">Card title</h5>
-              <p class="card-text">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Reprehenderit enim dolorem tempore non excepturi expedita natus ab magni odit aliquam. Dignissimos explicabo et veniam in sunt, necessitatibus perspiciatis minus aliquid.</p>
+              <h5 th:text="${post.title}" class="card-title">Card title</h5>
+              <p th:text="${post.description}" class="card-text">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Reprehenderit enim dolorem tempore non excepturi expedita natus ab magni odit aliquam. Dignissimos explicabo et veniam in sunt, necessitatibus perspiciatis minus aliquid.</p>
               <a href="#" class="btn btn-outline-info">go somewere</a>
             </div>
           </div>
         </div>
-        <div class="col-3">
-          <div class="card" style="width: 18rem;">
-            <img th:src=@{/img/aqua.jpg} src="../static/img/aqua.jpg" alt="">
-            <div class="card-body">
-              <h5 class="card-title">Card title</h5>
-              <p class="card-text">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Reprehenderit enim dolorem tempore non excepturi expedita natus ab magni odit aliquam. Dignissimos explicabo et veniam in sunt, necessitatibus perspiciatis minus aliquid.</p>
-              <a href="#" class="btn btn-outline-info">go somewere</a>
-            </div>
-          </div>
-        </div>
-        <div class="col-3">
-          <div class="card" style="width: 18rem;">
-            <img th:src=@{/img/aqua.jpg} src="../static/img/aqua.jpg" alt="">
-            <div class="card-body">
-              <h5 class="card-title">Card title</h5>
-              <p class="card-text">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Reprehenderit enim dolorem tempore non excepturi expedita natus ab magni odit aliquam. Dignissimos explicabo et veniam in sunt, necessitatibus perspiciatis minus aliquid.</p>
-              <a href="#" class="btn btn-outline-info">go somewere</a>
-            </div>
-          </div>
-        </div>
-        <div class="col-3">
-          <div class="card" style="width: 18rem;">
-            <img th:src=@{/img/aqua.jpg} src="../static/img/aqua.jpg" alt="">
-            <div class="card-body">
-              <h5 class="card-title">Card title</h5>
-              <p class="card-text">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Reprehenderit enim dolorem tempore non excepturi expedita natus ab magni odit aliquam. Dignissimos explicabo et veniam in sunt, necessitatibus perspiciatis minus aliquid.</p>
-              <a href="#" class="btn btn-outline-info">go somewere</a>
-            </div>
-          </div>
-        </div>
+        
       </div>
     </div>
       
