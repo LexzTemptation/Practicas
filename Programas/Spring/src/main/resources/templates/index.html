@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Practicas para aprender frame SpringBoot">
     <meta name="keywords" content="Practicas, SpringBoot">
-    <meta name="author" content="Alejandro Cornejo">
+    <meta name="author" content="Athena Technologies">
     <link th:href="@{/css/bootstrap.css}" rel="stylesheet" href="../static/css/bootstrap.css">
     
 </head>
@@ -15,24 +15,24 @@
             
   </header>
 
-<nav class="navbar navbar-light" style="background-color: #e3f2fd;">
+  <nav class="navbar navbar-light" style="background-color: #e3f2fd;">
 
-    <div class="container-fluid">
-      <a class="navbar-brand" th:thref="@{index.html}">Salud virtual</a>
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse" id="navbarNav">
-        <ul class="navbar-nav">
-            <a class="nav-link" th:href="@{/}" href="#">Home</a>
-            <a class="nav-link" href="#">Features</a>
-            <a class="nav-link" href="#">Pricing</a>
-          </li>
-        </ul>
+      <div class="container-fluid">
+        <a class="navbar-brand" th:thref="@{index.html}">Salud virtual</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav">
+              <a class="nav-link" th:href="@{/}" href="#">Inicio</a>
+              <a class="nav-link" href="#">Galeria</a>
+              <a class="nav-link" href="#">Post</a>
+            </li>
+          </ul>
+        </div>
       </div>
-    </div>
 
-</nav>
+  </nav>
 
   <article>
 
@@ -49,7 +49,7 @@
     <div class="container">
       <div class="row">
 
-        <!--for-each variable temporal : ${parametro}, El parametro viene de la clase "Post"-->
+        <!--for-each = "variable temporal : ${parametro}", El parametro viene de la clase "Post"-->
         <div th:each="post : ${posts}" class="col-3"> <!--El for va a recorrer una lista-->
           <div class="card" style="width: 18rem;">
             <img th:src="${post.urlImg}" src="../static/img/aqua.jpg" alt=""> <!--La variable insertada tiene que ser igual de la clase creada,
@@ -58,8 +58,7 @@
             <div class="card-body">
               <h5 th:text="${post.title}" class="card-title">Card title</h5>
               <p th:text="${post.description}" class="card-text">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Reprehenderit enim dolorem tempore non excepturi expedita natus ab magni odit aliquam. Dignissimos explicabo et veniam in sunt, necessitatibus perspiciatis minus aliquid.</p>
-              <p th:date="${post.date}" class="card-date"></p>
-              <a href="#" class="btn btn-outline-info">go somewere</a>
+              <a th:href="@{/home/post?id=} + ${post.id}" class="btn btn-outline-info">go somewere</a>
             </div>
           </div>
         </div>
@@ -91,6 +90,7 @@
           </nav>
         </div>
       </div>
+      <p>Athena Technologies</p>
   </footer>
 
   <script th:src="@{/js/jquery/jquery-3.6.0.js}" src="../static/js/jquery-3.6.0.js"></script>

@@ -1,6 +1,6 @@
 /* Aquí se hace el modelado de los atributos de las cards */
 
-package com.athenatechnologies.core.entity;
+package com.athenatechnologies.core.model;
 
 import java.util.Date;
 
