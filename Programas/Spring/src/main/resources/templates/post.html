@@ -1,64 +1,89 @@
 <!DOCTYPE html>
 <html lang="es">
+    <head>
+        <title>:D 2</title>
 
-<head>
-  <title>:D 2</title>
+        <link th:href="@{/css/bootstrap.css}" rel="stylesheet" href="../static/css/bootstrap.css">
+        <!--Agregar al final de esta sección los scripts propios-->
+    </head>
 
-  <link th:href="@{/css/bootstrap.css}" rel="stylesheet" href="../static/css/bootstrap.css">
-  <!--Agregar al final de esta sección los scripts propios-->
-</head>
+    <body>
+        <header>
+        </header>
 
-<body>
-  <header>
-  </header>
+        <nav class="navbar navbar-light" style="background-color: #e3f2fd;">
 
-  <nav class="navbar navbar-light" style="background-color: #e3f2fd;">
-  
-    <div class="container-fluid">
-      <a class="navbar-brand" th:thref="@{index.html}">Salud virtual</a>
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
-        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse" id="navbarNav">
-        <ul class="navbar-nav">
-          <a class="nav-link" th:href="@{/}" href="#">Inicio</a>
-          <a class="nav-link" href="#">Galeria</a>
-          <a class="nav-link" href="#">Post</a>
-          </li>
-        </ul>
-      </div>
-    </div>
-  
-  </nav>
+            <div class="container-fluid">
+                <a class="navbar-brand" th:thref="@{index.html}">Salud virtual</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav">
+                        <a class="nav-link" th:href="@{/}" href="#">Inicio</a>
+                        <a class="nav-link" href="#">Galeria</a>
+                        <a class="nav-link" href="#">Post</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
 
-  <article>
+        </nav>
 
-    <div class="jumbotron" style="background-color: #e1e1e1;">
-      <h1 th:text="${post.title}" class="display-4"></h1>
-      <p th:text="${post.description}" class="lead"></p>
-      <hr class="my-4">
-      <p th:text="${post.date}"></p>
-      <a class="btn btn-outline-info" href="#" role="button">Learn more</a>
-    </div>
+        <article>
 
-  </article>
+            <div class="jumbotron" style="background-color: #e1e1e1;">
+                <h1 th:text="${post.title}" class="display-4"></h1>
+                <p th:text="${post.description}" class="lead"></p>
+                <hr class="my-4">
+                <p th:text="${post.date}"></p>
+                <a class="btn btn-outline-info" href="#" role="button">Learn more</a>
+            </div>
 
-  <section>
+        </article>
 
-  </section>
+        <section>
 
-  <aside>
-    <!--Aparte-->
+            <br>
+            
+            <div class="container">
+                <div class="row">
+            
+                    <!--for-each = "variable temporal : ${parametro}", El parametro viene de la clase "Post"-->
+                    <div th:each="post : ${posts}" class="col-3">
+                        <!--El for va a recorrer una lista-->
+                        <div class="card" style="width: 18rem;">
+                            <img th:src="${post.urlImg}" src="../static/img/aqua.jpg" alt="">
+                            <!--La variable insertada tiene que ser igual de la clase creada,
+                                                                                                              en este caso es la clase "Post", el "th:..." debe ser perteneciente
+                                                                                                              a lo que se desea mostrar-->
+                            <div class="card-body">
+                                <h5 th:text="${post.title}" class="card-title">Card title</h5>
+                                <p th:text="${post.description}" class="card-text">Lorem ipsum dolor sit, amet consectetur
+                                    adipisicing elit. Reprehenderit enim dolorem tempore non excepturi expedita natus ab magni odit
+                                    aliquam. Dignissimos explicabo et veniam in sunt, necessitatibus perspiciatis minus aliquid.</p>
+                                <a th:href="@{/home/post?id=} + ${post.id}" class="btn btn-outline-info">go somewere</a>
+                            </div>
+                        </div>
+                    </div>
+            
+                </div>
+            </div>
 
-  </aside>
+        </section>
 
-  <footer>
-    <p>Athena Technologies</p>
-  </footer>
+        <aside>
+            <!--Aparte-->
 
-  <script th:src="@{/js/jquery/jquery-3.6.0.js}" src="../static/js/jquery-3.6.0.js"></script>
-  <script th:src="@{/js/bootstrap.js}" src="../static/js/bootstrap.js"></script>
-</body>
+        </aside>
+
+        <footer>
+            <p>Athena Technologies</p>
+        </footer>
+
+        <script th:src="@{/js/jquery/jquery-3.6.0.js}" src="../static/js/jquery-3.6.0.js"></script>
+        <script th:src="@{/js/bootstrap.js}" src="../static/js/bootstrap.js"></script>
+    </body>
 
 </html>

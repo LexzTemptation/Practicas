@@ -8,6 +8,8 @@ import java.util.stream.Collectors;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.servlet.ModelAndView;
@@ -96,9 +98,10 @@ public class ControllerBasic
 	 * return null;
 	 * }
 	 */
-
+	
+	/*
 	@GetMapping(path = {"/post"})														//Ya se le está dando un parametro, por eso es falso
-	public ModelAndView getPostIndividual(@RequestParam(defaultValue = "1", name = "id", required = false) int id)
+	public ModelAndView getPostIndividual(@RequestParam(defaultValue = "1", name = "id", required = false) int id) */
 	/* @RequestParam:
 	 * 
 	 * Anotación que indica que un parámetro de método debe vincularse a un parámetro de solicitud web.
@@ -110,13 +113,48 @@ public class ControllerBasic
 	 * de consulta y datos de formulario en un solo mapa llamado "parámetros", y eso incluye el análisis
 	 * automático del cuerpo de la solicitud.
 	 */
+	/*
 	{
-		ModelAndView mav = new ModelAndView(Pages.POST);
-																//postFiltrado
+		ModelAndView mav = new ModelAndView(Pages.POST);         //postFiltrado
 		List<Post> postFiltrado = this.getPosts().stream().filter((p) -> {return p.getId() == id;}).collect(Collectors.toList());
 
 		mav.addObject("post", postFiltrado.get(0));
 
 		return mav;
 	}
+	*/
+
+	//Esta es otra forma de hacer lo de arriba solo que la ruta en el navegador sería algo así: localhost:8080/home/post/p/"num"
+	@GetMapping(path = { "/post","/post/p/{post}" })
+	public ModelAndView getPostIndividual
+	(@PathVariable(required = true, name = "post") int id)
+	{
+		ModelAndView mav = new ModelAndView(Pages.POST);
+		List<Post> postFiltrado = this.getPosts().stream().filter((p) ->
+		{
+			return p.getId() == id;
+		}).collect(Collectors.toList());
+
+		mav.addObject("post", postFiltrado.get(0));
+
+		return mav;
+	}
+
+	@GetMapping("/newPost") //se le agrego nueva ruta
+	public ModelAndView getForm()
+	{
+		return new ModelAndView("form").addObject("post", new Post()); //Se manda el formulario a form y se manda un nuevo objeto
+	}
+
+	//Esta parte se puede sustituir por un gestor de base de datos
+	@PostMapping("/addNewPost")
+	public String addNewPost(Post post, Model vro)
+	{
+		List<Post> posts = this.getPosts();
+		posts.add(post);
+		vro.addAttribute("posts", post);
+
+		return "index";
+	}
+
 }
