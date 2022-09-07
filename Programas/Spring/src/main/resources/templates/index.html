@@ -58,9 +58,11 @@
                             <div class="card-body">
                                 <h5 th:text="${post.title}" class="card-title">Card title</h5>
                                 <p th:text="${post.description}" class="card-text">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Reprehenderit enim dolorem tempore non excepturi expedita natus ab magni odit aliquam. Dignissimos explicabo et veniam in sunt, necessitatibus perspiciatis minus aliquid.</p>
-                                <a th:href="@{/home/post?id=} + ${post.id}" class="btn btn-outline-info">go somewere</a>
+                            <!--<a th:href="@{/home/post?id=} + ${post.id}" class="btn btn-outline-info">go somewere</a>-->
+                                <a th:href="@{/home/post/p/id=} + ${post.id}" class="btn btn-outline-info">go somewere</a>
                             </div>
                         </div>
+                      <br>
                     </div>
 
                 </div>

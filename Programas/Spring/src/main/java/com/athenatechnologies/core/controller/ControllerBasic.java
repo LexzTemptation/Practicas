@@ -98,7 +98,7 @@ public class ControllerBasic
 	 * return null;
 	 * }
 	 */
-	
+
 	/*
 	@GetMapping(path = {"/post"})														//Ya se le está dando un parametro, por eso es falso
 	public ModelAndView getPostIndividual(@RequestParam(defaultValue = "1", name = "id", required = false) int id) */
@@ -140,6 +140,7 @@ public class ControllerBasic
 		return mav;
 	}
 
+	//Vidio 13
 	@GetMapping("/newPost") //se le agrego nueva ruta
 	public ModelAndView getForm()
 	{
@@ -147,12 +148,13 @@ public class ControllerBasic
 	}
 
 	//Esta parte se puede sustituir por un gestor de base de datos
+	//Para crear un nuevo recurso esta el @PostMapping
 	@PostMapping("/addNewPost")
 	public String addNewPost(Post post, Model vro)
 	{
 		List<Post> posts = this.getPosts();
 		posts.add(post);
-		vro.addAttribute("posts", post);
+		vro.addAttribute("posts", posts);
 
 		return "index";
 	}
