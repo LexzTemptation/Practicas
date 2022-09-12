@@ -1,10 +1,9 @@
 package com.athenatechnologies.core.controller;
 
-import java.util.ArrayList;
-import java.util.Date;
 import java.util.List;
 import java.util.stream.Collectors;
 
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -13,6 +12,7 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.servlet.ModelAndView;
 
+import com.athenatechnologies.core.components.PostComponent;
 import com.athenatechnologies.core.configuration.Pages;
 import com.athenatechnologies.core.model.Post;
 
@@ -28,7 +28,7 @@ import com.athenatechnologies.core.model.Post;
 							 */
 public class ControllerBasic
 {
-
+	/*
 	public List<Post> getPosts()
 	{
 		ArrayList<Post> post = new ArrayList<>();
@@ -49,10 +49,11 @@ public class ControllerBasic
 				"http://localhost:8080/img/aqua.jpg",
 				"Desarrollo web Vro", new Date()));
 
-		/* */
-
 		return post;
-	}
+	}*/
+
+	@Autowired
+	private PostComponent _postComponent;
 
 	@GetMapping(path = {"/posts", "/"}) /* @GetMapping:
 										* 
@@ -69,7 +70,7 @@ public class ControllerBasic
 									 * permite devolver tanto el modelo como la vista en un valor devuelto.
 									 */
 	{
-		vro.addAttribute("posts", this.getPosts());
+		vro.addAttribute("posts", this._postComponent.getPosts());
 
 		return "index";
 	}
@@ -96,8 +97,8 @@ public class ControllerBasic
 	 * {
 	 * return null;
 	 * }
-	 */
-
+	 * /
+	
 	/*
 	@GetMapping(path = {"/post"})														//Ya se le está dando un parametro, por eso es falso
 	public ModelAndView getPostIndividual(@RequestParam(defaultValue = "1", name = "id", required = false) int id) */
@@ -129,7 +130,7 @@ public class ControllerBasic
 	(@PathVariable(required = true, name = "post") int id)
 	{
 		ModelAndView mav = new ModelAndView(Pages.POST);
-		List<Post> postFiltrado = this.getPosts().stream().filter((p) ->
+		List<Post> postFiltrado = this._postComponent.getPosts().stream().filter((p) ->
 		{
 			return p.getId() == id;
 		}).collect(Collectors.toList());
@@ -147,11 +148,11 @@ public class ControllerBasic
 	}
 
 	//Esta parte se puede sustituir por un gestor de base de datos
-	//Para crear un nuevo recurso esta el @PostMapping
+	//Para crear un nuevo recurso es´ta el @PostMapping
 	@PostMapping("/addNewPost")
 	public String addNewPost(Post post, Model vro)
 	{
-		List<Post> posts = this.getPosts();
+		List<Post> posts = this._postComponent.getPosts();
 		posts.add(post);
 		vro.addAttribute("posts", posts);
 

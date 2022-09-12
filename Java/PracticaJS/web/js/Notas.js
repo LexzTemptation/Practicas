@@ -716,6 +716,7 @@ console.log(nombre, apellido, edad);
 // se prente aislar en una sola variable.
 */
 
+/*
 //*******Objetos literales*******
 
 //Los objetos literales son una nueva forma de escribir atributos y métodos
@@ -757,97 +758,45 @@ const person =
 
 console.log(person);
 person.cantar();
+*/
 
 
+//*******Párametros REST & Operador Spread*******
+// REST: La sintaxis de los parámetros rest nos permiten representar un
+// número indefinido de argumentos como un array.
 
+function sumar (a,b, ...c)
+{
+    let resultado = a + b;
 
+    c.forEach(function(n)
+    {
+        resultado += n;
+    });
 
+    return resultado;
+}
 
+console.log(sumar(1, 2));
+console.log(sumar(1, 2, 3));
+console.log(sumar(1, 2, 3, 4));
 
 
+// Spread: La sintaxis extendida o spread syntax permite a un elemento
+// iterable tal como un arreglo o cadena ser expandido en lugares donde
+// cero o más argumentos (para llamadas de función) o elementos
+// (para Array literales) son esperados, o a un objeto ser expandido en 
+// lugares donde cero o más pares de valores clave 
+// (para literales Tipo Objeto) son esperados.
 
+const arr1 = [1,2,3,4,5,],
+arr2 = [1, 2, 3, 4, 5];
 
+console.log(arr1, arr2);
 
+const arr3 = [...arr1, ...arr2];
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+console.log(arr3);
 
 
 
@@ -865,149 +814,5 @@ person.cantar();
 
 
 //********************VER RESULTADOS EN CONSOLA********************
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 

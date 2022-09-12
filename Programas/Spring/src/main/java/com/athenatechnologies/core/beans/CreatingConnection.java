@@ -18,4 +18,26 @@ public class CreatingConnection
         return connection;
 
     }
+
+    @Bean(name = "beanConnectionTwo")
+    public ConnectionDb getConexionBdTwo()
+    {
+        ConnectionDb connection = new ConnectionDb();
+        connection.setNombreBd("springDb");
+        connection.setUrl("localhost");
+
+        return connection;
+
+    }
+
+    @Bean(name = "beanConnectionThree")
+    public ConnectionDb ConnectionDbThree()
+    {
+        ConnectionDb connection = new ConnectionDb();
+        connection.setNombreBd("springDb");
+        connection.setUrl("localhost");
+
+        return connection;
+
+    }
 }
