@@ -14,7 +14,7 @@ public class Pract28
 
         for (int i = 4; i >= 0; i--)
         {
-            System.out.print("Digite un numero");
+            System.out.print("Digite un numero: ");
             numeros[i] = feli.nextFloat();
         }
         for (float i : numeros)
