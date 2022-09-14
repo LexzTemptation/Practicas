@@ -1,13 +1,13 @@
 
 body 
 {
-    background: linear-gradient(to right, #91eae4, #86a8e7, #7f7fd5, #d3ada6);
+    background: linear-gradient(to right, #00C9F3, #86a8e7, #7f7fd5, #d3ada6);
     /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 }
 
 nav
 {
-    background-color: rgba(255, 255, 255, 0.0);
+    background-color: rgba(255, 255, 255, 0.1);
 }
 
 h5, p
@@ -22,9 +22,17 @@ p
     text-shadow: #000000 1px 1px 2px;
 }
 
-img_gym
+banner-carousel
 {
-    height: auto;
-    width: auto;
+    background-color: rgba(255, 255, 255, 0.5);
+    background: id="carouselExampleCaptions";
+    background: cover;
 }
+
+
+
+
+
+
+
 
