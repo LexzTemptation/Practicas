@@ -11,7 +11,7 @@
 var nav = document.querySelector('nav');
 window.addEventListener('scroll', function()
 {
-    if (window.pageYOffset > 650)
+    if (window.pageYOffset > 700)
     {
         nav.classList.add("bg-info", "shadow");
     }

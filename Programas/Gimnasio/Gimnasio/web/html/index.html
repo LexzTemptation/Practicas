@@ -22,14 +22,42 @@ Click nbfs://nbhost/SystemFileSystem/Templates/JSP_Servlet/Html.html to edit thi
         <!--Agregar al final de esta sección los scripts propios-->
         <link href="../css/index.css" rel="stylesheet" type="text/css"/>
     </head>
+    
     <body>
         <header>
+            <div id="carouselExampleCaptions" class="banner-carousel slide" data-bs-ride="carousel" style="max-width: 100; margin: 0 auto;">
+                <div class="carousel-inner">
+                    <div class="carousel-item carousel-image bg-img-1 active">
+                        <img id="img_gym" src="../media/img/gym1.jpg" class="d-block w-100" alt="...">
+                        <div class="carousel-caption d-none d-md-block">
+                            <h3>First slide label</h3>
+                            <p>Some representative placeholder content for the first slide.</p>
+                        </div>
+                    </div>
+                    <div class="carousel-item carousel-image bg-img-2">
+                        <img id="img_gym" src="../media/img/gym2.jpg" class="d-block w-100" alt="...">
+                        <div class="carousel-caption d-none d-md-block">
+                            <h5>Second slide label</h5>
+                            <p>Some representative placeholder content for the second slide.</p>
+                        </div>
+                    </div>
+                    <div class="carousel-item carousel-image bg-img-3">
+                        <img id="img_gym" src="../media/img/gym3.jpg" class="d-block w-100" alt="...">
+                        <div class="carousel-caption d-none d-md-block">
+                            <h5>Third slide label</h5>
+                            <p>Some representative placeholder content for the third slide.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </header>
 
-        <nav class="navbar fixed-top navbar-expand-lg navbar-info p-md-3">
+        <nav class="navbar fixed-top navbar-expand-lg navbar-info rounded header p-md-3">
             <div class="container">
-                <a class="navbar-brand" href="#"><img src="../media/img/logo.png" alt="Logo" width="25" height="25" class="d-inline-block align-text-top"> Fit Center Gym</a>
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <a class="navbar-brand" href="#"><img src="../media/img/logo.png" alt="Logo" width="25" height="25"
+                   class="d-inline-block align-text-top"> Fit Center Gym</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
                 <div class="collapse navbar-collapse" id="navbarNav">
@@ -82,70 +110,78 @@ Click nbfs://nbhost/SystemFileSystem/Templates/JSP_Servlet/Html.html to edit thi
         </nav>
 
         <article>
-            <div id="carouselExampleCaptions" class="banner-carousel slide" data-bs-ride="carousel" style="max-width: 100; margin: 0 auto;">
-                <div class="carousel-inner">
-                    <div class="carousel-item carousel-image bg-img-1 active">
-                        <img id="img_gym" src="../media/img/gym1.jpg" class="d-block w-100" alt="...">
-                        <div class="carousel-caption d-none d-md-block">
-                            <h3>First slide label</h3>
-                            <p>Some representative placeholder content for the first slide.</p>
-                        </div>
-                    </div>
-                    <div class="carousel-item carousel-image bg-img-2">
-                        <img id="img_gym" src="../media/img/gym2.jpg" class="d-block w-100" alt="...">
-                        <div class="carousel-caption d-none d-md-block">
-                            <h5>Second slide label</h5>
-                            <p>Some representative placeholder content for the second slide.</p>
-                        </div>
-                    </div>
-                    <div class="carousel-item carousel-image bg-img-3">
-                        <img id="img_gym" src="../media/img/gym3.jpg" class="d-block w-100" alt="...">
-                        <div class="carousel-caption d-none d-md-block">
-                            <h5>Third slide label</h5>
-                            <p>Some representative placeholder content for the third slide.</p>
+            <div class="container marketing">
+                <div class="row py-5 text-center">
+                    <div class="col-12 py-5">
+                        <h1 class="py-1 fw-bold display-3">Nosotros</h1>
+                        <p1 class="lead">Lorem ipsum, dolor sit amet consectetur adipisicing elit. 
+                            Mollitia, nisi suscipit omnis autem, praesentium vero veritatis 
+                            officiis perspiciatis dolorum consectetur impedit eius repellat 
+                            inventore voluptates cum eligendi temporibus ut fugit.
+                        </p1>
+                        <br><br><br>
+                        <div class="row lead">
+                            <div class="col-lg-4 ">
+                                <img class="rounded-circle" src="media/img/mision.jpg" alt="Generic placeholder image" width="140"
+                                    height="140">
+                                <h2 class="my-4 fw-bold display-6">Misi&oacute;n</h2>
+                                <p>
+                                    Poder, con nuestro conocimiento brindar una atención de calidad a nuestros clientes. Somos una
+                                    organizaci&oacute;n comprometida con la calidad en nuestros servicios, siguiendo una filosof&iacute;a 
+                                    de trabajo bien definida.
+                                </p>
+                            </div>
+
+                            <div class="col-lg-4">
+                                <img class="rounded-circle" src="media/img/vision.jpg" alt="Generic placeholder image" width="140"
+                                    height="140">
+                                <h2 class="my-4 fw-bold display-6">Visi&oacute;n</h2>
+                                <p>Nuestra visi&oacute;n es lograr ser una empresa sumamente importante en lo que hacemos,
+                                    adem&aacute;s de lograr tener una sucursal como m&iacute;nimo en cada una de las ciudades m&aacute;s
+                                    importantes del mundo.
+                                </p>
+                            </div>
+                            <div class="col-lg-4">
+                                <img class="rounded-circle" src="media/img/objetivo.jpg" alt="Generic placeholder image" width="140"
+                                    height="140">
+                                <h2 class="my-4 fw-bold display-6">Objetivo</h2>
+                                <p>Nuestro objetivo como empresa es ser uno de los l&iacute;deres y referentes mundiales en el
+                                concepto de los Spa’s, adem&aacute;s de ser una empresa siempre innovadora.</p>
+                            </div>
                         </div>
                     </div>
                 </div>
+            </div>
+            
+            <div class="container my-5 d-grip gap-5">
+                <div class="p-5 border">
+                    Lorem ipsum, dolor sit amet consectetur adipisicing elit. Sint,
+                    expedita dignissimos quibusdam iure quaerat maiores rerum soluta,
+                    totam laboriosam est eos asperiores voluptate optio magni doloribus
+                    fuga delectus? Reiciendis, minus?
+                </div>
+            </div>
+
+            <div class="container my-5 d-grip gap-5">
+                <div class="p-5 border">
+                    Lorem ipsum, dolor sit amet consectetur adipisicing elit. Sint,
+                    expedita dignissimos quibusdam iure quaerat maiores rerum soluta,
+                    totam laboriosam est eos asperiores voluptate optio magni doloribus
+                    fuga delectus? Reiciendis, minus?
+                </div>
+            </div>
+            <div class="container my-5 d-grip gap-5">
+                <div class="p-5 border">
+                    Lorem ipsum, dolor sit amet consectetur adipisicing elit. Sint,
+                    expedita dignissimos quibusdam iure quaerat maiores rerum soluta,
+                    totam laboriosam est eos asperiores voluptate optio magni doloribus
+                    fuga delectus? Reiciendis, minus?
                 </div>
             </div>
         </article>
 
         <section>
-            <div class="container my-5 d-grip gap-5">
-                <div class="p-2">
-                    <h1 class="text-center">Nosotros</h1>
-                    <p1>Lorem ipsum, dolor sit amet consectetur adipisicing elit. 
-                        Mollitia, nisi suscipit omnis autem, praesentium vero veritatis 
-                        officiis perspiciatis dolorum consectetur impedit eius repellat 
-                        inventore voluptates cum eligendi temporibus ut fugit.
-                    </p1>
-                </div>
-            </div>
-            <div class="container my-5 d-grip gap-5">
-                <div class="p-5 border">
-                    Lorem ipsum, dolor sit amet consectetur adipisicing elit. Sint,
-                    expedita dignissimos quibusdam iure quaerat maiores rerum soluta,
-                    totam laboriosam est eos asperiores voluptate optio magni doloribus
-                    fuga delectus? Reiciendis, minus?
-                </div>
-            </div>
-
-            <div class="container my-5 d-grip gap-5">
-                <div class="p-5 border">
-                    Lorem ipsum, dolor sit amet consectetur adipisicing elit. Sint,
-                    expedita dignissimos quibusdam iure quaerat maiores rerum soluta,
-                    totam laboriosam est eos asperiores voluptate optio magni doloribus
-                    fuga delectus? Reiciendis, minus?
-                </div>
-            </div>
-            <div class="container my-5 d-grip gap-5">
-                <div class="p-5 border">
-                    Lorem ipsum, dolor sit amet consectetur adipisicing elit. Sint,
-                    expedita dignissimos quibusdam iure quaerat maiores rerum soluta,
-                    totam laboriosam est eos asperiores voluptate optio magni doloribus
-                    fuga delectus? Reiciendis, minus?
-                </div>
-            </div>
+            
         </section>
 
         <aside> <!--Aparte-->
