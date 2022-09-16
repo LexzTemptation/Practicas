@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <title>:D 3</title>
+  <meta charset="UTF-8">
+  <link th:href="@{/css/bootstrap.css}" rel="stylesheet" href="../static/css/bootstrap.css">
+  <link th:href="@{/css/all.css}" rel="stylesheet" href="../static/css/all.css">
+  <link th:href="@{/css/fontawesome.css}" rel="stylesheet" href="../static/css/fontawesome.css">
+
+  <!--Agregar al final de esta sección los scripts propios-->
+  <link rel="stylesheet" href="../static/estilos.css">
+
+</head>
+
+<body>
+  <header>
+  </header>
+
+  <nav class="navbar navbar-expand-lg" style="background-color: #e3f2fd;">
+
+    <a class="navbar-brand" href="#">Apendiendo SpringBoot</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav">
+          <a class="nav-link" th:href="@{/}" href="#">Inicio</a>
+          <a class="nav-link" href="#">Galeria</a>
+          <a class="nav-link" href="#">Post</a>
+      </ul>
+    </div>
+
+  </nav>
+
+  <article>
+    
+  </article>
+
+  <section>
+
+    <div>
+      <div class="row">
+        <div class="col-12 mt-5">
+          <h1 style="width: 50vw; margin-left : 25vw;">New Post</h1>
+        </div>
+        <div class="col-6">
+          <form style="width: 50vw; margin-left : 25vw;" class="row g-3" th:action="@{/home/addNewPost}" method="post" th:object="${post}">
+
+              <div class="col-md-6">
+                <label for="id">Id</label>
+                <input th:field="*{id}" th:value="*{id}" type="number" class="form-control" id="id" placeholder="0">
+              </div>
+
+              <div class="col-md-6">
+                <label for="id">Descripción</label>
+                <input th:field="*{description}" th:value="*{description}" type="text" class="form-control" id="id" placeholder="Descripción">
+              </div>
+
+              <div class="col-md-6">
+                <label for="id">Imagen</label>
+                <input th:field="*{urlImg}" th:value="*{urlImg}" type="text" class="form-control" id="id" placeholder="http://localhost:8080/img/aqua.jpg">
+              </div>
+
+              <div class="col-md-6">
+                <label for="id">Titulo</label>
+                <input th:field="*{title}" th:value="*{title}" type="text" class="form-control" id="id" placeholder="Titulo">
+              </div>
+
+            <div class="col-12">
+              <button type="submit" class="btn btn-outline-success">Agregar</button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+
+  </section>
+
+  <aside>
+    <!--Aparte-->
+
+  </aside>
+
+  <footer>
+
+    <div class="container">
+      <div class="row">
+        <div class="col-12 mt-5">
+          <p style="text-align:center;">Athena Technologies</p>
+        </div>
+      </div>
+    </div>
+    
+  </footer>
+
+  <script th:src="@{/js/jquery/jquery-3.6.0.js}" src="../static/js/jquery-3.6.0.js"></script>
+  <script th:src="@{/js/bootstrap.js}" src="../static/js/bootstrap.js"></script>
+  <script th:src="@{/js//js/all.js}" src="../static/js/all.js"></script>
+  <script th:src="@{/js/fontawesome.js}" src="../static/js/fontawesome.js"></script>
+</body>
+
+</html>

@@ -10,7 +10,7 @@ CREATE TABLE rooms
     locationRoom TEXT DEFAULT NULL
 );
 
-CREATE TABLE room_type
+CREATE TABLE roomType
 (
 	cardio TEXT DEFAULT NULL,
 	general TEXT DEFAULT NULL,
@@ -125,10 +125,10 @@ ADD CONSTRAINT fk_reservations_member FOREIGN KEY (idMember) REFERENCES members 
 ADD CONSTRAINT fk_reservations_court FOREIGN KEY (idCourt) REFERENCES courtSquash (idCourt) ON DELETE CASCADE ON UPDATE CASCADE;
 
 --Añadiendo claves foraneas a tabla reservations
-ALTER TABLE room_type
+ALTER TABLE roomType
 ADD KEY fk_roomType_room (idRoom);
 
-ALTER TABLE room_type
+ALTER TABLE roomType
 ADD CONSTRAINT fk_roomType_room FOREIGN KEY (idRoom) REFERENCES rooms (idRoom) ON DELETE CASCADE ON UPDATE CASCADE;
 
 --DROP DATABASE gym_vro;

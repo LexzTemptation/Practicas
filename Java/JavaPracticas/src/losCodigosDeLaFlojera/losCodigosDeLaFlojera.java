@@ -62,9 +62,13 @@ public static void main(String[] args)
         <meta name="description" content="Practicas de Aplicaciones web orientadas a servicios">
         <meta name="keywords" content="Practicas orientadas a servicios">
         <meta name="author" content="Alejandro Cornejo">
+        <!-- Bootstrap CSS -->
         <link href="style/bootstrap/css/bootstrap.min.css" rel="stylesheet" type="text/css"/>
+        <!-- Font Awesome CSS -->
         <link href="style/font_awesome_5_15_3/css/all.css" rel="stylesheet" type="text/css"/>
+        <!-- Sweet Alert CSS -->
         <link href="style/sweetalert2/sweetalert2.css" rel="stylesheet" type="text/css"/>
+    
         <!--Agregar al final de esta sección los scripts propios-->
 
         <header>
@@ -92,9 +96,13 @@ public static void main(String[] args)
         </footer>
 
         <!--Agregar al final del body los scripts propios
+        <!-- JQuery JS-->
         <script src="js/jquery/jquery-3.6.0.min.js" type="text/javascript"></script>
+        <!-- Bootstrap JS-->
         <script src="style/bootstrap/js/bootstrap.js" type="text/javascript"></script>
+        <!-- Font Awesome JS-->
         <script src="style/font_awesome_5_15_3/js/all.js" type="text/javascript"></script>
+        <!-- Sweet Alert JS-->
         <script src="style/sweetalert2/sweetalert2.all.js" type="text/javascript"></script>
         <!-- scripts propios -->
 
