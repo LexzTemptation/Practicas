@@ -23,7 +23,7 @@ public class Pract22Nota
             {
                 contMayores18++;
             }
-
+            
             if( altura >= 1.75)
             {
                 contAltMay175++;
