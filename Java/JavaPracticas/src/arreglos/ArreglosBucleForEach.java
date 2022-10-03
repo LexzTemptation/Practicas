@@ -8,7 +8,7 @@ public class ArreglosBucleForEach
     {
         System.out.println();
 
-        String[] nombres ={ "Alejandro", "Maria", "Luisa", "Juan", "Narcisa", "Luis", "Robert", "Flor", "Jessica" };
+        String[] nombres = { "Alejandro", "Maria", "Luisa", "Juan", "Narcisa", "Luis", "Robert", "Flor", "Jessica" };
 
         for (int i = 0; i < nombres.length; i++)  // length regresa los elementos del arreglo.
         {
@@ -22,7 +22,7 @@ public class ArreglosBucleForEach
         // nombreDelElemento: Este puede ser cualquier nombre, pero por tradicion se sigue usando "i" de "iterador"
 
         /*
-        for(TipoDeDatoDelArreglo nombreDelElemento:nombreDelArreglo)
+        for(TipoDeDatoDelArreglo nombreDelElemento : nombreDelArreglo)
         {
             System.out.println("Nombres: " + nombreDelElemento);
         }
@@ -30,7 +30,7 @@ public class ArreglosBucleForEach
         
         for (String i : nombres)
         {
-            System.out.println("Nombres: " + i);
+            System.out.println("Nombre: " + i);
         }
 
         System.out.println();
