@@ -10,14 +10,17 @@ public class Pract28
         System.out.println();
         Scanner feli = new Scanner(System.in);
 
-        float numeros[] = new float[5];
+        int numeros[] = new int[5];
 
         for (int i = 4; i >= 0; i--)
         {
             System.out.print("Digite un numero: ");
-            numeros[i] = feli.nextFloat();
+            numeros[i] = feli.nextInt();
         }
-        for (float i : numeros)
+
+        System.out.println("");
+
+        for (int i : numeros)
         {
             System.out.println(i);
         }
