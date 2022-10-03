@@ -10,7 +10,7 @@ public class Pract29
         System.out.println();
         Scanner feli = new Scanner(System.in);
 
-        System.out.println("Ni idea de que iba a hacer");
+            
 
         feli.close();
         System.out.println();
