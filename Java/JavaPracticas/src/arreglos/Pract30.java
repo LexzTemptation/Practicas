@@ -1,9 +1,9 @@
 
 /*
- * Pedir 12 nuemros para dos tablas, guardar esos numeros en dos arrys, y
+ * Pedir 12 numeros para dos tablas, guardar esos numeros en dos arrays, y
  * mezclarlos en un tercer array
  * de la siguiente forma: 3 numeros del primero,3 del segundo, 3 del primero, 3
- * desl segundo etc ...
+ * del segundo etc ...
  */
 
 package arreglos;
