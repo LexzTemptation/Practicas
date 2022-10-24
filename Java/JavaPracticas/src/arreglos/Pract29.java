@@ -18,7 +18,7 @@ public class Pract29
 
         for (int i = 0; i < 10; i++)
         { // for para rellenar el arreglo de numeros
-            System.out.print("Ingresa el numero " + (i + 1) + ": ");
+            System.out.print("Ingresa el valor " + (i + 1) + ": ");
             numeros[i] = feli.nextInt();
         }
 

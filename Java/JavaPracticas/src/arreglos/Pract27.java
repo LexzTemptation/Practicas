@@ -24,7 +24,7 @@ public class Pract27
 
         for (int i = 0; i < letras.length; i++)
         {
-            System.out.print("Digite los elementos del arreglo: ");
+            System.out.print((i + 1) + ".- Digite los elementos del arreglo: ");
             letras[i] = feli.next().charAt(0);
         }
 
