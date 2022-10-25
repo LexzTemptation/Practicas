@@ -1,10 +1,10 @@
-package com.athtec;
+package com.org.athtec.core.SpringUdemy1;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
 
 @SpringBootTest
-class SpringUdem1ApplicationTests {
+class SpringUdemy1ApplicationTests {
 
 	@Test
 	void contextLoads() {
