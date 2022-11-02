@@ -16,7 +16,8 @@ public class ControladorInicio
     @GetMapping("/")
     public String inicio()
     {
-        log.info("Ejecutando controlador REST");
+        log.info("Ejecutando controlador Spring MVC");
+        /*return "html/index.html";*/
         return "index";
 
 
