@@ -1,0 +1,24 @@
+{
+    "configurations": [
+        {
+            "type": "java",
+            "name": "Spring Boot-MusicRoomApplication<music-room>",
+            "request": "launch",
+            "cwd": "${workspaceFolder}",
+            "mainClass": "com.javeros.musicroom.MusicRoomApplication",
+            "projectName": "music-room",
+            "args": "",
+            "envFile": "${workspaceFolder}/.env"
+        },
+        {
+            "type": "java",
+            "name": "Spring Boot-MusicStoneApplication<music-stone>",
+            "request": "launch",
+            "cwd": "${workspaceFolder}",
+            "mainClass": "com.javeros.musicstone.MusicStoneApplication",
+            "projectName": "music-stone",
+            "args": "",
+            "envFile": "${workspaceFolder}/.env"
+        }
+    ]
+}

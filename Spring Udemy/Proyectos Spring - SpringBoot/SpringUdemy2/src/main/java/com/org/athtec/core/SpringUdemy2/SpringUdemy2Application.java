@@ -12,6 +12,7 @@ public class SpringUdemy2Application
 	public static void main(String[] args)
 	{
 		SpringApplication.run(SpringUdemy2Application.class, args);
+		/*El metodo "run" ejecuta el servidor "apache tomcat" que el programa tiene embebido */
 	}
 
 }

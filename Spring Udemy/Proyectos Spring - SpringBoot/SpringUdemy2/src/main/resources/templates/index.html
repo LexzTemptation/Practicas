@@ -1,5 +1,7 @@
 <!DOCTYPE html>
-<html xmlns:th="http://www.thymeleaf.org"></html>
+<html xmlns:th="http://www.thymeleaf.org"></html> <!--Básicamente, cada elemento (o atributo) en XML
+                                                    pertenece a un espacio de nombres, a modo de "calificación" 
+                                                    del nombre del elemento.-->
     <head>
         <title>Inicio pro</title>
         
@@ -19,7 +21,11 @@
     <body>
 
         <h1>Inicio pro</h1>
-        <p th:text="hey"></p>
+        <p th:text="fierro"></p> <!--Esto es diferente, ya que el mensaje esta dentro de la etiqueta, no entre de ella-->
+        <p th:text="${mensaje}"></p> <!--Para acceder al valor de las variables del controlador se utiiza el "expression language"
+                                        su sintaxis es: "${variable}", (similar al de JSP, no igual)-->
+        <p th:text="${saludo}"></p>
+
         
 
         
