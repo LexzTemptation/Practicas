@@ -1,4 +1,6 @@
-package com.org.athtec.core.SpringUdemy2.domain;
+package com.org.athtec.core.SpringUdemy3.domain;
+
+import javax.persistence.*;
 
 import lombok.Data;
 
@@ -16,6 +18,8 @@ import lombok.Data;
        * -Debe tener un constructor público sin argumentos.
        * -Todas las propiedades en java bean deben ser privadas con métodos getters y
        * setter públicos. */
+@Entity
+@Table(name = "persona")
 public class Persona
 {
     private String nombre, apellido, email, telefono;
