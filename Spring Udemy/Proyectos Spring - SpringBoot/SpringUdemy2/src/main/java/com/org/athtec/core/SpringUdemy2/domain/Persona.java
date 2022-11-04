@@ -1,4 +1,4 @@
-package com.org.athtec.core.SpringUdemy2;
+package com.org.athtec.core.SpringUdemy2.domain;
 
 import lombok.Data;
 
