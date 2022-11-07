@@ -27,7 +27,7 @@ import lombok.extern.slf4j.Slf4j;
 public class ControladorInicio
 {
     @Autowired/* Similar a la notación de "@Inject" */
-    private PersonaDao PersonaDao;
+    private PersonaDao personaDao;
 
     /*  Con lo siguiente se está compartiendo información del MODELO hacia la VISTA */
     @GetMapping("/")
@@ -38,7 +38,7 @@ public class ControladorInicio
                                         Esta clase tiene la función de agregar información que se quiere compartir 
                                         con la vista (index.html)*/
     {
-        var personas = PersonaDao.findAll();
+        var personas = personaDao.findAll();
 
         log.info("Ejecutando controlador Spring MVC");
         model.addAttribute("personas", personas);
