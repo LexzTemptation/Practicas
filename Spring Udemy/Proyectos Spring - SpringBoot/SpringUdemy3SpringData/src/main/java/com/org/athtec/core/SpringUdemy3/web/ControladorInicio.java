@@ -1,15 +1,20 @@
 /*2*/
 package com.org.athtec.core.SpringUdemy3.web;
 
-import java.util.ArrayList;
-import java.util.Arrays;
 
-import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 
-import com.org.athtec.core.SpringUdemy3.domain.Persona;
+import com.athtec.core.SpringUdemy3.dao.PersonaDao;
+
+/* import java.util.ArrayList;
+import java.util.Arrays; */
+import org.springframework.beans.factory.annotation.Autowired;
+
+/* import com.org.athtec.core.SpringUdemy.PersonaDao; */
+
+/* import com.org.athtec.core.SpringUdemy3.domain.Persona; */
 
 import lombok.extern.slf4j.Slf4j;
 
@@ -21,6 +26,9 @@ import lombok.extern.slf4j.Slf4j;
                 independiente de la implementación real. */
 public class ControladorInicio
 {
+    @Autowired/* Similar a la notación de "@Inject" */
+    private PersonaDao PersonaDao;
+
     /*  Con lo siguiente se está compartiendo información del MODELO hacia la VISTA */
     @GetMapping("/")
     public String inicio(Model model)/* Aquí se recibía el objero http servlet request y response, y utlizando
@@ -30,8 +38,10 @@ public class ControladorInicio
                                         Esta clase tiene la función de agregar información que se quiere compartir 
                                         con la vista (index.html)*/
     {
+        var personas = PersonaDao.findAll();
+
         log.info("Ejecutando controlador Spring MVC");
-        /* model.addAttribute("personas", personas); */
+        model.addAttribute("personas", personas);
         return "index";
 
 
