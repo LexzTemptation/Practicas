@@ -1,5 +1,5 @@
 /*2*/
-package com.org.athtec.core.SpringUdemy;
+package com.org.athtec.core.SpringUdemy.web;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
