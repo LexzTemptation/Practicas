@@ -28,6 +28,6 @@ public class Persona implements Serializable
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private long idPersona;
+    private long id_persona;
     private String nombre, apellido, email, telefono;
 }
