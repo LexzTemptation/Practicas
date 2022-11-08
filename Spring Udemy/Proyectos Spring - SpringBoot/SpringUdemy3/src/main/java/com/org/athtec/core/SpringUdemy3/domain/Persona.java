@@ -3,7 +3,6 @@ package com.org.athtec.core.SpringUdemy3.domain;
 import java.io.Serializable;
 
 import javax.persistence.*;
-import javax.persistence.Table;
 
 import lombok.Data;
 

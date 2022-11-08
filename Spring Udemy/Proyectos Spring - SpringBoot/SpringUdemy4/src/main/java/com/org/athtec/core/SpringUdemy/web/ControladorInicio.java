@@ -6,7 +6,7 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 
-import com.org.athtec.core.SpringUdemy3.dao.PersonaDao;
+import com.org.athtec.core.SpringUdemy.servicio.PersonaService;
 
 import lombok.extern.slf4j.Slf4j;
 
@@ -20,7 +20,7 @@ import lombok.extern.slf4j.Slf4j;
 public class ControladorInicio
 {
     @Autowired
-    private PersonaDao personaDao;
+    private PersonaService personaService;
 
     /*
      * Con lo siguiente se está compartiendo información del MODELO hacia la VISTA
@@ -35,7 +35,7 @@ public class ControladorInicio
                                       * con la vista (index.html)
                                       */
     {
-        var personas = personaDao.findAll();
+        var personas = personaService.listarPersonas();
 
         log.info("Ejecutando controlador Spring MVC");
         /* return "html/index.html"; */
