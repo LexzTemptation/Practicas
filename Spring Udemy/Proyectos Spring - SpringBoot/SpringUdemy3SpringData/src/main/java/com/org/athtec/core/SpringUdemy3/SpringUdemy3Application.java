@@ -4,7 +4,9 @@ package com.org.athtec.core.SpringUdemy3;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.context.annotation.ComponentScan;
 
+@ComponentScan({"com.athtec.core.SpringUdemy3"})
 @SpringBootApplication
 public class SpringUdemy3Application
 {
