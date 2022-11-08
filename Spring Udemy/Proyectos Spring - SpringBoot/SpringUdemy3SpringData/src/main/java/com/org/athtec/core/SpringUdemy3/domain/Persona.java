@@ -27,7 +27,7 @@ import lombok.Data;
        * -Todas las propiedades en java bean deben ser privadas con métodos getters y
        * setter públicos. */
 @Entity /* Especifica que la clase es una entidad. Esta anotación se aplica a la clase de entidad.*/
-/* @Table(name = "persona") */ /* Está notación no es necesaria, pero puede causar errores en otros SO.
+@Table(name = "persona") /* Está notación no es necesaria, pero puede causar errores en otros SO.
                             De cualquier forma, si la clase de java no se escribe igual que en la
                             BD puede provocar que los qery tengan errores.
                             Sintaxis: @Table(name = "nombre de de la tabla")*/
