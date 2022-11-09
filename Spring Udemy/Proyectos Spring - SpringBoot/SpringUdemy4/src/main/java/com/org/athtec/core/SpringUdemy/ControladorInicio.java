@@ -1,12 +1,12 @@
 /*2*/
-package com.org.athtec.core.SpringUdemy.web;
+package com.org.athtec.core.SpringUdemy;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 
-import com.org.athtec.core.SpringUdemy.servicio.PersonaService;
+import com.org.athtec.core.SpringUdemy3.dao.PersonaDao;
 
 import lombok.extern.slf4j.Slf4j;
 
@@ -20,7 +20,7 @@ import lombok.extern.slf4j.Slf4j;
 public class ControladorInicio
 {
     @Autowired
-    private PersonaService personaService;
+    private PersonaDao personaDao;
 
     /*
      * Con lo siguiente se está compartiendo información del MODELO hacia la VISTA
@@ -35,7 +35,7 @@ public class ControladorInicio
                                       * con la vista (index.html)
                                       */
     {
-        var personas = personaService.listarPersonas();
+        var personas = personaDao.findAll();
 
         log.info("Ejecutando controlador Spring MVC");
         /* return "html/index.html"; */
