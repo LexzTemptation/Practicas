@@ -8,6 +8,19 @@
             "mainClass": "com.org.athtec.core.SpringUdemy2.SpringUdemy2Application",
             "projectName": "SpringUdemy2",
             "args": "",
+            "envFile": "${workspaceFolder}/.env",
+            "noDebug": true,
+            "__progressId": "70fcbb67-0bbd-425f-963a-f0a95cb6717e",
+            "vmArgs": " -Dcom.sun.management.jmxremote -Dcom.sun.management.jmxremote.port=38727 -Dcom.sun.management.jmxremote.authenticate=false -Dcom.sun.management.jmxremote.ssl=false -Dspring.jmx.enabled=true -Djava.rmi.server.hostname=localhost -Dspring.application.admin.enabled=true -Dspring.boot.project.name=SpringUdemy2"
+        },
+        {
+            "type": "java",
+            "name": "Spring Boot-SpringUdemy1Application<SpringUdemy1>",
+            "request": "launch",
+            "cwd": "${workspaceFolder}",
+            "mainClass": "com.org.athtec.core.SpringUdemy1.SpringUdemy1Application",
+            "projectName": "SpringUdemy1",
+            "args": "",
             "envFile": "${workspaceFolder}/.env"
         }
     ]
