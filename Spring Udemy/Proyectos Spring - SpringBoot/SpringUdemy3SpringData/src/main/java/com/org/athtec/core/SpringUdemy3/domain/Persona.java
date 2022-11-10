@@ -38,6 +38,6 @@ public class Persona implements Serializable /*  */
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private long id_persona; // Llave primaria de la tabla en la bd correspondiente a la clase.
+    private long idPersona; // Llave primaria de la tabla en la bd correspondiente a la clase.
     private String nombre, apellido, email, telefono;
 }
