@@ -28,21 +28,8 @@
     <a th:href="@{/}">Inicio Pro</a>
     <br>
     <form th:action="@{/guardar}" method="post" th:object="${persona}">
-        <label for="nombre">Nombre:</label>
-        <input type="text" name="nombre" th:field="*{nombre}" />
-        <br><br>
-        <label for="apellido">Apellido:</label>
-        <input type="text" name="apellido" th:field="*{apellido}" />
-        <br><br>
-        <label for="email">Email:</label>
-        <input type="text" name="email" th:field="*{email}" />
-        <br><br>
-        <label for="telefono">Telefono:</label>
-        <input type="text" name="telefono" th:field="*{telefono}" />
-        <br><br>
-        <input class="btn btn-outline-success" type="submit" name="guardar" value="Guardar" />
 
-        <!-- <div class="mb-3 row">
+        <div class="mb-3 row">
             <label class="col-sm-1 col-form-label" for="id">Id:</label>
             <div class="col-sm-5">
                 <input class="form-control" type="text" name="id" th:field="*{id_persona}" />
@@ -74,9 +61,23 @@
         </div>
         <div class="mb-3 row">
         <div class="col-sm-5">
-            <input class="form-control" type="submit" name="guardar" value="Guardar"/>
-        </div> -->
+            <input class="btn btn-outline-success" type="submit" name="guardar" value="Guardar"/>
+        </div>
     </form>
+
+    <!-- <label for="nombre">Nombre:</label>
+    <input type="text" name="nombre" th:field="*{nombre}" />
+    <br><br>
+    <label for="apellido">Apellido:</label>
+    <input type="text" name="apellido" th:field="*{apellido}" />
+    <br><br>
+    <label for="email">Email:</label>
+    <input type="text" name="email" th:field="*{email}" />
+    <br><br>
+    <label for="telefono">Telefono:</label>
+    <input type="text" name="telefono" th:field="*{telefono}" />
+    <br><br>
+    <input class="btn btn-outline-success" type="submit" name="guardar" value="Guardar" /> -->
 
 </body>
 
