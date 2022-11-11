@@ -17,13 +17,14 @@ public class PersonaServiceImpl implements PersonaService
     private PersonaDao personaDao;
 
     @Override
-    @Transactional
+    @Transactional(readOnly = true)
     public List<Persona> listarPersonas()
     {
         return (List<Persona>) personaDao.findAll();
     }
 
     @Override
+    @Transactional
     public void guardar(Persona persona)
     {
         personaDao.save(persona);
@@ -31,6 +32,7 @@ public class PersonaServiceImpl implements PersonaService
     }
 
     @Override
+    @Transactional
     public void eliminar(Persona persona)
     {
         personaDao.delete(persona);
@@ -38,6 +40,7 @@ public class PersonaServiceImpl implements PersonaService
     }
 
     @Override
+    @Transactional(readOnly = true)
     public Persona encontrarPersona(Persona persona)
     {
         return personaDao.findById(persona.getId_persona()).orElse(null);

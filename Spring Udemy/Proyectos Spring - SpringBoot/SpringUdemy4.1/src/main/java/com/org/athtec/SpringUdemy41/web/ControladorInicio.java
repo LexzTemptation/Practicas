@@ -52,6 +52,6 @@ public class ControladorInicio
     public String guardar(Persona persona)
     {
         personaService.guardar(persona);
-        return "redirec:/";
+        return "index";
     }
 }
