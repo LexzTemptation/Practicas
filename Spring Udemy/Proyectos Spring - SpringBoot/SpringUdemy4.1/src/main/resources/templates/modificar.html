@@ -30,9 +30,9 @@
     <form th:action="@{/guardar}" method="post" th:object="${persona}">
 
         <div class="mb-3 row">
-            <label class="col-sm-1 col-form-label" for="id">Id:</label>
+            <!-- <label class="col-sm-1 col-form-label" for="id">Id:</label> -->
             <div class="col-sm-5">
-                <input class="form-control" type="text" name="id" th:field="*{id_persona}" />
+                <input class="form-control" type="hidden" name="id" th:field="*{id_persona}" />
             </div>
         </div>
         <div class="mb-3 row">
