@@ -39,5 +39,12 @@ INSERT INTO persona VALUES
     "38456583"
 );
 
-
+INSERT INTO persona VALUES 
+(
+    default, 
+    "Paola", 
+    "Fran", 
+    "pfra@yahoo.com", 
+    "56345347"
+);
 

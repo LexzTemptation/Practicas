@@ -41,6 +41,8 @@
                         <th>Apellido </th>
                         <th>Email </th>
                         <th>Teléfono </th>
+                        <th>Editar </th>
+                        <th>Eliminar </th>
                     </tr>
                 </thead>
                 <tbody>
@@ -50,6 +52,10 @@
                         <td class="table-success" th:text="${persona.apellido}">Mostrar Apellido </td>
                         <td class="table-success" th:text="${persona.email}">Mostrar Email </td>
                         <td class="table-success" th:text="${persona.telefono}">Mostrar Teléfono</td>
+                        <td class="table-success" > <a th:href="@{/editar/} + ${persona.id_persona}" th:text="Editar" /></td>
+                        <!-- <td class="table-success" > <a th:href="@{/eliminar/} + ${persona.id_persona}" th:text="Eliminar" /></td> -->
+                        <td class="table-success"> <a th:href="@{/eliminar(id_persona=${persona.id_persona})}" th:text="Eliminar" /></td>
+                        <!-- Forma query param -->
                     </tr>
                 </tbody>
             </table>

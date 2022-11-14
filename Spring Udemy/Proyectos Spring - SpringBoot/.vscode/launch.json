@@ -31,7 +31,8 @@
             "mainClass": "com.org.athtec.SpringUdemy4.SpringUdemy4Application",
             "projectName": "SpringUdemy4",
             "args": "",
-            "envFile": "${workspaceFolder}/.env"
+            "envFile": "${workspaceFolder}/.env",
+            "vmArgs": " -Dcom.sun.management.jmxremote -Dcom.sun.management.jmxremote.port=33851 -Dcom.sun.management.jmxremote.authenticate=false -Dcom.sun.management.jmxremote.ssl=false -Dspring.jmx.enabled=true -Djava.rmi.server.hostname=localhost -Dspring.application.admin.enabled=true -Dspring.boot.project.name=SpringUdemy4"
         },
         {
             "type": "java",
@@ -40,6 +41,17 @@
             "cwd": "${workspaceFolder}",
             "mainClass": "com.org.athtec.SpringUdemy41.SpringUdemy4Application",
             "projectName": "SpringUdemy4.1",
+            "args": "",
+            "envFile": "${workspaceFolder}/.env",
+            "vmArgs": " -Dcom.sun.management.jmxremote -Dcom.sun.management.jmxremote.port=35673 -Dcom.sun.management.jmxremote.authenticate=false -Dcom.sun.management.jmxremote.ssl=false -Dspring.jmx.enabled=true -Djava.rmi.server.hostname=localhost -Dspring.application.admin.enabled=true -Dspring.boot.project.name=SpringUdemy4.1"
+        },
+        {
+            "type": "java",
+            "name": "Spring Boot-SpringUdemy31Application<SpringUdemy3.1>",
+            "request": "launch",
+            "cwd": "${workspaceFolder}",
+            "mainClass": "com.org.athtec.SpringUdemy31.SpringUdemy31Application",
+            "projectName": "SpringUdemy3.1",
             "args": "",
             "envFile": "${workspaceFolder}/.env"
         }
