@@ -3,6 +3,8 @@ package com.org.athtec.SpringUdemy5.domain;
 import java.io.Serializable;
 
 import javax.persistence.*;
+import javax.validation.constraints.Email;
+import javax.validation.constraints.NotEmpty;
 
 import lombok.Data;
 
@@ -29,5 +31,11 @@ public class Persona implements Serializable
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private long id_persona;
-    private String nombre, apellido, email, telefono;
+
+    @NotEmpty
+    private String nombre, apellido;
+    @NotEmpty
+    @Email
+    private String email;
+    private String telefono;
 }
