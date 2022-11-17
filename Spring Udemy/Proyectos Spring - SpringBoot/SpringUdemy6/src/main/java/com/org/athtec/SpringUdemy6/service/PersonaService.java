@@ -1,10 +1,10 @@
-package com.org.athtec.SpringUdemy5.service;
+package com.org.athtec.SpringUdemy6.service;
 
 import java.util.List;
 
 import org.springframework.stereotype.Service;
 
-import com.org.athtec.SpringUdemy5.domain.Persona;
+import com.org.athtec.SpringUdemy6.domain.Persona;
 
 @Service
 public interface PersonaService

@@ -1,4 +1,4 @@
-package com.org.athtec.SpringUdemy5.service;
+package com.org.athtec.SpringUdemy6.service;
 
 import java.util.List;
 
@@ -6,8 +6,8 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
-import com.org.athtec.SpringUdemy5.dao.PersonaDao;
-import com.org.athtec.SpringUdemy5.domain.Persona;
+import com.org.athtec.SpringUdemy6.dao.PersonaDao;
+import com.org.athtec.SpringUdemy6.domain.Persona;
 
 @Service
 public class PersonaServiceImpl implements PersonaService
