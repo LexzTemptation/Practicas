@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <annotationProcessing>
+      <profile default="true" name="Default" enabled="true" />
+      <profile name="Maven default annotation processors profile" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <module name="SpringUdemy1" />
+        <module name="SpringUdemy2" />
+        <module name="SpringUdemy4" />
+        <module name="SpringUdemy5" />
+        <module name="SpringUdemy6" />
+        <module name="SpringUdemy4.1" />
+        <module name="SpringUdemy3.1" />
+      </profile>
+    </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="SpringUdemy1" target="17" />
+      <module name="SpringUdemy2" target="17" />
+      <module name="SpringUdemy3.1" target="17" />
+      <module name="SpringUdemy4" target="17" />
+      <module name="SpringUdemy4.1" target="17" />
+      <module name="SpringUdemy5" target="17" />
+      <module name="SpringUdemy6" target="17" />
+    </bytecodeTargetLevel>
+  </component>
+  <component name="JavacSettings">
+    <option name="ADDITIONAL_OPTIONS_OVERRIDE">
+      <module name="SpringUdemy1" options="-parameters" />
+      <module name="SpringUdemy2" options="-parameters" />
+      <module name="SpringUdemy3.1" options="-parameters" />
+      <module name="SpringUdemy4" options="-parameters" />
+      <module name="SpringUdemy4.1" options="-parameters" />
+      <module name="SpringUdemy5" options="-parameters" />
+      <module name="SpringUdemy6" options="-parameters" />
+    </option>
+  </component>
+</project>

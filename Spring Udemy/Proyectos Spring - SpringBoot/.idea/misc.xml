@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="MavenProjectsManager">
+    <option name="originalFiles">
+      <list>
+        <option value="$PROJECT_DIR$/SpringUdemy1/pom.xml" />
+        <option value="$PROJECT_DIR$/SpringUdemy2/pom.xml" />
+        <option value="$PROJECT_DIR$/SpringUdemy4/pom.xml" />
+        <option value="$PROJECT_DIR$/SpringUdemy5/pom.xml" />
+        <option value="$PROJECT_DIR$/SpringUdemy6/pom.xml" />
+        <option value="$PROJECT_DIR$/SpringUdemy3.1/pom.xml" />
+        <option value="$PROJECT_DIR$/SpringUdemy4.1/pom.xml" />
+      </list>
+    </option>
+  </component>
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_19" project-jdk-name="liberica-17" project-jdk-type="JavaSDK" />
+  <component name="ProjectType">
+    <option name="id" value="jpab" />
+  </component>
+</project>
