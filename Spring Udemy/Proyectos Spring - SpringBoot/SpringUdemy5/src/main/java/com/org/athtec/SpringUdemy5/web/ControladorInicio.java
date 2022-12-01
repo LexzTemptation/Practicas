@@ -31,8 +31,7 @@ import lombok.extern.slf4j.Slf4j;
             */
 public class ControladorInicio
 {
-    @Autowired /*
-                * Para poder inyectar cualquier otra dependencia/objeto que sea administrado
+    @Autowired /* Para poder inyectar cualquier otra dependencia/objeto que sea administrado
                 * por el contenedor
                 * se utiliza la notación "@Autowired", muy similar a "Inject"
                 */
