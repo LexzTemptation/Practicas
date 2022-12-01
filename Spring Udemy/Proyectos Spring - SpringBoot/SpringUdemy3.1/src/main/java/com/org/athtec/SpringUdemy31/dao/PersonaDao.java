@@ -14,8 +14,7 @@ Proporciona una operación Crud genérica en un repositorio.
 Se define en el paquete org.springframework.data.repository y amplía la interfaz
 Spring Data Repository. Si alguien quiere usar CrudRepository en la aplicación
 Spring Boot, debe crear una interfaz y ampliar la interfaz de CrudRepository. 
-  
-  */
+*/
 public interface PersonaDao extends CrudRepository<Persona, Long>
 {
 
