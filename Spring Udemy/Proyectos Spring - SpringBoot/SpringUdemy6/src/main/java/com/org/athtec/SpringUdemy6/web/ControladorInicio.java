@@ -38,7 +38,7 @@ public class ControladorInicio
     {
         var personas = personaService.listarPersonas();
 
-        log.info("Ejecutando controlador Spring MVC");
+        /*log.info("Ejecutando controlador Spring MVC");*/
         /* return "html/index.html"; */
         model.addAttribute("personas", personas);
         return "index";
