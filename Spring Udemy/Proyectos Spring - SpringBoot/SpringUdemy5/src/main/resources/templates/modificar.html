@@ -1,8 +1,7 @@
 <!DOCTYPE html>
 <html xmlns:th="http://www.thymeleaf.org"
-      xmlns="http://www.w3.org/1999/xhtml"></html><!--Básicamente, cada elemento (o atributo) en XML
-                                                    pertenece a un espacio de nombres, a modo de "calificación" 
-                                                    del nombre del elemento.-->
+      xmlns="http://www.w3.org/1999/xhtml"></html><!--Esté se usó para quitar el warning
+                                                    que da en está etiqueta-->
 
 <head>
     <title>Datos de la persona</title>
@@ -24,7 +23,7 @@
 <body>
 
     <h1>Datos de la persona</h1>
-    <br />
+    <br/>
     <a th:href="@{/}">Inicio Pro</a>
     <br>
     <form class="row g-3 needs-validation" novalidate th:action="@{/guardar}" method="post" th:object="${persona}">

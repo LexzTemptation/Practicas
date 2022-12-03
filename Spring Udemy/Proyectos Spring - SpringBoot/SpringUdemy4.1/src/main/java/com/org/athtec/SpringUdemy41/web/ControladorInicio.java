@@ -49,6 +49,7 @@ public class ControladorInicio
 
     }
 
+    /* Path para agregar persona que conduce al HTML para la vista del formulario */
     @GetMapping("/agregar")
     public String agregar(Persona persona)
     {
