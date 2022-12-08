@@ -49,7 +49,7 @@ public class ControladorInicio
 
     }
 
-    /* Path para agregar persona que conduce al HTML para la vista del formulario */
+    /* Path para el HTML del fomulario donde se agrega/modifica una persona */
     @GetMapping("/agregar")
     public String agregar(Persona persona)
     {
@@ -63,6 +63,26 @@ public class ControladorInicio
         return "redirect:/";
     }
     
+    /* Para mapear este caso se utiliza "@GetMapping", para que 
+    funcione, el id_debe ser exactamente igual al atributo de la
+    clase que se quiere que se inicialice.
+    
+    "Persona persona": al definir un objeto de tipo "Persona", spring
+    lo que hace es buscar el objeto, si existe entonces lo inyecta, y además 
+    el parametro que está recibiendo lo va a asociar con el objeto tipo "persona",
+    de manera automatica va a inicializar el objeto tipo "persona" con el valor
+    de "id_persona".
+    
+    Model model: Se recibe la variable de modelo para poderla compartir
+    para la siguiente petición
+
+    Persona service: nos sirve para buscar el objeto, se manda a llamar
+    el objeto "encontrarPersona", el cual el "objeto" persona ya tiene
+    el id y por lo tanto ya lo puede encontrar en la base de datos.
+
+    Finalmente se comparte el objeto "persona" utilizando la variable de "model" con "addAtribute"
+    
+    */
     @GetMapping("/editar/{id_persona}")
     public String editar(Persona persona, Model model)
     {
@@ -71,6 +91,7 @@ public class ControladorInicio
         return "modificar";
     }
 
+    /* Elimiación por forma de path */
     /* @GetMapping("/eliminar/{id_persona}")
     public String eliminar(Persona persona, Model model)
     {
@@ -78,7 +99,14 @@ public class ControladorInicio
         return "redirect:/";
     } */
 
-    /* Forma query param */
+    /* Elimiación por forma query param
+       Los parámetros de consulta son parámetros adjuntos al final de una URL y se
+       separan de la URL por un signo de interrogación (?). La sección antes del
+       signo de interrogación es el parámetro de ruta, y la sección después del
+       signo de interrogación es la consulta. El parámetro de ruta define la
+       ubicación de los recursos, mientras que el parámetro de consulta define las
+       operaciones de clasificación, paginación o filtro.
+    */
     @GetMapping("/eliminar") 
     public String eliminar(Persona persona)
     {

@@ -61,9 +61,12 @@
                         <td class="table-success" th:text="${persona.apellido}">Mostrar Apellido </td>
                         <td class="table-success" th:text="${persona.email}">Mostrar Email </td>
                         <td class="table-success" th:text="${persona.telefono}">Mostrar Teléfono</td>
-                        <td class="table-success" > <a th:href="@{/editar/} + ${persona.id_persona}" th:text="Editar" /></td>
+                        <!-- th:href="@{/editar/} + ${persona.id_persona}": el path de editar se encarga de
+                        seleccionar un objeto de tipo persona y posteriormente redirigirlo a la pagina de modificar.
+                        Sin embargo, se debe especificar el id del objeto persona que se esta seleccionando,  -->
+                        <td class="table-success"> <a type="button" class="btn btn-outline-warning" th:href="@{/editar/} + ${persona.id_persona}" /><i class="fas fa-edit"></i></td>
                         <!-- <td class="table-success" > <a th:href="@{/eliminar/} + ${persona.id_persona}" th:text="Eliminar" /></td> -->
-                        <td class="table-success"> <a th:href="@{/eliminar(id_persona=${persona.id_persona})}" th:text="Eliminar" /></td>
+                        <td class="table-success"> <a type="button" class="btn btn-outline-danger" th:href="@{/eliminar(id_persona=${persona.id_persona})}" ><i class="fas fa-trash-alt"></i></a></td>
                         <!-- Forma query param -->
                     </tr>
                 </tbody>

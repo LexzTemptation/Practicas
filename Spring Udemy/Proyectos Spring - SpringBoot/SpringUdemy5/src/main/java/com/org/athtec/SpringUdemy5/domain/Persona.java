@@ -38,10 +38,17 @@ public class Persona implements Serializable
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private long id_persona;
 
+    /* Para que el campo de nombre y apellido no esté vacio se maneja la 
+       notación "@NotEmpty", esto hace que este campo sea obligatorio llenarlo.
+       Cuando se trabaja con cadenas se usa está notación, en caso de numeros se usa "@NotNull"
+    */
     @NotEmpty
     private String nombre, apellido;
     @NotEmpty
-    @Email
+    @Email /* Este campo a demás de no estar vacio tiene el formato de "@Email" valido.
+              Si es que en el formulario tiene un campo de tipo texto, se puede validar
+              desde aquí dandole el tipo al que pertenece 
+            */
     private String email;
     private String telefono;
 }
