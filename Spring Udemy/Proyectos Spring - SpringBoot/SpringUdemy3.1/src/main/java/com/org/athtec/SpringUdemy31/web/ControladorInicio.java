@@ -11,14 +11,21 @@ import com.org.athtec.SpringUdemy31.dao.PersonaDao;
 import lombok.extern.slf4j.Slf4j;
 
 
-@Controller /* */
+@Controller /* La anotación @Controller indica que la clase anotada es un controlador. Es
+             * una especialización de @Component y se detecta automáticamente a través del
+             * escaneo de classpath. Por lo general, se usa en combinación con métodos de
+             * controlador anotados basados en la anotación @RequestMapping. @RestController
+             * es una anotación de conveniencia para hermanos para crear controladores
+             * Restful.
+             */
 @Slf4j /* Simple Logging Facade for Java (abreviado SLF4J) actúa como una fachada para
                 diferentes marcos de registro (por ejemplo, java.util.logging, logback,
                 Log4j). Ofrece una API genérica, lo que hace que el registro sea
                 independiente de la implementación real. */
 public class ControladorInicio
 {
-    @Autowired
+    @Autowired /*Para poder inyectar cualquier otra dependencia/objeto que sea administrado por el contenedor
+                se utiliza la notación "@Autowired", muy similar a "Inject"*/
     private PersonaDao personaDao;
 
     /*  Con lo siguiente se está compartiendo información del MODELO hacia la VISTA */
@@ -30,7 +37,7 @@ public class ControladorInicio
                                         Esta clase tiene la función de agregar información que se quiere compartir 
                                         con la vista (index.html)*/
     {
-        var personas = personaDao.findAll();
+        var personas = personaDao.findAll(); /*Método "findAll();" */
 
         log.info("Ejecutando controlador Spring MVC");
         /* return "html/index.html"; */

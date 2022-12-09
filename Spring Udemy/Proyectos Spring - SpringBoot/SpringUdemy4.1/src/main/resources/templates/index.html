@@ -1,7 +1,15 @@
 <!DOCTYPE html>
 <html xmlns:th="http://www.thymeleaf.org"> <!--Básicamente, cada elemento (o atributo) en XML
-                                                    pertenece a un espacio de nombres, a modo de "calificación" 
-                                                    del nombre del elemento.-->
+                                                pertenece a un espacio de nombres, a modo de
+                                                "calificación" del nombre del elemento.
+
+                                                Thymeleaf es un moderno motor de plantillas Java
+                                                del lado del servidor para entornos web e independientes.
+                                                El objetivo principal de Thymeleaf es traer elegantes
+                                                plantillas naturales a su flujo de trabajo de desarrollo: 
+                                                HTML que se puede mostrar correctamente en los navegadores 
+                                                y también funciona como prototipos estáticos, lo que permite 
+                                                una colaboración más sólida en los equipos de desarrollo.-->
     <head>
         <title>Inicio pro</title>
         
@@ -27,7 +35,8 @@
             y accediendo por medio de la expresión "${persona.nombre}" y con cada una de los elemtos de la clase del objeto
             que se ha compartido.-->
         <br/>
-
+            <!-- th:href es un atributo modificador de atributo: una vez procesado, calculará la URL del
+                 enlace que se utilizará y establecerá el atributo href de la etiqueta en esta URL. -->
         <a th:href="@{/agregar}">Agregar persona</a>
         <br/>
         <!--En está condicion lo que se hace es verificar si la tabla tiene datos, 
@@ -52,9 +61,12 @@
                         <td class="table-success" th:text="${persona.apellido}">Mostrar Apellido </td>
                         <td class="table-success" th:text="${persona.email}">Mostrar Email </td>
                         <td class="table-success" th:text="${persona.telefono}">Mostrar Teléfono</td>
-                        <td class="table-success" > <a th:href="@{/editar/} + ${persona.id_persona}" th:text="Editar" /></td>
+                        <!-- th:href="@{/editar/} + ${persona.id_persona}": el path de editar se encarga de
+                        seleccionar un objeto de tipo persona y posteriormente redirigirlo a la pagina de modificar.
+                        Sin embargo, se debe especificar el id del objeto persona que se esta seleccionando,  -->
+                        <td class="table-success"> <a type="button" class="btn btn-outline-warning" th:href="@{/editar/} + ${persona.id_persona}" /><i class="fas fa-edit"></i></td>
                         <!-- <td class="table-success" > <a th:href="@{/eliminar/} + ${persona.id_persona}" th:text="Eliminar" /></td> -->
-                        <td class="table-success"> <a th:href="@{/eliminar(id_persona=${persona.id_persona})}" th:text="Eliminar" /></td>
+                        <td class="table-success"> <a type="button" class="btn btn-outline-danger" th:href="@{/eliminar(id_persona=${persona.id_persona})}" ><i class="fas fa-trash-alt"></i></a></td>
                         <!-- Forma query param -->
                     </tr>
                 </tbody>

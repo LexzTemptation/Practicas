@@ -1,8 +1,7 @@
 <!DOCTYPE html>
 <html xmlns:th="http://www.thymeleaf.org"
-      xmlns="http://www.w3.org/1999/xhtml"></html><!--Básicamente, cada elemento (o atributo) en XML
-                                                    pertenece a un espacio de nombres, a modo de "calificación" 
-                                                    del nombre del elemento.-->
+      xmlns="http://www.w3.org/1999/xhtml"></html><!--Esté se usó para quitar el warning
+                                                    que da en está etiqueta-->
 
 <head>
     <title>Datos de la persona</title>
@@ -24,10 +23,24 @@
 <body>
 
     <h1>Datos de la persona</h1>
-    <br />
-    <a th:href="@{/}">Inicio Pro</a>
+    <br/>
+    <a th:href="@{/}">Inicio Pro</a><!-- Zelda que regresa a la pagina inicial -->
     <br>
     <form th:action="@{/guardar}" method="post" th:object="${persona}">
+    <!-- th:action="@{/guardar}": guarda la información en la base de datos
+         method="post": Los datos del formulario se enviarán al servidor almacenándolos en un cuerpo de solicitud HTTP.
+         th:object="${persona}": Asociación desde el formulario para el objeto que se quiere usar.
+         
+         Para mapear la acción de guardar se recupera la información del formulario
+         es en la case "ControladorInicio" en el "@PostMapping("/guardar")"-->
+
+
+        <!-- th:field="*{id_persona}": Thymeleaf utiliza esta sintaxis para asociar los datos 
+        del atributo, para que se ingresen los datos es importante el asterisco ya que se usa para leer o modificar 
+    
+        Es muy importante agregar el id aunque sea un input oculto, ya que si esto no se hace, al momento de
+        editarlo/modificarlo va a crear un nuevo registro con los valores modificados sin modificar el registro
+        que se quería editar-->
 
         <div class="mb-3 row">
             <!-- <label class="col-sm-1 col-form-label" for="id">Id:</label> -->
@@ -61,7 +74,9 @@
         </div>
         <div class="mb-3 row">
         <div class="col-sm-5">
-            <input class="btn btn-outline-success" type="submit" name="guardar" value="Guardar"/>
+            <input class="btn btn-outline-success" type="submit" name="guardar" value="Guardar"/> 
+            <!-- Esta es la forma de Spring para los botones, al accionar este botón se guardarán los datos
+                 por medio del "th:action="@{/guardar}""-->
         </div>
     </form>
 

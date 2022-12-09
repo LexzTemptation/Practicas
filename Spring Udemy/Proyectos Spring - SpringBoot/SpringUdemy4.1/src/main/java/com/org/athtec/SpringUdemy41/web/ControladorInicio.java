@@ -14,15 +14,22 @@ import com.org.athtec.SpringUdemy41.service.PersonaService;
 import lombok.extern.slf4j.Slf4j;
 
 
-@Controller /* */
+@Controller /* La anotación @Controller indica que la clase anotada es un controlador. Es
+             * una especialización de @Component y se detecta automáticamente a través del
+             * escaneo de classpath. Por lo general, se usa en combinación con métodos de
+             * controlador anotados basados en la anotación @RequestMapping. @RestController
+             * es una anotación de conveniencia para hermanos para crear controladores
+             * Restful.
+             */
 @Slf4j /* Simple Logging Facade for Java (abreviado SLF4J) actúa como una fachada para
                 diferentes marcos de registro (por ejemplo, java.util.logging, logback,
                 Log4j). Ofrece una API genérica, lo que hace que el registro sea
                 independiente de la implementación real. */
 public class ControladorInicio
 {
-    @Autowired
-    private PersonaService personaService;
+    @Autowired /* Para poder inyectar cualquier otra dependencia/objeto que sea administrado por el contenedor
+                se utiliza la notación "@Autowired", muy similar a "Inject"*/
+    private PersonaService personaService; /* Ahora se inyecta la capade servicio */
 
     /*  Con lo siguiente se está compartiendo información del MODELO hacia la VISTA */
     @GetMapping("/")
@@ -33,7 +40,7 @@ public class ControladorInicio
                                         Esta clase tiene la función de agregar información que se quiere compartir 
                                         con la vista (index.html)*/
     {
-        var personas = personaService.listarPersonas();
+        var personas = personaService.listarPersonas(); /* Se cambia el método */
 
         log.info("Ejecutando controlador Spring MVC");
         /* return "html/index.html"; */
@@ -42,6 +49,7 @@ public class ControladorInicio
 
     }
 
+    /* Path para el HTML del fomulario donde se agrega/modifica una persona */
     @GetMapping("/agregar")
     public String agregar(Persona persona)
     {
@@ -55,6 +63,26 @@ public class ControladorInicio
         return "redirect:/";
     }
     
+    /* Para mapear este caso se utiliza "@GetMapping", para que 
+    funcione, el id_debe ser exactamente igual al atributo de la
+    clase que se quiere que se inicialice.
+    
+    "Persona persona": al definir un objeto de tipo "Persona", spring
+    lo que hace es buscar el objeto, si existe entonces lo inyecta, y además 
+    el parametro que está recibiendo lo va a asociar con el objeto tipo "persona",
+    de manera automatica va a inicializar el objeto tipo "persona" con el valor
+    de "id_persona".
+    
+    Model model: Se recibe la variable de modelo para poderla compartir
+    para la siguiente petición
+
+    Persona service: nos sirve para buscar el objeto, se manda a llamar
+    el objeto "encontrarPersona", el cual el "objeto" persona ya tiene
+    el id y por lo tanto ya lo puede encontrar en la base de datos.
+
+    Finalmente se comparte el objeto "persona" utilizando la variable de "model" con "addAtribute"
+    
+    */
     @GetMapping("/editar/{id_persona}")
     public String editar(Persona persona, Model model)
     {
@@ -63,6 +91,7 @@ public class ControladorInicio
         return "modificar";
     }
 
+    /* Elimiación por forma de path */
     /* @GetMapping("/eliminar/{id_persona}")
     public String eliminar(Persona persona, Model model)
     {
@@ -70,7 +99,14 @@ public class ControladorInicio
         return "redirect:/";
     } */
 
-    /* Forma query param */
+    /* Elimiación por forma query param
+       Los parámetros de consulta son parámetros adjuntos al final de una URL y se
+       separan de la URL por un signo de interrogación (?). La sección antes del
+       signo de interrogación es el parámetro de ruta, y la sección después del
+       signo de interrogación es la consulta. El parámetro de ruta define la
+       ubicación de los recursos, mientras que el parámetro de consulta define las
+       operaciones de clasificación, paginación o filtro.
+    */
     @GetMapping("/eliminar") 
     public String eliminar(Persona persona)
     {
