@@ -10,8 +10,8 @@ import org.springframework.validation.Errors;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 
-import com.org.athtec.SpringUdemy61.domain.Persona;
-import com.org.athtec.SpringUdemy61.service.PersonaService;
+import com.org.athtec.SpringUdemy62.domain.Persona;
+import com.org.athtec.SpringUdemy62.service.PersonaService;
 
 import lombok.extern.slf4j.Slf4j;
 
