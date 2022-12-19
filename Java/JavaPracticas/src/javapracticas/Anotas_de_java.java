@@ -22,7 +22,7 @@ public class Anotas_de_java
           num2 = feli.nextFloat();
           suma = num1 + num2;
           resta = num1 - num2;
-          multi = num1  num2;
+          multi = num1 * num2;
           div = num1 / num2;
           resto = num1 % num2; // El mod o simbolo de porcentaje nos da el residuo de
           una división
