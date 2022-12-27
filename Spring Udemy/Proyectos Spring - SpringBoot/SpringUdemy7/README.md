@@ -1,8 +1,12 @@
-En este proyecto se maneja el concepto de la
-internacilización con un "listener".
+En este proyecto se maneja el concepto de seguridad.
+Al inicaiar la aplicación nos manda un formulario
+en el que se ingresa el usuario y la contraseña,
+los cuales son:
 
-Esto se va a encontrar en los archivos ".properties"
-con sus respectivas modificaciones en los html
+Usuario: user
+Contraseña: 
+
+La contraseña tiende a variar cada que se inicia la aplicación
 
 Esto para no estar reescribiendo código en los
 archivos HTML.
