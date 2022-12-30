@@ -1,10 +1,10 @@
-package com.org.athtec.SpringUdemy7.service;
+package com.org.athtec.SpringUdemy71.service;
 
 import java.util.List;
 
 import org.springframework.stereotype.Service;
 
-import com.org.athtec.SpringUdemy7.domain.Persona;
+import com.org.athtec.SpringUdemy71.domain.Persona;
 
 /*Interface: Otra forma de lograr la abstracción en Java es con interfaces.
 Una interfaz es una "clase completamente abstracta" que se utiliza para agrupar

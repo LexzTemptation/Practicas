@@ -1,4 +1,4 @@
-package com.org.athtec.SpringUdemy7.domain;
+package com.org.athtec.SpringUdemy71.domain;
 
 import java.io.Serializable;
 

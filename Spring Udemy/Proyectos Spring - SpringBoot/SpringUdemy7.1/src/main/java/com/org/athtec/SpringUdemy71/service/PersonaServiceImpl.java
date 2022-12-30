@@ -1,4 +1,4 @@
-package com.org.athtec.SpringUdemy7.service;
+package com.org.athtec.SpringUdemy71.service;
 
 import java.util.List;
 
@@ -6,8 +6,8 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
-import com.org.athtec.SpringUdemy7.dao.PersonaDao;
-import com.org.athtec.SpringUdemy7.domain.Persona;
+import com.org.athtec.SpringUdemy71.dao.PersonaDao;
+import com.org.athtec.SpringUdemy71.domain.Persona;
 
 @Service /*Los componentes de servicio son el archivo de clase que contiene la
           * anotación @Service. Estos archivos de clase se utilizan para escribir la

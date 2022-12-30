@@ -9,9 +9,9 @@
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
 	<groupId>com.org.athtec.core</groupId>
-	<artifactId>SpringUdemy7</artifactId>
+	<artifactId>SpringUdemy7.1</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	<name>SpringUdemy7</name>
+	<name>SpringUdemy7.1</name>
 	<description>Demo project for Spring Boot</description>
 	<properties>
 		<java.version>17</java.version>

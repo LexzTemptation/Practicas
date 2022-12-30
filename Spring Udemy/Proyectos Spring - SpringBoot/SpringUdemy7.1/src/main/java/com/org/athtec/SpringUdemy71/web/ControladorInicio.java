@@ -1,5 +1,5 @@
 /*2*/
-package com.org.athtec.SpringUdemy7.web;
+package com.org.athtec.SpringUdemy71.web;
 
 import javax.validation.Valid;
 
@@ -10,8 +10,8 @@ import org.springframework.validation.Errors;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 
-import com.org.athtec.SpringUdemy7.domain.Persona;
-import com.org.athtec.SpringUdemy7.service.PersonaService;
+import com.org.athtec.SpringUdemy71.domain.Persona;
+import com.org.athtec.SpringUdemy71.service.PersonaService;
 
 import lombok.extern.slf4j.Slf4j;
 

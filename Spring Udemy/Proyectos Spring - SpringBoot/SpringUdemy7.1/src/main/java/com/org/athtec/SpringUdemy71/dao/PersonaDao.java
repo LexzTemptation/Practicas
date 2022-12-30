@@ -1,9 +1,9 @@
 /* Data Access Object*/
-package com.org.athtec.SpringUdemy7.dao;
+package com.org.athtec.SpringUdemy71.dao;
 
 import org.springframework.data.repository.CrudRepository;
 
-import com.org.athtec.SpringUdemy7.domain.Persona;
+import com.org.athtec.SpringUdemy71.domain.Persona;
 
 /*Interface: Otra forma de lograr la abstracción en Java es con interfaces.
 Una interfaz es una "clase completamente abstracta" que se utiliza para agrupar

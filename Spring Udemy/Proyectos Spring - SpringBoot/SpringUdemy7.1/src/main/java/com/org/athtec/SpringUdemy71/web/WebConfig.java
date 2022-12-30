@@ -1,4 +1,4 @@
-package com.org.athtec.SpringUdemy7.web;
+package com.org.athtec.SpringUdemy71.web;
 
 import java.util.Locale;
 
