@@ -1,4 +1,8 @@
 {
     "java.compile.nullAnalysis.mode": "automatic",
     "java.configuration.updateBuildConfiguration": "interactive",
+    "[java]": {
+        "editor.insertSpaces": false,
+        "editor.detectIndentation": true
+    },
 }

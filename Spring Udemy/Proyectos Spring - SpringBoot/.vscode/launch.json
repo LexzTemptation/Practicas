@@ -2,6 +2,13 @@
     "configurations": [
         {
             "type": "java",
+            "name": "Launch SpringUdemy71Application",
+            "request": "launch",
+            "mainClass": "com.org.athtec.SpringUdemy71.SpringUdemy71Application",
+            "projectName": "SpringUdemy7.1"
+        },
+        {
+            "type": "java",
             "name": "Spring Boot-SpringUdemy2Application<SpringUdemy2>",
             "request": "launch",
             "cwd": "${workspaceFolder}",
@@ -106,6 +113,16 @@
             "cwd": "${workspaceFolder}",
             "mainClass": "com.org.athtec.SpringUdemy7.SpringUdemy6Application",
             "projectName": "SpringUdemy7",
+            "args": "",
+            "envFile": "${workspaceFolder}/.env"
+        },
+        {
+            "type": "java",
+            "name": "Spring Boot-SpringUdemy6Application<SpringUdemy7.1>",
+            "request": "launch",
+            "cwd": "${workspaceFolder}",
+            "mainClass": "com.org.athtec.SpringUdemy71.SpringUdemy6Application",
+            "projectName": "SpringUdemy7.1",
             "args": "",
             "envFile": "${workspaceFolder}/.env"
         }

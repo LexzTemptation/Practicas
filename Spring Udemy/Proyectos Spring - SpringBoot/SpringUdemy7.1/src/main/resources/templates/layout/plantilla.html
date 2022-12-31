@@ -49,6 +49,9 @@
                     Gimnasio SA de CV | Calle #1234 Colonia 37000 León Guanajuato.
                 </h6>
             </div>
+            <form method="POST" th:action="@{/logout}">
+                <a href="#" onclick="this.parentNode.submit()" th:text="#{accion.salir}">Logout</a>
+            </form>
             <br><br>
     </footer>
     <script src="../js/index-css.js"></script>
