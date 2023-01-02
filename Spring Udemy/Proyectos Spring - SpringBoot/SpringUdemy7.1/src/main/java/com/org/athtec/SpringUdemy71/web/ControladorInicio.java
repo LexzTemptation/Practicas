@@ -4,6 +4,8 @@ package com.org.athtec.SpringUdemy71.web;
 import javax.validation.Valid;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.security.core.annotation.AuthenticationPrincipal;
+import org.springframework.security.core.userdetails.User;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.validation.Errors;
@@ -38,16 +40,20 @@ public class ControladorInicio
 
     /*  Con lo siguiente se está compartiendo información del MODELO hacia la VISTA */
     @GetMapping("/")
-    public String inicio(Model model)/* Aquí se recibía el objero http servlet request y response, y utlizando
-                                        uno de los alcances como "request", "session" o "application" se compartian
-                                        atributos para desplegarlos en las paginas para desplegarlos en las paginas
-                                        en los "jsp", en vez de todo eso se recibe un objeto llamado "model".
+    public String inicio(Model model, @AuthenticationPrincipal User user)/* Aquí se recibía el objero http servlet 
+                                        request y response, y utlizandouno de los alcances como "request", "session"
+                                        o "application" se compartian atributos para desplegarlos en las paginas,
+                                        para desplegarlos en las paginas en los "jsp", en vez de todo eso se recibe 
+                                        un objeto llamado "model".
                                         Esta clase tiene la función de agregar información que se quiere compartir 
-                                        con la vista (index.html)*/
+                                        con la vista (index.html).
+                                        El "@AuthenticationPrincipal User user" (user se puede cambiar) es para
+                                        Saber que usuario se ha logueado (solo se manda a consola).*/
     {
         var personas = personaService.listarPersonas(); /* Se cambia el método */
 
         log.info("Ejecutando controlador Spring MVC");
+        log.info("Usuario logueado" + user);
         /* return "html/index.html"; */
         model.addAttribute("personas", personas);
         return "index";
