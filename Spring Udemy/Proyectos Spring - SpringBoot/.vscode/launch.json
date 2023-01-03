@@ -125,6 +125,16 @@
             "projectName": "SpringUdemy7.1",
             "args": "",
             "envFile": "${workspaceFolder}/.env"
+        },
+        {
+            "type": "java",
+            "name": "Spring Boot-SpringUdemy71Application<SpringUdemy7.2>",
+            "request": "launch",
+            "cwd": "${workspaceFolder}",
+            "mainClass": "com.org.athtec.SpringUdemy72.SpringUdemy71Application",
+            "projectName": "SpringUdemy7.2",
+            "args": "",
+            "envFile": "${workspaceFolder}/.env"
         }
     ]
 }
