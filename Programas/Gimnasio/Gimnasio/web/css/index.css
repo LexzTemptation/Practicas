@@ -3,6 +3,11 @@ body
 {
     background: linear-gradient(to right, #00C9F3, #86a8e7, #7f7fd5, #d3ada6);
     /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    /* 
+    background-color: linear-gradient(to right, #ff8260, #f7b733); 
+    background: linear-gradient(to right, #6e91a8, #9b8ad8); 
+    background: linear-gradient(to right, #bfe2fa, #c6b6fe); 
+    */
 }
 
 nav
