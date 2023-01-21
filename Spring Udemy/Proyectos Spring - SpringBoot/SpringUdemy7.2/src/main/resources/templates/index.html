@@ -1,15 +1,16 @@
 <!DOCTYPE html>
-<html xmlns:th="http://www.thymeleaf.org"> <!--Básicamente, cada elemento (o atributo) en XML
-                                                pertenece a un espacio de nombres, a modo de
-                                                "calificación" del nombre del elemento.
+<html xmlns:th="http://www.thymeleaf.org"> 
+<!--Básicamente, cada elemento (o atributo) en XML
+pertenece a un espacio de nombres, a modo de
+"calificación" del nombre del elemento.
 
-                                                Thymeleaf es un moderno motor de plantillas Java
-                                                del lado del servidor para entornos web e independientes.
-                                                El objetivo principal de Thymeleaf es traer elegantes
-                                                plantillas naturales a su flujo de trabajo de desarrollo: 
-                                                HTML que se puede mostrar correctamente en los navegadores 
-                                                y también funciona como prototipos estáticos, lo que permite 
-                                                una colaboración más sólida en los equipos de desarrollo.-->
+Thymeleaf es un moderno motor de plantillas Java
+del lado del servidor para entornos web e independientes.
+El objetivo principal de Thymeleaf es traer elegantes
+plantillas naturales a su flujo de trabajo de desarrollo: 
+HTML que se puede mostrar correctamente en los navegadores 
+y también funciona como prototipos estáticos, lo que permite 
+una colaboración más sólida en los equipos de desarrollo.-->
     <head>
         <title>Inicio pro</title>
         
@@ -37,7 +38,7 @@
         <br/>
             <!-- th:href es un atributo modificador de atributo: una vez procesado, calculará la URL del
                  enlace que se utilizará y establecerá el atributo href de la etiqueta en esta URL. -->
-        <a th:href="@{/agregar}">[[#{persona.crear}]]</a>
+        <a sec:authorize="hasRole('ROLE_ADMIN')" th:href="@{/agregar}">[[#{persona.crear}]]</a>
         <br/>
         <!--En está condicion lo que se hace es verificar si la tabla tiene datos, 
             "si personas es diferente de null y personas es diferente de vacio" se agregan a la tabla-->
@@ -50,8 +51,8 @@
                         <th>[[#{persona.apellido}]] </th>
                         <th>[[#{persona.email}]] </th>
                         <th>[[#{persona.telefono}]] </th>
-                        <th>[[#{accion.editar}]] </th>
-                        <th>[[#{accion.eliminar}]] </th>
+                        <th sec:authorize="hasRole('ROLE_ADMIN')">[[#{accion.editar}]] </th>
+                        <th sec:authorize="hasRole('ROLE_ADMIN')">[[#{accion.eliminar}]] </th>
                     </tr>
                 </thead>
                 <tbody>
@@ -64,9 +65,9 @@
                         <!-- th:href="@{/editar/} + ${persona.id_persona}": el path de editar se encarga de
                         seleccionar un objeto de tipo persona y posteriormente redirigirlo a la pagina de modificar.
                         Sin embargo, se debe especificar el id del objeto persona que se esta seleccionando,  -->
-                        <td class="table-success"> <a type="button" class="btn btn-outline-warning" th:href="@{/editar/} + ${persona.id_persona}" /><i class="fas fa-edit"></i></td>
+                        <td sec:authorize="hasRole('ROLE_ADMIN')" class="table-success"> <a type="button" class="btn btn-outline-warning" th:href="@{/editar/} + ${persona.id_persona}" /><i class="fas fa-edit"></i></td>
                         <!-- <td class="table-success" > <a th:href="@{/eliminar/} + ${persona.id_persona}" th:text="Eliminar" /></td> -->
-                        <td class="table-success"> <a type="button" class="btn btn-outline-danger" th:href="@{/eliminar(id_persona=${persona.id_persona})}" ><i class="fas fa-trash-alt"></i></a></td>
+                        <td sec:authorize="hasRole('ROLE_ADMIN')" class="table-success"> <a type="button" class="btn btn-outline-danger" th:href="@{/eliminar(id_persona=${persona.id_persona})}" ><i class="fas fa-trash-alt"></i></a></td>
                         <!-- Forma query param -->
                     </tr>
                 </tbody>
