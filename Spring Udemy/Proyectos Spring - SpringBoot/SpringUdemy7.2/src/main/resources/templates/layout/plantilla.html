@@ -1,6 +1,10 @@
 <!DOCTYPE html>
 <html xmlns:th="http://www.thymeleaf.org"
+<<<<<<< HEAD
       xmlns:sec="http://www.thymeleaf.org/extras/spring-security"> 
+=======
+      xmlns:sec="http://www.thymeleaf.org/extras/spring-secutity"> 
+>>>>>>> 843674599524b21b1b2ac5d816ee0b0c600b04e6
 <!--Básicamente, cada elemento (o atributo) en XML
 pertenece a un espacio de nombres, a modo de
 "calificación" del nombre del elemento.
@@ -52,8 +56,13 @@ una colaboración más sólida en los equipos de desarrollo.-->
                 </h6>
             </div>
             <form method="POST" th:action="@{/logout}">
+<<<<<<< HEAD
                 <b>User: </b><span sec:authentication="name">Usuario logueado</span>|
                 <b>Roles: </b><span sec:authentication="principal.authorities">Roles</span>
+=======
+                <b>User:</b><span sec:authentication="name">Usuario en login</span>
+                <b>Roles:</b><span sec:authentication="principal.authorities">Roles</span>
+>>>>>>> 843674599524b21b1b2ac5d816ee0b0c600b04e6
                 <a href="#" onclick="this.parentNode.submit()" th:text="#{accion.salir}">Logout</a>
             </form>
             <br><br>
