@@ -1,9 +1,5 @@
 <!DOCTYPE html>
-<<<<<<< HEAD
-<html xmlns:th="http://www.thymeleaf.org" xmlns:sec="http://www.thymeleaf.org/extras/spring-security">
-=======
 <html xmlns:th="http://www.thymeleaf.org"> 
->>>>>>> 843674599524b21b1b2ac5d816ee0b0c600b04e6
 <!--Básicamente, cada elemento (o atributo) en XML
 pertenece a un espacio de nombres, a modo de
 "calificación" del nombre del elemento.
@@ -43,10 +39,7 @@ una colaboración más sólida en los equipos de desarrollo.-->
             <!-- th:href es un atributo modificador de atributo: una vez procesado, calculará la URL del
                  enlace que se utilizará y establecerá el atributo href de la etiqueta en esta URL. -->
         <a sec:authorize="hasRole('ROLE_ADMIN')" th:href="@{/agregar}">[[#{persona.crear}]]</a>
-<<<<<<< HEAD
         <!-- Esta etiqueta no se va a mostrar si el usuario no tiene permisos para ver el link -->
-=======
->>>>>>> 843674599524b21b1b2ac5d816ee0b0c600b04e6
         <br/>
         <!--En está condicion lo que se hace es verificar si la tabla tiene datos, 
             "si personas es diferente de null y personas es diferente de vacio" se agregan a la tabla-->
