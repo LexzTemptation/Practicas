@@ -19,7 +19,7 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter
 	{
 		auth.inMemoryAuthentication()
 				.withUser("admin")
-					.password("{noop}1234") /* {noop}: De esta manera no se encripta el password */
+					.password("{noop}admin") /* {noop}: De esta manera no se encripta el password */
 					.roles("ADMIN", "USER")
 				.and()
 				.withUser("user")
