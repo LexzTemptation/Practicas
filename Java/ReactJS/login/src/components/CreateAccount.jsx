@@ -12,32 +12,34 @@ export default function CC() {
                                 <br /><br />
                                 <form class="w3-container">
                                     <div class="row justify-content-left">
+                                        <h4>LLENE TODOS LOS CAMPOS</h4>
+                                        <br /><br />
                                         <div class="col-9">
-                                            <input type="text" placeholder="Nombre(s)" />
+                                            <input class="inpt-cc" type="text" placeholder="Nombre(s)" />
                                         </div>
                                         <br /><br />
                                         <div class="col-9">
-                                            <input type="text" placeholder="Apellido paterno" />
+                                            <input class="inpt-cc" type="text" placeholder="Apellido paterno" />
                                         </div>
                                         <br /><br />
                                         <div class="col-9">
-                                            <input type="password" placeholder="Apellido materno" />
+                                            <input class="inpt-cc" type="password" placeholder="Apellido materno" />
                                         </div>
                                         <br /><br />
                                         <div class="col-9">
-                                            <input type="date" placeholder="Fecha de nacimiento" />
+                                            <input class="inpt-cc" type="date" placeholder="Fecha de nacimiento" />
                                         </div>
                                         <br /><br />
                                         <div class="col-9">
-                                            <input type="tel" placeholder="Teléfono" />
+                                            <input class="inpt-cc" type="tel" placeholder="Teléfono" />
                                         </div>
                                         <br /><br />
                                         <div class="col-9">
-                                            <input type="email" placeholder="Email" />
+                                            <input class="inpt-cc" type="email" placeholder="Email" />
                                         </div>
                                         <br /><br />
                                         <div class="col-9">
-                                            <input type="password" placeholder="Contraseña" />
+                                            <input class="inpt-cc" type="password" placeholder="Contraseña" />
                                         </div>
                                     </div>
                                     <br />
@@ -49,25 +51,15 @@ export default function CC() {
                                 </form>
                             </div>
                             <div class="col-3">
-                                <img src="user-icn.png" width="300" height="300" alt='' />
                                 <div class="row justify-content-center">
-                                    <div class="col-11">
-                                        <h4>Ingresa tu e-mail, teléfono</h4>
-                                    </div>
-                                </div>
-                                <div class="row justify-content-center">
-                                    <div class="col-6">
-                                        <h4>o usuario de</h4>
-                                    </div>
-                                </div>
-                                <div class="row justify-content-center">
-                                    <div class="col-8">
-                                        <h4>CHAIN GAME STORE</h4>
+                                    <div class="col-12">
+                                        <br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
+                                        <h1>Creación de cuenta</h1>
                                     </div>
                                 </div>
                             </div>
                         </div>
-                        <br /><br /><br /><br /><br />
+                        <br /><br /><br />
                     </section>
                 </div>
             </div>

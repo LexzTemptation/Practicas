@@ -142,7 +142,7 @@ section
   background-image: url(../src/images/bkg-login.webp);
 }
 
-h4
+h1, h4
 {
   color: white;
 }
@@ -157,10 +157,30 @@ input
   color: white;
 }
 
-input::placeholder 
+input:hover 
 {
   font-size: 0.9em;
   background: transparent;
   border: transparent;
+  border-bottom: 3px solid #FF4500;
+  color: rgba(255, 255, 255, 0.5);
+}
+
+input.inpt-cc
+{
+  font-size: 0.9em;
+  background: transparent;
+  border: transparent;
+  border-bottom: 3px solid #FF4500;
+  width: 100%;
+  color: white;
+}
+
+input.inpt-cc:hover 
+{
+  font-size: 0.9em;
+  background: transparent;
+  border: transparent;
+  border-bottom: 3px solid #FF4500;
   color: rgba(255, 255, 255, 0.5);
 }
