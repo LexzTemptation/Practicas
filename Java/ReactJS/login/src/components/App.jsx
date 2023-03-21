@@ -26,7 +26,7 @@ export default function App()
                                         <div class="col-10">
                                             <button class="login" >Iniciar sesion</button>
                                             &nbsp;&nbsp;&nbsp;
-                                            <button class="createAccount">Crear cuenta</button>
+                                            <a href="/createaccount" class="createAccount">Crear cuenta</a>
                                         </div>
                                     </div>
                                 </form>

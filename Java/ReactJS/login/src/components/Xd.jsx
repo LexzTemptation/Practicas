@@ -2,5 +2,13 @@
 
 export default function Xd()
 {
-    return <h4>Xdxdxdxd</h4>
+    return(
+        <nav>
+            <ul>
+                <li>
+                    <a href="/app">Login</a>
+                </li>
+            </ul>
+        </nav>
+    );
 }
