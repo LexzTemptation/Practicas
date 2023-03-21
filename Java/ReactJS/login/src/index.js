@@ -23,7 +23,7 @@ const router = createBrowserRouter([
     element: <App />,
   },
   {
-    path: "/cc",
+    path: "/createaccount",
     element: <CreateAccount />,
   },
 ]);

@@ -9,11 +9,31 @@ export default function CC() {
                     <section>
                         <div class="row justify-content-center">
                             <div class="col-3">
-                                <br /><br /><br /><br /><br /><br /><br /><br />
+                                <br /><br />
                                 <form class="w3-container">
                                     <div class="row justify-content-left">
                                         <div class="col-9">
-                                            <input type="text" placeholder="Email, teléfono, usuario" />
+                                            <input type="text" placeholder="Nombre(s)" />
+                                        </div>
+                                        <br /><br />
+                                        <div class="col-9">
+                                            <input type="text" placeholder="Apellido paterno" />
+                                        </div>
+                                        <br /><br />
+                                        <div class="col-9">
+                                            <input type="password" placeholder="Apellido materno" />
+                                        </div>
+                                        <br /><br />
+                                        <div class="col-9">
+                                            <input type="date" placeholder="Fecha de nacimiento" />
+                                        </div>
+                                        <br /><br />
+                                        <div class="col-9">
+                                            <input type="tel" placeholder="Teléfono" />
+                                        </div>
+                                        <br /><br />
+                                        <div class="col-9">
+                                            <input type="email" placeholder="Email" />
                                         </div>
                                         <br /><br />
                                         <div class="col-9">
