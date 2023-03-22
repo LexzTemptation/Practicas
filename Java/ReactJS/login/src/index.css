@@ -178,6 +178,21 @@ input.inpt-cc
   color: white;
 }
 
+input.form-control me-2
+{
+  font-size: 0.9em;
+  border-bottom: 3px solid cyan;
+  width: 100%;
+  color: white;
+}
+
+input.inpt-cc:hover 
+{
+  font-size: 0.9em;
+  border-bottom: 3px solid cyan;
+  color: rgba(255, 255, 255, 0.5);
+}
+
 input.inpt-cc:hover 
 {
   font-size: 0.9em;

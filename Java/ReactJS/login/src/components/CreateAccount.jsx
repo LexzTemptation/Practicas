@@ -3,8 +3,18 @@ import React, { Fragment } from "react";
 export default function CC() {
     return (
         <Fragment>
+            <nav>
+                <ul>
+                    <li>
+                        <a href="/app">Login</a>
+                    </li>
+                    <li>
+                        <a href="/">Inicio</a>
+                    </li>
+                </ul>
+            </nav>
             <div class="container-fluid">
-                <br /><br /><br />
+                <br />
                 <div class="col-12">
                     <section>
                         <div class="row justify-content-center">
