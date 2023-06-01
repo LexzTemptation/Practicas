@@ -3,5 +3,17 @@
     "[java]": {
         "editor.detectIndentation": true
     },
-    "java.jdt.ls.vmargs": "-XX:+UseParallelGC -XX:GCTimeRatio=4 -XX:AdaptiveSizePolicyWeight=90 -Dsun.zip.disableMemoryMapping=true -Xmx2G -Xms100m -Xlog:disable"
+    "java.jdt.ls.vmargs": "-XX:+UseParallelGC -XX:GCTimeRatio=4 -XX:AdaptiveSizePolicyWeight=90 -Dsun.zip.disableMemoryMapping=true -Xmx2G -Xms100m -Xlog:disable",
+    "sqltools.connections": [
+        {
+            "mysqlOptions": {
+                "authProtocol": "default"
+            },
+            "previewLimit": 50,
+            "server": "localhost",
+            "driver": "MySQL",
+            "name": "test",
+            "connectString": "mysql://<2z72hq09jbnv5bj5q64q>:<pscale_pw_7iu4Xv9bHL5WXUE8xMkRFMwBkuCqOuPCs7ux1B7BNEg>@<aws.connect.psdb.cloud>/<test>?ssl={\"rejectUnauthorized\":true}"
+        }
+    ]
 }
