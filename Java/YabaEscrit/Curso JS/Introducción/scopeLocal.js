@@ -14,4 +14,4 @@ var obtenerNumeroLetras = (nombre) => {
 	funcionAnidada();
 };
 obtenerNumeroLetras('Alex');
- console.log(numero);
+console.log(numero);

@@ -1,3 +1,4 @@
+/* Métodos para arreglos */
 const colores = ["Rojo", "Verde", "Azul"];
 
 /* 
