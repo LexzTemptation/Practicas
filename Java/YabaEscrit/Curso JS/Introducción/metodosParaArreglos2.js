@@ -26,7 +26,6 @@ console.log(nombres.lastIndexOf('Rafael'));
 */
 nombres.forEach((nombre, index /* iterador */) => {
     console.log(`Hola ${nombre} (${index})`);
-	
 });
 
 /* 
