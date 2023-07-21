@@ -43,16 +43,18 @@ if (nombre[0] === 'S') {
 	📌 .map()
 	Nos permite ejecutar una función por cada elemento y crear un nuevo arreglo
 	en base a los resultados de esa función.
+	*toUpperCase funciona para hacer las letras mayusculas*
 */
 const nombresMayusculas = nombres.map((nombre) => nombre.toUpperCase());
 console.log(nombresMayusculas);
 
 /* 📌 .filter()
 	Nos permite ejecutar una función por cada elemento 
-	y luego crear un arreglo en base a los resultados de esa función. 
+	y luego crear un arreglo en base a los resultados de esa función.
+	Este devuelve los elementos que cumplan con una condición.
 */
 const nombres4Letras = nombres.filter((nombre) => {
-    if (nombre.length === 5) {
+    if (nombre.length === 4 ) {
         return nombre;
     }
 });
@@ -70,19 +72,19 @@ console.log(nombres.includes('Carlos'));
 	Nos permite ejecutar un condicional sobre cada elemento y 
 	nos devuelve true si TODOS los elemento cumplieron la condición.
 */
-const nombresValidos = nombres.every((nombre) => {
+const nombresValidoss = nombres.every((nombre) => {
 	if (typeof nombre === 'string') {
 		return true;
 	} else {
 		return false;
 	}
 });
-console.log('¿Todos los nombres son validos? ' + nombresValidos);
+console.log('¿Todos los nombres son validos? R=' + nombresValidoss);
 
 /* 
 	📌 .some()
 	Nos permite ejecutar un condicional sobre cada elemento y
-	nos devuelve true si algun elemento cumplio la condición.
+	nos devuelve true si ALGÚN elemento cumplio la condición.
 */
 const nombresValidos = nombres.some((nombre) => {
     if (typeof nombre !== "string") {
