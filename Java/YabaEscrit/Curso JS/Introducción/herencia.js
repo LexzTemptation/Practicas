@@ -1,4 +1,5 @@
 class Usuario {
+    // Método
     constructor(usuario, password) {
         this.usuario = usuario;
         this.password = password;
@@ -10,6 +11,7 @@ class Usuario {
     }
 }
 
+// Herencia
 class Moderador extends Usuario {
     constructor(usuario, password, permisos) {
         super(usuario, password);
