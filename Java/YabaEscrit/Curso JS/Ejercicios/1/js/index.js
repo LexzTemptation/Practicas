@@ -108,3 +108,4 @@ let recortarCaracteres = () => {
 
 };
 recortarCaracteres();
+
