@@ -93,7 +93,11 @@ let fierro = () => Swal.fire({
     timer: 3000,
     timerProgressBar: true,
     background: '#3A4460',
-    confirmButtonColor: '#009252'
+    confirmButtonColor: '#009252',
+    didOpen: (toast) => {
+        toast.addEventListener('mouseenter', Swal.stopTimer)
+        toast.addEventListener('mouseleave', Swal.resumeTimer)
+    }
 });
 
 function contarWord()
