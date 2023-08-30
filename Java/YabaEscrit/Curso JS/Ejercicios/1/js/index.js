@@ -91,21 +91,25 @@ let fierro = () => Swal.fire({
     icon: 'success',
     title: `Fierro 🤠`,
     timer: 3000,
-    timerProgressBar: true
+    timerProgressBar: true,
+    background: '#3A4460',
+    confirmButtonColor: '#009252'
 });
 
 function contarWord()
 {
     let word = 'fierro'
-    document.write(`<h1>${word.length}</h1>`);
+    /* document.write(`<h1>${word.length}</h1>`); */
+    console.log(word.length);
 }
 contarWord();
 
 let recortarCaracteres = () => {
     let word2 = 'Hola mundo';
 
-    document.write(`<h1>${word2.slice(0, 5)}</h1>`);
+    /* document.write(`<h1>${word2.slice(0, 5)}</h1>`); */
 
+    console.log(word2.slice(0, 5));
 };
 recortarCaracteres();
 
