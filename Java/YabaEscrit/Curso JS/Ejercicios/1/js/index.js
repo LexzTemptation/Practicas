@@ -117,3 +117,19 @@ let recortarCaracteres = () => {
 };
 recortarCaracteres();
 
+
+
+let suma = () => {
+
+    let n1;
+    let n2;
+    let tex;
+
+    n1 = parseInt(document.getElementById("fierro1").value);
+    n2 = parseInt(document.getElementById("fierro2").value);
+
+    tex = parseInt(n1 + n2);
+
+    document.getElementById("res").value = tex;
+
+}
