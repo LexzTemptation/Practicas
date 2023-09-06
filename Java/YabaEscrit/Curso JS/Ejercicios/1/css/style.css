@@ -30,6 +30,11 @@ h2 {
     color: #848484;
 }
 
+label {
+    font-size: 20px;
+    color: #eaeaea;
+}
+
 button {
     border: none;
     background: #009252;
