@@ -33,10 +33,12 @@
 // console.log(texto.replace('Carlos', 'Arturo'));
 
 /*
-	📌 .split() - Convierte una cadena de texto en un arreglo.
+	📌 .split() - Convierte una cadena de texto en un arreglo,
+	cada caracter lo toma como una posición del arreglo.
 	Tenemos que especificar donde cortar cada elemento.
 
-	1er parametro - el caracter que funcionara como separador.
+	1er parametro - el caracter que funcionara como separador
+	(de cualquier posición de la cadena).
 */
 // const texto = 'Hola yo soy Carlos!';
 // console.log(texto.split(' '));

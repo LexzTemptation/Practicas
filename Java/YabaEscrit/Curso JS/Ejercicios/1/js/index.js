@@ -174,6 +174,40 @@ arreglo1('Hola que tal?', ' ');
 repeticion(); */
 
 /* 5 */
+/* let contarWord = (wordRev = "") => {
+
+    wordRev = document.getElementById("valor").value;
+
+    (!wordRev)
+        ? (Swal.fire({
+            icon: "error",
+            title: `<h3>Ingrese una palabra valida</h3>`,
+            timer: 2000,
+            timerProgressBar: true,
+            background: '#3A4460',
+            confirmButtonColor: '#009252',
+            didOpen: (toast) => {
+                toast.addEventListener('mouseenter', Swal.stopTimer)
+                toast.addEventListener('mouseleave', Swal.resumeTimer)
+            }
+        }))
+        :
+        (Swal.fire({
+            icon: "success",
+            title: `<h3>${(' La parabra: "' + wordRev + '", invertida es: ' +  wordRev.split("").reverse().join(""))}</h3>`,
+            timer: 3000,
+            timerProgressBar: true,
+            background: '#3A4460',
+            confirmButtonColor: '#009252',
+            didOpen: (toast) => {
+                toast.addEventListener('mouseenter', Swal.stopTimer)
+                toast.addEventListener('mouseleave', Swal.resumeTimer)
+            }
+        }));
+} */
+
+/* 6 */
+
 
 
 /* Operaciones básicas */
