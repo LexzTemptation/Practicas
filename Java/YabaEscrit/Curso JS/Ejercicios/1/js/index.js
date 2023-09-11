@@ -210,7 +210,72 @@ repeticion(); */
 } */
 
 /* 6 */
+/* let contarWords = (str = "", str2 = "") => {
 
+    str = document.getElementById("valor").value;
+    str2 = document.getElementById("valor2").value;
+
+    if (!str) 
+    {
+        return (Swal.fire({
+            icon: "error",
+            title: `<h3>Ingrese un texto valido</h3>`,
+            timer: 2000,
+            timerProgressBar: true,
+            background: '#3A4460',
+            confirmButtonColor: '#009252',
+            didOpen: (toast) => {
+                toast.addEventListener('mouseenter', Swal.stopTimer)
+                toast.addEventListener('mouseleave', Swal.resumeTimer)
+            }
+        }))
+    }
+    if (!str2) {
+
+        return (Swal.fire({
+            icon: "warning",
+            title: `<h3>Ingrese un texto a evaluar</h3>`,
+            timer: 2000,
+            timerProgressBar: true,
+            background: '#3A4460',
+            confirmButtonColor: '#009252',
+            didOpen: (toast) => {
+                toast.addEventListener('mouseenter', Swal.stopTimer)
+                toast.addEventListener('mouseleave', Swal.resumeTimer)
+            }
+        }))
+    }
+
+    let i = 0, contador = 0;
+
+    while (i !== -1) {
+
+        i = str.indexOf(str2, i)
+
+        if (i !== -1) {
+            i++
+            contador++;
+        }
+        
+    }
+
+
+    return (Swal.fire({
+        icon: "info",
+        title: `<h3>La palabra: ${str2} se repite ${contador}</h3>`,
+        timer: 2000,
+        timerProgressBar: true,
+        background: '#3A4460',
+        confirmButtonColor: '#009252',
+        didOpen: (toast) => {
+            toast.addEventListener('mouseenter', Swal.stopTimer)
+            toast.addEventListener('mouseleave', Swal.resumeTimer)
+        }
+    }))
+
+} */
+
+/* 7 */
 
 
 /* Operaciones básicas */
