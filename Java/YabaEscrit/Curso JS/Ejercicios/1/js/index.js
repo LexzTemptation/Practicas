@@ -84,15 +84,18 @@ calificacin();*/
 
 Toast.fire({
     icon:'success',
-    title:"Fierro"
+    title: `Fierro &#129312`
 }) */
 
 let fierro = () => Swal.fire({
     icon: 'success',
-    title: `Fierro 🤠`,
+    title: `Fierro &#129312`,
+    toast: true,
+    position: 'top-end',
     timer: 3000,
     timerProgressBar: true,
     background: '#3A4460',
+    showConfirmButton: false,
     confirmButtonColor: '#009252',
     didOpen: (toast) => {
         toast.addEventListener('mouseenter', Swal.stopTimer)
