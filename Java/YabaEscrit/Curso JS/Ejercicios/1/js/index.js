@@ -185,7 +185,6 @@ recortarCaracteres(); */
     }))
 } */
 
-
 /* 4 */
 /* let repeticion = () => {
 
@@ -346,6 +345,23 @@ repeticion(); */
 } */
 
 /* 8 */
+/* let eliminarCaracteres = (str = "", patron = "") => {
+
+    Swal.fire({ title: `<h1>${str.split(patron).join('') }</h1>`})
+
+    console.log(str.split(patron).join(''))
+}
+eliminarCaracteres("xyz1, xyz2, xyz3, xyz4 y xyz5 xyz", "xyz") */
+
+/* 9 */
+/* let numerosAleatorios = (min, max) => {
+    
+    min = Math.ceil(501);
+    max = Math.floor(600)
+
+    Swal.fire({title:Math.floor(Math.random() * (max - min) + min)})
+} */
+
 
 
 /* Operaciones básicas */
