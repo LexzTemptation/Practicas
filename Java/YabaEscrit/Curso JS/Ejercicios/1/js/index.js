@@ -152,19 +152,39 @@ let fierro = () => Swal.fire({
 recortarCaracteres(); */
 
 /* 3 */
-/* let arreglo1 = (str = "", sep = undefined) => {
+/* let arreglo1 = (str = "", sep = ' ') => {
+    str = document.getElementById("valor").value;
     (!str)
-    ?console.warn("1")
+    ? Swal.fire({
+        icon: "error",
+        title: `<h3>Ingrese un texto</h3>`,
+        timer: 2000,
+        timerProgressBar: true,
+        background: '#3A4460',
+        confirmButtonColor: '#009252',
+        didOpen: (toast) => {
+            toast.addEventListener('mouseenter', Swal.stopTimer)
+            toast.addEventListener('mouseleave', Swal.resumeTimer)
+        }
+    })
     :(sep === undefined)
-        ?console.warn("2")
-        :console.info(str.split(sep))
+    ? console.warn("2")
+    : (console.info(str.split(sep)),
+    Swal.fire({
+        icon: "success",
+        title: `<h3>${str.split(sep)}</h3>`,
+        footer: `<h4>Ver consola</h4>`,
+        timer: 2000,
+        timerProgressBar: true,
+        background: '#3A4460',
+        confirmButtonColor: '#009252',
+        didOpen: (toast) => {
+            toast.addEventListener('mouseenter', Swal.stopTimer)
+            toast.addEventListener('mouseleave', Swal.resumeTimer)
+        }
+    }))
+} */
 
-    let string = 'Hola que tal?';
-
-    document.write(`<h1>${string.split(' ')}</h1>`);
-}
-arreglo1('Hola que tal?', ' ');
- */
 
 /* 4 */
 /* let repeticion = () => {
@@ -210,7 +230,7 @@ repeticion(); */
 } */
 
 /* 6 */
-/* let contarWords = (str = "", str2 = "") => {
+/* let countRepeatedWords = (str = "", str2 = "") => {
 
     str = document.getElementById("valor").value;
     str2 = document.getElementById("valor2").value;
@@ -276,6 +296,56 @@ repeticion(); */
 } */
 
 /* 7 */
+/* let palindromo = (word = "") => {
+    
+    word = document.getElementById("valor").value;
+    
+    if (!word) {
+        return (Swal.fire({
+            icon: "error",
+            title: `<h3>Ingrese un texto</h3>`,
+            timer: 2000,
+            timerProgressBar: true,
+            background: '#3A4460',
+            confirmButtonColor: '#009252',
+            didOpen: (toast) => {
+                toast.addEventListener('mouseenter', Swal.stopTimer)
+                toast.addEventListener('mouseleave', Swal.resumeTimer)
+            }
+        }))
+    }
+
+    word = word.toLowerCase();
+    let reves = word.split("").reverse().join("");
+
+    (word === reves)
+        ? Swal.fire({
+            icon: "success",
+            title: `<h3>${true}</h3>`,
+            timer: 2000,
+            timerProgressBar: true,
+            background: '#3A4460',
+            confirmButtonColor: '#009252',
+            didOpen: (toast) => {
+                toast.addEventListener('mouseenter', Swal.stopTimer)
+                toast.addEventListener('mouseleave', Swal.resumeTimer)
+            }
+        })
+        : Swal.fire({
+            icon: "warning",
+            title: `<h3>${false}</h3>`,
+            timer: 2000,
+            timerProgressBar: true,
+            background: '#3A4460',
+            confirmButtonColor: '#009252',
+            didOpen: (toast) => {
+                toast.addEventListener('mouseenter', Swal.stopTimer)
+                toast.addEventListener('mouseleave', Swal.resumeTimer)
+            }
+        })
+} */
+
+/* 8 */
 
 
 /* Operaciones básicas */
