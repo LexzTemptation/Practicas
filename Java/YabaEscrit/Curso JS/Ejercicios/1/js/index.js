@@ -362,7 +362,94 @@ eliminarCaracteres("xyz1, xyz2, xyz3, xyz4 y xyz5 xyz", "xyz") */
     Swal.fire({title:Math.floor(Math.random() * (max - min) + min)})
 } */
 
+/* 10 */
+/* let capicua = (num = 0) => {
 
+    num = parseInt(document.getElementById("valor").value);
+    console.log(num, typeof num)
+
+    if (!num) {
+        return (Swal.fire({
+            icon: "error",
+            title: `<h3>Ingrese un número</h3>`,
+            timer: 2000,
+            timerProgressBar: true,
+            background: '#3A4460',
+            confirmButtonColor: '#009252',
+            didOpen: (toast) => {
+                toast.addEventListener('mouseenter', Swal.stopTimer)
+                toast.addEventListener('mouseleave', Swal.resumeTimer)
+            }
+        }))
+    }
+
+    let numb = num.toString();
+
+    let reves = numb.split("").reverse().join("");
+
+    console.log(numb, typeof numb);
+
+    (numb === reves)
+        ? Swal.fire({
+            icon: "info",
+            title: `<h3>${true}</h3>`,
+            timer: 2000,
+            timerProgressBar: true,
+            background: '#3A4460',
+            confirmButtonColor: '#009252',
+            didOpen: (toast) => {
+                toast.addEventListener('mouseenter', Swal.stopTimer)
+                toast.addEventListener('mouseleave', Swal.resumeTimer)
+            }
+        })
+        : Swal.fire({
+            icon: "warning",
+            title: `<h3>${false}</h3>`,
+            timer: 2000,
+            timerProgressBar: true,
+            background: '#3A4460',
+            confirmButtonColor: '#009252',
+            didOpen: (toast) => {
+                toast.addEventListener('mouseenter', Swal.stopTimer)
+                toast.addEventListener('mouseleave', Swal.resumeTimer)
+            }
+        })
+} */
+
+/* 11 */
+let factorial = (num = 0) => {
+
+    num = parseInt(document.getElementById("valor").value);
+    console.log(num, typeof num);
+
+    if (!num) {
+        return (Swal.fire({
+            icon: "error",
+            title: `<h3>Ingrese un número</h3>`,
+            timer: 2000,
+            timerProgressBar: true,
+            background: '#3A4460',
+            confirmButtonColor: '#009252',
+            didOpen: (toast) => {
+                toast.addEventListener('mouseenter', Swal.stopTimer)
+                toast.addEventListener('mouseleave', Swal.resumeTimer)
+            }
+        }))
+    }
+
+    let factorial = 1;
+
+    for (let i = 1; i <= num; i++) {
+        
+        factorial *= i;
+        console.log(i, factorial)
+        
+    }
+
+    console.log(factorial, num)
+
+
+}
 
 /* Operaciones básicas */
 /* let operacion = () => {
