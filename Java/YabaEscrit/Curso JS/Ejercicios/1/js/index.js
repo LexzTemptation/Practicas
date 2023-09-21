@@ -417,7 +417,7 @@ eliminarCaracteres("xyz1, xyz2, xyz3, xyz4 y xyz5 xyz", "xyz") */
 } */
 
 /* 11 */
-let factorial = (num = 0) => {
+/* let factorial = (num = 0) => {
 
     num = parseInt(document.getElementById("valor").value);
     console.log(num, typeof num);
@@ -461,7 +461,9 @@ let factorial = (num = 0) => {
     console.log(num, factorial);
 
 
-}
+} */
+
+/* 12 */
 
 /* Operaciones básicas */
 /* let operacion = () => {
