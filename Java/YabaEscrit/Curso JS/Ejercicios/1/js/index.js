@@ -424,7 +424,7 @@ let factorial = (num = 0) => {
 
     if (!num) {
         return (Swal.fire({
-            icon: "error",
+            icon: "warning",
             title: `<h3>Ingrese un número</h3>`,
             timer: 2000,
             timerProgressBar: true,
@@ -446,7 +446,19 @@ let factorial = (num = 0) => {
         
     }
 
-    console.log(factorial, num)
+    Swal.fire({
+        icon: "info",
+        title: `<h3>El factorial de ${num} es: ${factorial}</h3>`,
+        timer: 2000,
+        timerProgressBar: true,
+        background: '#3A4460',
+        confirmButtonColor: '#009252',
+        didOpen: (toast) => {
+            toast.addEventListener('mouseenter', Swal.stopTimer)
+            toast.addEventListener('mouseleave', Swal.resumeTimer)
+        }
+    });
+    console.log(num, factorial);
 
 
 }
