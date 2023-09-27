@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org"> <!--Básicamente, cada elemento (o atributo) en XML
+                                                pertenece a un espacio de nombres, a modo de
+                                                "calificación" del nombre del elemento.
+
+                                                Thymeleaf es un moderno motor de plantillas Java
+                                                del lado del servidor para entornos web e independientes.
+                                                El objetivo principal de Thymeleaf es traer elegantes
+                                                plantillas naturales a su flujo de trabajo de desarrollo: 
+                                                HTML que se puede mostrar correctamente en los navegadores 
+                                                y también funciona como prototipos estáticos, lo que permite 
+                                                una colaboración más sólida en los equipos de desarrollo.-->
+
+<head>
+    <title>Plantilla</title>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Practicas de Aplicaciones web con Spring Boot">
+    <meta name="keywords" content="Practicas con Spring Boot">
+    <meta name="author" content="Alejandro Cornejo">
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
+    <!-- Font Awesome CSS -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css"
+        integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm" crossorigin="anonymous">
+    <link href="../css/index.css" rel="stylesheet" type="text/css" />
+</head>
+
+<body>
+    <header th:fragment="header">
+        <h1>Control de clientes</h1>
+    </header>
+
+    <footer th:fragment="footer">
+        <br><br>
+            <div class="justify-content-center">
+                <h6 class="text-truncate text-center">
+                    <i class="far fa-copyright"></i>
+                    <time id="current_date"></time>
+                    Gimnasio SA de CV | Calle #1234 Colonia 37000 León Guanajuato.
+                </h6>
+            </div>
+            <br><br>
+    </footer>
+    <script src="../js/index-css.js"></script>
+</body>

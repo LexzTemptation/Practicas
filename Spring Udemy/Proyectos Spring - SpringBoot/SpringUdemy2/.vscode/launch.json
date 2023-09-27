@@ -1,0 +1,14 @@
+{
+    "configurations": [
+        {
+            "type": "java",
+            "name": "Spring Boot-SpringUdemy1Application<SpringUdemy2>",
+            "request": "launch",
+            "cwd": "${workspaceFolder}",
+            "mainClass": "com.org.athtec.core.SpringUdemy1.SpringUdemy1Application",
+            "projectName": "SpringUdemy2",
+            "args": "",
+            "envFile": "${workspaceFolder}/.env"
+        }
+    ]
+}
