@@ -183,7 +183,7 @@
 } */
 
 /* Descuento del 15% */
-let accionarFuncion = (totalCompra = 0) => {
+/* let accionarFuncion = (totalCompra = 0) => {
 
     totalCompra = parseFloat(document.getElementById("valor").value);
 
@@ -206,6 +206,77 @@ let accionarFuncion = (totalCompra = 0) => {
         : (Swal.fire({
             icon: "info",
             title: `<h3>${("El descuento es: " + descuento + " y el precio final es: " + precioFinal)}</h3>`,
+            timer: 3000,
+            timerProgressBar: true,
+            background: '#3A4460',
+            confirmButtonColor: '#009252',
+            didOpen: (toast) => {
+                toast.addEventListener('mouseenter', Swal.stopTimer)
+                toast.addEventListener('mouseleave', Swal.resumeTimer)
+            }
+        }));
+
+} */
+
+/* Calculo de salario de acuerdo a horas trabajadas */
+/* let accionarFuncion = (horasTrabajadas = 0, valorPorHora = 0) => {
+
+    horasTrabajadas = parseFloat(document.getElementById("valor").value);
+    valorPorHora = parseFloat(document.getElementById("valor2").value);
+
+    let salarioFinal = (horasTrabajadas * valorPorHora);
+
+        (!horasTrabajadas || !valorPorHora)
+        ? (Swal.fire({
+            icon: "error",
+            title: `<h3>Ingrese un valor numerico para calcular el salario final</h3>`,
+            timer: 2000,
+            timerProgressBar: true,
+            background: '#3A4460',
+            confirmButtonColor: '#009252',
+            didOpen: (toast) => {
+                toast.addEventListener('mouseenter', Swal.stopTimer)
+                toast.addEventListener('mouseleave', Swal.resumeTimer)
+            }
+        }))
+        : (Swal.fire({
+            icon: "info",
+            title: `<h3>${("El salario final es: " + salarioFinal)}</h3>`,
+            timer: 3000,
+            timerProgressBar: true,
+            background: '#3A4460',
+            confirmButtonColor: '#009252',
+            didOpen: (toast) => {
+                toast.addEventListener('mouseenter', Swal.stopTimer)
+                toast.addEventListener('mouseleave', Swal.resumeTimer)
+            }
+        }));
+
+} */
+
+/* Calculo de salario con un 25% de aumento */
+let accionarFuncion = (salario = 0) => {
+
+    salario = parseFloat(document.getElementById("valor").value);
+
+    let salarioFinal = (salario + (salario * (25/100)));
+
+        (!salario)
+        ? (Swal.fire({
+            icon: "error",
+            title: `<h3>Ingrese un valor numerico para calcular el salario final</h3>`,
+            timer: 2000,
+            timerProgressBar: true,
+            background: '#3A4460',
+            confirmButtonColor: '#009252',
+            didOpen: (toast) => {
+                toast.addEventListener('mouseenter', Swal.stopTimer)
+                toast.addEventListener('mouseleave', Swal.resumeTimer)
+            }
+        }))
+        : (Swal.fire({
+            icon: "info",
+            title: `<h3>${("Su salario final con 25% de aumento es de: " + salarioFinal)}</h3>`,
             timer: 3000,
             timerProgressBar: true,
             background: '#3A4460',
