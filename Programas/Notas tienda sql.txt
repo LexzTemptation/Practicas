@@ -1,0 +1,157 @@
+#Insertar registro en tablas por orden de atributos
+INSERT INTO categoria VALUES (NULL, "Bebidas");
+
+#Insertar registro en tablas por selección de atributos
+INSERT INTO categoria (nombre) VALUES ("Aceites");
+
+#Insertar varios registros en un atributo
+INSERT INTO categoria (nombre) VALUES ("Detergentes"), ("Galletas"), ("Chocolates"), ("Frituras");
+
+#Insertar varios registros en varios atributos
+INSERT INTO producto (nombre, precio, fecha_venta, id_categoria) VALUES 
+("Coca cola", 5.5, '2023-10-08', 1), 
+("Inka cola", 5.4, '2023-10-07', 1), 
+#curdate(): Se ingresa la fecha actual
+("Heineken", 3.6, curdate(), 1);
+
+INSERT INTO codigo_barras (serial, id_producto) VALUES 
+("7234752", 1), ("7628935", 2), ("2689305", 3), ("265798", 4);
+
+#Modificar (o actualizar) registros de una tabla
+#					Atributo y registro a actualizar, donde exista el "id_categoria = 1"
+UPDATE categoria SET nombre = "Bebidas con gas" WHERE id_categoria = 1;
+
+UPDATE producto SET nombre = "Pepsi", precio = "5.2" WHERE id_producto = 2;
+
+UPDATE producto SET cantidad = 150 WHERE id_producto = 1;
+
+#Eliminar registros de una tabla
+DELETE FROM producto WHERE id_producto = 6;
+DELETE FROM categoria WHERE id_categoria = 6;
+
+#Consultas en tablas
+SELECT * FROM categoria;
+
+#Mostrar solo una columna
+SELECT nombre FROM producto;
+
+#Mostrar varias columnas y poner alias a una o varias columnas
+SELECT nombre as 'Nombre del producto', precio as 'Precio del producto', cantidad FROM producto;
+
+#Consultas filtradas o consultas especificas
+/* Consulta que muestra el nombre, precio y cantidad de la tabla producto donde tenga el "id_categoria = 1" */
+SELECT nombre, precio, cantidad FROM producto WHERE id_categoria = 1;
+
+/* Consulta que muestra el nombre, precio y cantidad de la tabla producto donde tenga el "id_producto = 1" */
+SELECT nombre, precio, cantidad FROM producto WHERE id_producto = 1;
+
+/* Consulta que muestra el nombre, precio y cantidad de la tabla producto donde tenga mas de 100 unidades en stock */
+SELECT nombre, precio, cantidad FROM producto WHERE cantidad > 100;
+
+/* Consulta que muestra el nombre, precio y cantidad de la tabla producto donde tenga menos de 100 unidades en stock */
+SELECT nombre, precio, cantidad FROM producto WHERE cantidad <= 100;
+
+/* Consulta que muestra el producto con mayor y menor cantidad */
+SELECT MIN(cantidad) as "Menor cantidad", MAX(cantidad) as "Mayor cantidad" FROM producto;
+
+/* Consulta que muestra los productos en orden alfabetico*/
+SELECT nombre, precio FROM producto ORDER BY nombre ASC; /* Acendente */
+SELECT nombre, precio FROM producto ORDER BY nombre DESC; /* Desendente */
+
+#Consultas más avanzadas
+/* Consulta que muestra el producto y que tenga más de 100 unidades en cantidad */
+SELECT * FROM producto WHERE id_categoria = 1 AND cantidad > 100;
+
+/* Consulta que muestra el producto y que su campo precio es "NOT NULL" */
+SELECT * FROM producto WHERE precio IS NOT NULL;
+
+/* Consulta que muestra donde su precio esté entre 2 y 5 */
+SELECT * FROM producto WHERE precio BETWEEN 2 AND 5;
+
+/* Consulta que muestra donde su precio no esté entre 2 y 5 */
+SELECT * FROM producto WHERE precio NOT BETWEEN 2 AND 5;
+
+/* Consulta que muestra donde su cantidad sea de 50 + 50*/
+SELECT * FROM producto WHERE cantidad = 50 + 50;
+
+/* Consulta que muestra los nombres de los productos que comiencen con 'Aceite' */
+SELECT * FROM producto WHERE nombre LIKE 'Aceite%';
+
+/* Consulta que muestra los nombres de los productos que terminen con 'O' */
+SELECT * FROM producto WHERE nombre LIKE '%O';
+
+/* Consulta que muestra los nombres de los productos que comiencen con 'A' */
+SELECT * FROM producto WHERE nombre LIKE 'A%';
+
+/* Consulta que muestra los nombres de los productos que tengan entre su nombre '%ce%' */
+SELECT * FROM producto WHERE nombre LIKE '%ce%';
+
+#Consultas en varias tablas
+/* Consulta que muestra el nombre, precio y cantidad de la tabla producto y categoria cantidad de la tabla categoria*/
+SELECT product.nombre, product.precio, product.cantidad, category.nombre as "Categoria" 
+FROM producto as product INNER JOIN categoria as category on product.id_categoria = category.id_categoria;
+
+#Consultas filtradas o especificas en varias tablas
+/* Consulta que muestra el nombre, precio y cantidad de la tabla producto y categoria cantidad de la tabla categoria*/
+SELECT product.nombre, product.precio, product.cantidad, category.nombre as "Categoria" 
+FROM producto as product INNER JOIN categoria as category on product.id_categoria = category.id_categoria
+WHERE product.cantidad > 100;
+
+#Con alias en los atributos
+SELECT p.nombre as 'Producto', cb.serial as 'Codigo de barras' 
+FROM producto as p INNER JOIN codigo_barras as cb ON p.id_producto = cb.id_producto;
+
+#Tres tablas
+SELECT p.nombre as 'Producto', cb.serial as 'Codigo de barras', c.nombre as 'Categoria'
+FROM producto as p 
+INNER JOIN codigo_barras as cb ON p.id_producto = cb.id_producto
+INNER JOIN categoria as c ON p.id_producto = c.id_categoria;
+
+#todas las tablas
+SELECT p.nombre as 'Producto', cb.serial as 'Codigo de barras', c.nombre as 'Categoria', pvv.id_proveedores as "Proveedores"
+FROM producto as p 
+INNER JOIN codigo_barras as cb ON p.id_producto = cb.id_producto
+INNER JOIN categoria as c ON p.id_producto = c.id_categoria
+INNER JOIN union_pp as upp ON p.id_producto = upp.id_producto
+INNER JOIN proveedores as pvv ON pvv.id_proveedores = upp.id_proveedores;
+
+#todas las tablas filtrado
+SELECT p.nombre as 'Producto', cb.serial as 'Codigo de barras', c.nombre as 'Categoria', pvv.id_proveedores as 'Proveedores'
+FROM producto as p 
+INNER JOIN codigo_barras cb ON p.id_producto = cb.id_producto
+INNER JOIN categoria c ON p.id_producto = c.id_categoria
+INNER JOIN union_pp as upp ON p.id_producto = upp.id_producto
+INNER JOIN proveedores as pvv ON pvv.id_proveedores = upp.id_proveedores
+WHERE p.cantidad > 100;
+
+#Vistas forma de guardar las consultas avanzadas
+SELECT p.nombre as 'Producto', cb.serial as 'Codigo de barras', c.nombre as 'Categoria', pvv.id_proveedores as 'Proveedores'
+FROM producto as p 
+INNER JOIN codigo_barras cb ON p.id_producto = cb.id_producto
+INNER JOIN categoria c ON p.id_categoria = c.id_categoria
+INNER JOIN union_pp as upp ON p.id_producto = upp.id_producto
+INNER JOIN proveedores as pvv ON pvv.id_proveedores = upp.id_proveedores
+WHERE p.cantidad > 100;
+
+SELECT * FROM vista_todas_las_tablas;
+
+CREATE VIEW vista_producto_categoria AS 
+SELECT p.nombre, p.precio, p.cantidad, c.nombre as 'Categoria'
+FROM producto as p 
+INNER JOIN categoria as c ON p.id_categoria = c.id_categoria;
+
+#Procedimientos almacenados (determinadas acciones a ejecutar)
+DELIMITER //
+CREATE PROCEDURE productoXcategoria (IN id int)
+begin
+
+    SELECT * FROM producto WHERE id_categoria = id;
+
+end//
+
+DELIMITER ;
+
+USE tienda;
+SELECT * FROM categoria;
+SELECT * FROM producto;
+
